@@ -3,7 +3,7 @@ import { zhNavbar } from "./navbar/index.js";
 import { zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://github.com/Aurora-up",
+  hostname: "https://github.com/Aurora-up/aurora-blog",
 
   author: {
     name: "Mr.Hdd",
