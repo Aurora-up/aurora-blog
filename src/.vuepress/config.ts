@@ -4,7 +4,7 @@ import { searchPlugin } from '@vuepress/plugin-search'
 import { commentPlugin } from "vuepress-plugin-comment2";
 
 export default defineUserConfig({
-  base: "/",
+  base: "/aurora-blog/",
 
   locales: {
     "/": {
