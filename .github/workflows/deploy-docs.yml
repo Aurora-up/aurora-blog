@@ -4,7 +4,7 @@ name: 部署文档
 on:
   push:
     branches:
-      # 确保这是你正在使用的分支名称
+      # 确保这是你正在使用的分支名称(要推送的分支)
       - master
 
 jobs:
@@ -22,7 +22,7 @@ jobs:
       - name: 设置 Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
           cache: npm
 
       - name: 安装依赖
