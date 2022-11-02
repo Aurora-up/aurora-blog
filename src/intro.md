@@ -1,6 +1,5 @@
 ---
 icon: info
-footer: hdd❤hxy
 ---
 
 # 个人简介

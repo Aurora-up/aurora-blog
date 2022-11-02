@@ -10,7 +10,7 @@ export default hopeTheme({
     url: "https://mrhope.site",
   },
 
-  iconAssets: "https://at.alicdn.com/t/c/font_3740996_jumwejm52x.css",
+  iconAssets: "https://at.alicdn.com/t/c/font_3740996_89il1m7dx3o.css",
 
   logo: "/logo.jpg",
 
