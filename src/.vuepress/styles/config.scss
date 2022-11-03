@@ -1,2 +1,14 @@
 // you can change config here
-$code-lang: "css" "html" "js" "ts" "vue";
+$code-dark-theme: "vsc-dark-plus";
+
+$border-color: (
+  light: #ddd,
+  dark: #444,
+);
+
+// sidebar
+$sidebar-width: 18rem;
+$sidebar-mobile-width: 16rem !default;
+
+
+

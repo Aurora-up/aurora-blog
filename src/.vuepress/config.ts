@@ -29,6 +29,9 @@ export default defineUserConfig({
       },
       // 排除首页
       isSearchable: (page) => page.path !== '/',
+
+      maxSuggestions: 10
+
     }),
     //  评论插件
     commentPlugin({

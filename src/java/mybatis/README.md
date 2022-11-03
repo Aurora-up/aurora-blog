@@ -1,7 +1,7 @@
 ---
 title: mybatis 框架
 index: false
-icon: discover
+icon: mybatis
 category:
   - ORM-Framework
 footer: hdd❤hxy

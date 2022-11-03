@@ -3,20 +3,24 @@ import { zhNavbar } from "./navbar/index.js";
 import { zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://aurora-up.github.io/",
+
+  hostname: 'aurora-up.github.io',
 
   author: {
     name: "Mr.Hdd",
-    url: "https://mrhope.site",
+    url: "https://aurora-up.github.io/aurora-blog/",
   },
 
-  iconAssets: "https://at.alicdn.com/t/c/font_3740996_89il1m7dx3o.css",
+  copyright: "@Copyright | Author: hdd",
+
+  iconAssets: "https://at.alicdn.com/t/c/font_3740996_c6rag60q9i.css",
 
   logo: "/logo.jpg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
-
-  docsDir: "docs",
+  // 在线编辑路径
+  repo: "https://github.com/Aurora-up/aurora-blog",
+  docsDir: "src",
+  docsBranch: "master",
 
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
 
@@ -30,9 +34,6 @@ export default hopeTheme({
   },
 
   locales: {
-    /**
-     * Chinese locale config
-     */
     "/": {
       // navbar
       navbar: zhNavbar,
@@ -51,23 +52,34 @@ export default hopeTheme({
 
       // page meta
       metaLocales: {
-        editLink: "在 GitHub 上编辑此页",
+        editLink: "编辑此页",
       },
     },
   },
 
+  //  加密配置
   encrypt: {
     config: {
       "/demo/encrypt.html": ["1234"],
     },
   },
 
+  //  主题色切换
+  themeColor: {
+    blue: "#2196f3",
+    red: "#f26d6d",
+    green: "#3eaf7c",
+    orange: "#fb9b5f",
+  },
+
+  // 全屏按钮
+  fullscreen: true,
+
+
   plugins: {
     blog: {
       autoExcerpt: true,
     },
-
-
 
     // If you don't need comment feature, you can remove following option
     // The following config is for demo ONLY, if you need comment feature, please generate and use your own config, see comment plugin documentation for details.
@@ -126,6 +138,17 @@ export default hopeTheme({
       vpre: true,
       vuePlayground: true,
     },
+
+    //  版权信息
+    copyright: {
+      hostname: "aurora-up.github.io",
+      author: " hdd ",
+      license: " MIT ",
+      triggerWords: 50,
+      global: true,
+      // disableSelection:true
+    },
+
 
     pwa: {
       favicon: "/favicon.ico",
