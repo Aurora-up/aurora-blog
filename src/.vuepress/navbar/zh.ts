@@ -13,9 +13,19 @@ export const zhNavbar = navbar([
     prefix: "/Algorithm/",
     children: [
       {
+        text: "基本算法/思想",
+        icon: "base",
+        link: "base/"
+      },
+      {
         text: "数据结构",
         icon: "data_struct",
         link: "data_struct/"
+      },
+      {
+        text: "搜索",
+        icon: "search",
+        link: "search/"
       },
       {
         text: "数论",
@@ -32,31 +42,33 @@ export const zhNavbar = navbar([
         icon: "dynamic",
         link: "dynamic_programming/"
       },
+
+      {
+        text: "leetcodes刷题",
+        icon: "leetcode",
+        link: "leetcode/"
+      },
+      {
+        text: "机器学习算法",
+        icon: "machine_learning",
+        link: "machine_learning/"
+      },
     ]
   },
+
   {
     text: "rust",
     icon: "rust",
     link: "/rust/",
-    // children: [
-    //   {
-    //     text: "rust",
-    //     icon: "write",
-    //     prefix: "base/",
-    //     children: [
-    //       "1",
-    //     ]
-    //   },
-    // ]
   },
-  { 
-    text: "java", 
-    icon: "java", 
+  {
+    text: "java",
+    icon: "java",
     prefix: "/java/",
-    children:[ 
+    children: [
       {
         text: "ssm",
-        children:[
+        children: [
           {
             text: "mybatis",
             icon: "mybatis",
@@ -64,7 +76,7 @@ export const zhNavbar = navbar([
           }
         ]
       }
-      
+
     ]
   },
   {

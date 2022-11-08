@@ -2,6 +2,7 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 import { searchPlugin } from '@vuepress/plugin-search'
 import { commentPlugin } from "vuepress-plugin-comment2";
+import {componentsPlugin } from "vuepress-plugin-components";
 
 export default defineUserConfig({
   base: "/aurora-blog/",
@@ -19,6 +20,7 @@ export default defineUserConfig({
   shouldPrefetch: false,
 
   plugins: [
+    
     //  搜索插件
     searchPlugin({
       // 配置项
@@ -29,9 +31,7 @@ export default defineUserConfig({
       },
       // 排除首页
       isSearchable: (page) => page.path !== '/',
-
       maxSuggestions: 10
-
     }),
     //  评论插件
     commentPlugin({
@@ -44,5 +44,10 @@ export default defineUserConfig({
       category: "General",
       categoryId : "DIC_kwDOIWQMI84CSTX3",
     }),
+
+    componentsPlugin({
+      components: ["PDF", "FontIcon"],
+      iconAssets: "https://at.alicdn.com/t/c/font_3740996_otwcuw4tw7c.css",
+    })
   ],
 });

@@ -13,8 +13,6 @@ export default hopeTheme({
 
   copyright: "@Copyright | Author: hdd",
 
-  iconAssets: "https://at.alicdn.com/t/c/font_3740996_c6rag60q9i.css",
-
   logo: "/logo.jpg",
 
   // 在线编辑路径
@@ -146,9 +144,7 @@ export default hopeTheme({
       license: " MIT ",
       triggerWords: 50,
       global: true,
-      // disableSelection:true
     },
-
 
     pwa: {
       favicon: "/favicon.ico",
@@ -157,5 +153,6 @@ export default hopeTheme({
       appendBase: true,
       },
     },
+    
   },
 );

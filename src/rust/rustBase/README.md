@@ -4,7 +4,6 @@ index: false
 icon: rust
 category:
   - rust
-footer: hdd❤hxy
 ---
 
 rust 所有权
