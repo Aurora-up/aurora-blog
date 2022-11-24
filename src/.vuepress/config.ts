@@ -47,7 +47,7 @@ export default defineUserConfig({
 
     componentsPlugin({
       components: ["PDF", "FontIcon"],
-      iconAssets: "https://at.alicdn.com/t/c/font_3740996_otwcuw4tw7c.css",
+      iconAssets: "https://at.alicdn.com/t/c/font_3740996_2tipnmtldfd.css",
     })
   ],
 });

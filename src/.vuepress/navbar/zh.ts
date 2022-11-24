@@ -67,7 +67,37 @@ export const zhNavbar = navbar([
     prefix: "/java/",
     children: [
       {
-        text: "ssm",
+        text: "Spring相关",
+        children: [
+          {
+            text: "spring",
+            icon: "spring",
+            link: "spring/"
+          },
+          {
+            text: "springMVC",
+            icon: "springweb",
+            link: "springMVC/"
+          },
+          {
+            text: "springWebFlux",
+            icon: "springweb",
+            link: "springWebFlux/"
+          },
+          {
+            text: "springboot",
+            icon: "springboot",
+            link: "springboot/"
+          },
+          {
+            text: "springcloud",
+            icon: "springcloud",
+            link: "springcloud/"
+          },
+        ]
+      },
+      {
+        text: "ORM",
         children: [
           {
             text: "mybatis",
@@ -75,8 +105,7 @@ export const zhNavbar = navbar([
             link: "mybatis/"
           }
         ]
-      }
-
+      },
     ]
   },
   {
@@ -85,9 +114,46 @@ export const zhNavbar = navbar([
     prefix: "/database/",
     children: [
       {
-        text: "mysql",
-        icon: "mysql",
-        link: "mysql/"
+        text: "关系型database",
+        children: [
+          {
+            text: "mysql",
+            icon: "mysql",
+            link: "mysql/"
+          }
+        ]
+      },
+      {
+        text: "NoSql",
+        children: [
+          {
+            text: "redis",
+            icon: "redis",
+            link: "redis/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    text: "其他",
+    icon: "else",
+    prefix: "/otherTechniques/",
+    children: [
+      {
+        text: "Devops相关",
+        children: [
+          {
+            text: "Docker",
+            icon: "docker",
+            link: "docker/"
+          },
+          {
+            text: "Kubernetes",
+            icon: "kubernetes",
+            link: "kubernetes/"
+          }
+        ] 
       }
     ]
   },
