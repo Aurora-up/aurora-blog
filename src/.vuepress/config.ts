@@ -3,6 +3,11 @@ import theme from "./theme.js";
 import { searchPlugin } from '@vuepress/plugin-search'
 import { commentPlugin } from "vuepress-plugin-comment2";
 import {componentsPlugin } from "vuepress-plugin-components";
+import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
+import { getDirname, path } from "@vuepress/utils";
+
+
+const __dirname = getDirname(import.meta.url);
 
 export default defineUserConfig({
   base: "/aurora-blog/",
@@ -44,10 +49,14 @@ export default defineUserConfig({
       category: "General",
       categoryId : "DIC_kwDOIWQMI84CSTX3",
     }),
-
+    //  官方组件插件
     componentsPlugin({
       components: ["PDF", "FontIcon"],
-      iconAssets: "https://at.alicdn.com/t/c/font_3740996_2tipnmtldfd.css",
-    })
+      iconAssets: "https://at.alicdn.com/t/c/font_3740996_tb46invim8.css",
+    }),
+    // 注册自定义的组件
+    registerComponentsPlugin({
+      componentsDir: path.resolve(__dirname, "./components")
+    }),
   ],
 });

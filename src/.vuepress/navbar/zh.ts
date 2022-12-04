@@ -6,6 +6,11 @@ export const zhNavbar = navbar([
     icon: "index",
     link: "/"
   },
+  {
+    text: "快速导航",
+    icon: "navigate",
+    link: "/resourceNav"
+  },
   { text: "随笔", icon: "note", link: "/demo/" },
   {
     text: "Algorithm",

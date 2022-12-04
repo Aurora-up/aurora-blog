@@ -65,9 +65,9 @@ export default hopeTheme({
   //  主题色切换
   themeColor: {
     blue: "#2196f3",
-    red: "#f26d6d",
+    red: "#626aef",
     green: "#3eaf7c",
-    orange: "#fb9b5f",
+    orange: "#EE3C80",
   },
 
   // 全屏按钮
