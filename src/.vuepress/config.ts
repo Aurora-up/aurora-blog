@@ -64,6 +64,7 @@ export default defineUserConfig({
       themeColor: "#121212",
       cacheHTML: true,
       appendBase: true,
+      favicon: "./favicon.ico"
     }),
 
     // 注册自定义的组件
