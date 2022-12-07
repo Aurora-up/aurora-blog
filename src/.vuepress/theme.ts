@@ -145,14 +145,7 @@ export default hopeTheme({
       triggerWords: 50,
       global: true,
     },
-
-    pwa: {
-      favicon: "/favicon.ico",
-      cacheHTML: true,
-      cachePic: true,
-      appendBase: true,
-      },
-    },
-    
   },
+},
+
 );

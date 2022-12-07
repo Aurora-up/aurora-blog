@@ -22,9 +22,11 @@ export default defineUserConfig({
 
   theme,
 
-  shouldPrefetch: false,
+
+
 
   plugins: [
+    
     
     //  搜索插件
     searchPlugin({
@@ -59,12 +61,16 @@ export default defineUserConfig({
     pwaPlugin({
       cachePic: true,
       update: "available",
-      themeColor: "#77e1cf",
+      themeColor: "#121212",
+      cacheHTML: true,
+      appendBase: true,
     }),
 
     // 注册自定义的组件
     registerComponentsPlugin({
       componentsDir: path.resolve(__dirname, "./components")
     }),
+
   ],
+  shouldPrefetch: false,
 });
