@@ -5,7 +5,7 @@ import { commentPlugin } from "vuepress-plugin-comment2";
 import {componentsPlugin } from "vuepress-plugin-components";
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 import { getDirname, path } from "@vuepress/utils";
-
+import { pwaPlugin } from "vuepress-plugin-pwa2";
 
 const __dirname = getDirname(import.meta.url);
 
@@ -54,6 +54,14 @@ export default defineUserConfig({
       components: ["PDF", "FontIcon"],
       iconAssets: "https://at.alicdn.com/t/c/font_3740996_tb46invim8.css",
     }),
+
+    // pwa 插件
+    pwaPlugin({
+      cachePic: true,
+      update: "available",
+      themeColor: "#77e1cf",
+    }),
+
     // 注册自定义的组件
     registerComponentsPlugin({
       componentsDir: path.resolve(__dirname, "./components")

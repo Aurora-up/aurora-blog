@@ -20,6 +20,7 @@
     "vuepress-plugin-components": "^2.0.0-beta.121",
     "vuepress-plugin-copyright2": "^2.0.0-beta.119",
     "vuepress-plugin-md-enhance": "^2.0.0-beta.116",
+    "vuepress-plugin-pwa2": "^2.0.0-beta.134",
     "vuepress-theme-hope": "2.0.0-beta.116"
   }
 }
