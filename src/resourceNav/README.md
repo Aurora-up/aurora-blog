@@ -8,11 +8,16 @@ sticky: true
 star: true
 article: true
 timeline: true
+projects:
+  - icon: project
+    name: 项目名称
+    desc: 项目详细描述
+    link: https://你的项目链接
 ---
 
 <!-- more -->
 
-## rust 
+## rust
 
 <NavCard arr='[{"title":"Rust 官网","url":"https://www.rust-lang.org/","desc":"Rust Programming Lang","icon":"/navicon/rust.png"},{"title":"crates.io","url":"https://crates.io/","desc":"rust 语言第三方库集合","icon":"/navicon/cratesio.png"},{"title":"lib.rs","url":"https://lib.rs/","desc":"对 rust 的第三方库进行了分类","icon":"/navicon/librs.png"},{"title":"中文站点","url":"https://rustwiki.org/","desc":"对rust标准库,cargo手册登书籍进行了翻译","icon":"/navicon/rust.png"}]'></NavCard>
 
@@ -30,8 +35,3 @@ timeline: true
 
 <NavCard arr='[{"title":"axum中文网","url":"https://axum.rs/","desc":"一些使用 axum 的小案例","icon":"/navicon/axumzh.svg"}, {"title":"OS","url":"https://os.phil-opp.com/","desc":"使用 rust 从零开始编写一个小型操作系统","icon":"/navicon/rustbook.png"},{"title":"官方教程","url":"https://doc.rust-lang.org/book/ch00-00-introduction.html","desc":"rust 官方教程","icon":"/navicon/rustbook.png"}]'></NavCard>
 
-
-
-
-
-[起步 - Rust 中的异步编程 (huangjj27.github.io)](https://huangjj27.github.io/async-book/01_getting_started/01_chapter.html)

@@ -58,6 +58,11 @@ export const zhNavbar = navbar([
         icon: "machine_learning",
         link: "machine_learning/"
       },
+      {
+        text: "数学知识",
+        icon: "math",
+        link: "math/"
+      },
     ]
   },
 

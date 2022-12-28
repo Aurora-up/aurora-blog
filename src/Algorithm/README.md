@@ -20,6 +20,7 @@ category:
 - [图论](graph/README.md)
 - [leetcode](leetcode/README.md)
 - [机器学习算法](machine_learning/README.md)
+- [数学](./math/README.md)
 
 
 

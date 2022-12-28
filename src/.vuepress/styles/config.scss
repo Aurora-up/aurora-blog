@@ -1,6 +1,4 @@
 // you can change config here
-$code-dark-theme: "tomorrow";
-
 $border-color: (
   light: #ddd,
   dark: #444,
@@ -11,4 +9,12 @@ $sidebar-width: 18rem;
 $sidebar-mobile-width: 16rem !default;
 
 
+$bg-color: (
+  light: #fff,
+  dark: #2e303e,
+);
 
+$text-color: (
+  light: #2c3e50,
+  dark: #f8f8f8,
+);

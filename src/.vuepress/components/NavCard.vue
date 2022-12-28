@@ -6,7 +6,7 @@
 
             v-for="(cardObj,index) in cardArr" :key="index" >
             
-            <el-card shadow="never" :body-style="{ padding:'20px' }">
+            <el-card shadow="never" :body-style="{ padding:'15px'}">
 
                 <el-row class="box-card-header">
 
@@ -15,7 +15,7 @@
                     </el-col>
                 
                     <el-col :xs="12" :sm="12" :md="12" :lg="12" :xl="12" style="padding:0px;">
-                        <div style="text-align:right;">
+                        <div style="text-align:left;">
                             <el-tooltip effect="dark" :content="cardObj.desc" placement="top">
 
                                 <el-button color="#626aef" plain 

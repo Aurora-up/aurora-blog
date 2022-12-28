@@ -1,11 +1,17 @@
+@font-face {
+	font-family: "jetbrains_monolight";
+	src: url(./myfonts/jetbrainsmono-light.woff2) format("woff2"),
+      url(./myfonts/jetbrainsmono-light.woff) format("woff"),
+      url(./myfonts/JetBrainsMono-Light.ttf) format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 // you can change colors here
 $theme-color: #77e1cf;
 
 
 // content
-$content-width: 950px;
-
-
-$navbar-height: 3.5rem;
+$content-width: 850px;
+$navbar-height: 3rem;
 
 

@@ -23,8 +23,6 @@ export default defineUserConfig({
   theme,
 
 
-
-
   plugins: [
     
     
@@ -54,7 +52,7 @@ export default defineUserConfig({
     //  官方组件插件
     componentsPlugin({
       components: ["PDF", "FontIcon"],
-      iconAssets: "https://at.alicdn.com/t/c/font_3740996_tb46invim8.css",
+      iconAssets: "https://at.alicdn.com/t/c/font_3740996_g8zfq66elu.css",
     }),
 
     // pwa 插件
@@ -64,7 +62,6 @@ export default defineUserConfig({
       themeColor: "#121212",
       cacheHTML: true,
       appendBase: true,
-      favicon: "./favicon.ico"
     }),
 
     // 注册自定义的组件
