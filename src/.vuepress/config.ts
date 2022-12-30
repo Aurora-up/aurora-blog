@@ -53,6 +53,7 @@ export default defineUserConfig({
     componentsPlugin({
       components: ["PDF", "FontIcon"],
       iconAssets: "https://at.alicdn.com/t/c/font_3740996_g8zfq66elu.css",
+      backToTop:true,
     }),
 
     // pwa 插件
@@ -62,6 +63,7 @@ export default defineUserConfig({
       themeColor: "#121212",
       cacheHTML: true,
       appendBase: true,
+      maxPicSize: 6096,
     }),
 
     // 注册自定义的组件

@@ -44,6 +44,7 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
+        roundAvatar:true,
         description: "努力奔跑的小孩",
         intro: "/intro.html",
       },
@@ -79,7 +80,7 @@ export default hopeTheme({
       autoExcerpt: true,
     },
 
-    // If you don't need comment feature, you can remove following option
+    // 评论配置
     // The following config is for demo ONLY, if you need comment feature, please generate and use your own config, see comment plugin documentation for details.
     // To avoid disturbing the theme developer and consuming his resources, please DO NOT use the following config directly in your production environment!!!!!
     comment: {
@@ -93,7 +94,7 @@ export default hopeTheme({
       categoryId : "DIC_kwDOIWQMI84CSTX3",
     },
 
-    // Disable features you don't want here
+    // markdown 增强
     mdEnhance: {
       align: true,
       attrs: true,
