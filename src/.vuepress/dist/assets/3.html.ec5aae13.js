@@ -1,1 +1,0 @@
-import{_ as e}from"./_plugin-vue_export-helper.cdc0426e.js";import{o,c as t,e as r,a as c}from"./app.eb05c3c1.js";const n={},_=c("p",null,"Spring AOP",-1);function a(s,l){return o(),t("div",null,[_,r(" more ")])}const i=e(n,[["render",a],["__file","3.html.vue"]]);export{i as default};
