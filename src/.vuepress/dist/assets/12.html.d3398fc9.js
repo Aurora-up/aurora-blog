@@ -1,1 +1,0 @@
-import{_ as e}from"./_plugin-vue_export-helper.cdc0426e.js";import{o as t,c as o,e as c,a as r}from"./app.baae078d.js";const a={},_=r("p",null,"「栈 Stack 」",-1);function n(s,l){return t(),o("div",null,[_,c(" more ")])}const d=e(a,[["render",n],["__file","12.html.vue"]]);export{d as default};
