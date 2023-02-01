@@ -52,7 +52,7 @@ export default defineUserConfig({
     //  官方组件插件
     componentsPlugin({
       components: ["PDF", "FontIcon"],
-      iconAssets: "https://at.alicdn.com/t/c/font_3740996_g8zfq66elu.css",
+      iconAssets: "https://at.alicdn.com/t/c/font_3740996_9d1bjk1wpxi.css",
       backToTop:true,
     }),
 

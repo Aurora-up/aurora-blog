@@ -7,13 +7,9 @@ tag:
 sticky: true
 star: true
 article: true
-timeline: true
-projects:
-  - icon: project
-    name: 项目名称
-    desc: 项目详细描述
-    link: https://你的项目链接
 ---
+
+资源网站快速导航
 
 <!-- more -->
 

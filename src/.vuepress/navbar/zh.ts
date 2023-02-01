@@ -67,14 +67,41 @@ export const zhNavbar = navbar([
   },
 
   {
-    text: "rust",
-    icon: "rust",
-    link: "/rust/",
+    text: "code",
+    icon: "code",
+    prefix: "/code/",
+    children: [
+      {
+        text: "rust相关",
+        icon: "rust",
+        link: "rust/"
+      },
+      {
+        text: "c/cpp相关",
+        icon: "cpp",
+        link: "c_cpp/"
+      },
+      {
+        text: "java相关",
+        icon: "java",
+        link: "java/"
+      },
+      {
+        text: "python相关",
+        icon: "python",
+        link: "python/"
+      },
+      {
+        text: "前端相关",
+        icon: "frontend",
+        link: "frontend/"
+      },
+    ]
   },
   {
-    text: "java",
-    icon: "java",
-    prefix: "/java/",
+    text: "框架",
+    icon: "framework",
+    prefix: "/framework/",
     children: [
       {
         text: "Spring相关",

@@ -8,6 +8,6 @@ category:
 
 ## 目录
 
-- [1](./1.md)
+- [二维数组声明时,第一维不能省略的原因](./1.md)
 - [springboot 整和 Swagger](./2.md)
 - [HTTP协议](./3.md)
