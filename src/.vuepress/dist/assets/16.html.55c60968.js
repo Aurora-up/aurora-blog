@@ -1,1 +1,0 @@
-import{_ as e}from"./_plugin-vue_export-helper.cdc0426e.js";import{o,c as t,e as c,a as r}from"./app.bd556ac2.js";const a={},_=r("p",null,"「堆 heap」",-1);function n(s,l){return o(),t("div",null,[_,c(" more ")])}const d=e(a,[["render",n],["__file","16.html.vue"]]);export{d as default};

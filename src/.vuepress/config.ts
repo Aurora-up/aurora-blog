@@ -24,8 +24,6 @@ export default defineUserConfig({
 
 
   plugins: [
-    
-    
     //  搜索插件
     searchPlugin({
       // 配置项
