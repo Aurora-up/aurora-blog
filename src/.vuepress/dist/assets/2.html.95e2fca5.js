@@ -1,0 +1,1 @@
+import{_ as e}from"./_plugin-vue_export-helper.cdc0426e.js";import{o,c as t,e as c,a as r}from"./app.f11da4cb.js";const n={},a=r("p",null,"「分治 divide and conquer」",-1);function _(s,l){return o(),t("div",null,[a,c(" more ")])}const i=e(n,[["render",_],["__file","2.html.vue"]]);export{i as default};
