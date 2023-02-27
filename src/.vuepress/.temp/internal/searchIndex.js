@@ -387,6 +387,79 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "字符串处理",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Kmp 算法",
+        "slug": "kmp-算法",
+        "link": "#kmp-算法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "字符串哈希",
+        "slug": "字符串哈希",
+        "link": "#字符串哈希",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Manacher 算法",
+        "slug": "manacher-算法",
+        "link": "#manacher-算法",
+        "children": []
+      }
+    ],
+    "path": "/Algorithm/base/3.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "二分",
+    "headers": [
+      {
+        "level": 2,
+        "title": "整数二分",
+        "slug": "整数二分",
+        "link": "#整数二分",
+        "children": [
+          {
+            "level": 3,
+            "title": "1.分段实现",
+            "slug": "_1-分段实现",
+            "link": "#_1-分段实现",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.统一实现",
+            "slug": "_2-统一实现",
+            "link": "#_2-统一实现",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "浮点数二分",
+        "slug": "浮点数二分",
+        "link": "#浮点数二分",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二分答案",
+        "slug": "二分答案",
+        "link": "#二分答案",
+        "children": []
+      }
+    ],
+    "path": "/Algorithm/base/4.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "基本算法 / 思想",
     "headers": [
       {
@@ -401,6 +474,20 @@ export const searchIndex = [
         "title": "分治",
         "slug": "分治",
         "link": "#分治",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "字符串处理",
+        "slug": "字符串处理",
+        "link": "#字符串处理",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "二分",
+        "slug": "二分",
+        "link": "#二分",
         "children": []
       }
     ],
@@ -634,7 +721,43 @@ export const searchIndex = [
   },
   {
     "title": "查找技术",
-    "headers": [],
+    "headers": [
+      {
+        "level": 3,
+        "title": "查找中的一些术语",
+        "slug": "查找中的一些术语",
+        "link": "#查找中的一些术语",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "查找算法的性能",
+        "slug": "查找算法的性能",
+        "link": "#查找算法的性能",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "线性查找",
+        "slug": "线性查找",
+        "link": "#线性查找",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "二分查找",
+        "slug": "二分查找",
+        "link": "#二分查找",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "分块查找",
+        "slug": "分块查找",
+        "link": "#分块查找",
+        "children": []
+      }
+    ],
     "path": "/Algorithm/data_struct/17.html",
     "pathLocale": "/",
     "extraFields": []
@@ -1268,6 +1391,50 @@ export const searchIndex = [
       }
     ],
     "path": "/Algorithm/leetcode/1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "剑指 offer 系列",
+    "headers": [
+      {
+        "level": 2,
+        "title": "二叉树相关习题",
+        "slug": "二叉树相关习题",
+        "link": "#二叉树相关习题",
+        "children": [
+          {
+            "level": 3,
+            "title": "919.完全二叉树插入器",
+            "slug": "_919-完全二叉树插入器",
+            "link": "#_919-完全二叉树插入器",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "515.在每个树行中找最大值",
+            "slug": "_515-在每个树行中找最大值",
+            "link": "#_515-在每个树行中找最大值",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "513.找树左下角的值",
+            "slug": "_513-找树左下角的值",
+            "link": "#_513-找树左下角的值",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "103. 二叉树的锯齿形层序遍历",
+            "slug": "_103-二叉树的锯齿形层序遍历",
+            "link": "#_103-二叉树的锯齿形层序遍历",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/Algorithm/leetcode/2.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2366,9 +2533,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "树 标签",
+    "title": "字符串 标签",
     "headers": [],
-    "path": "/tag/%E6%A0%91/",
+    "path": "/tag/%E5%AD%97%E7%AC%A6%E4%B8%B2/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2380,9 +2547,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "图数据结构 标签",
+    "title": "二分 标签",
     "headers": [],
-    "path": "/tag/%E5%9B%BE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/",
+    "path": "/tag/%E4%BA%8C%E5%88%86/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2394,9 +2561,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "链表 标签",
+    "title": "树 标签",
     "headers": [],
-    "path": "/tag/%E9%93%BE%E8%A1%A8/",
+    "path": "/tag/%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2408,9 +2575,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "栈 标签",
+    "title": "图数据结构 标签",
     "headers": [],
-    "path": "/tag/%E6%A0%88/",
+    "path": "/tag/%E5%9B%BE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2422,9 +2589,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "队列 标签",
+    "title": "链表 标签",
     "headers": [],
-    "path": "/tag/%E9%98%9F%E5%88%97/",
+    "path": "/tag/%E9%93%BE%E8%A1%A8/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2436,9 +2603,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "哈希表 标签",
+    "title": "栈 标签",
     "headers": [],
-    "path": "/tag/%E5%93%88%E5%B8%8C%E8%A1%A8/",
+    "path": "/tag/%E6%A0%88/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2450,9 +2617,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "邻接表和邻接矩阵 标签",
+    "title": "队列 标签",
     "headers": [],
-    "path": "/tag/%E9%82%BB%E6%8E%A5%E8%A1%A8%E5%92%8C%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5/",
+    "path": "/tag/%E9%98%9F%E5%88%97/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2464,9 +2631,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "堆 标签",
+    "title": "哈希表 标签",
     "headers": [],
-    "path": "/tag/%E5%A0%86/",
+    "path": "/tag/%E5%93%88%E5%B8%8C%E8%A1%A8/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2478,9 +2645,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "查找技术 标签",
+    "title": "邻接表和邻接矩阵 标签",
     "headers": [],
-    "path": "/tag/%E6%9F%A5%E6%89%BE%E6%8A%80%E6%9C%AF/",
+    "path": "/tag/%E9%82%BB%E6%8E%A5%E8%A1%A8%E5%92%8C%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2492,9 +2659,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "排序 标签",
+    "title": "堆 标签",
     "headers": [],
-    "path": "/tag/%E6%8E%92%E5%BA%8F/",
+    "path": "/tag/%E5%A0%86/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2506,9 +2673,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "二叉树 标签",
+    "title": "查找技术 标签",
     "headers": [],
-    "path": "/tag/%E4%BA%8C%E5%8F%89%E6%A0%91/",
+    "path": "/tag/%E6%9F%A5%E6%89%BE%E6%8A%80%E6%9C%AF/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2520,9 +2687,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "二叉搜索树 标签",
+    "title": "排序 标签",
     "headers": [],
-    "path": "/tag/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/",
+    "path": "/tag/%E6%8E%92%E5%BA%8F/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2534,9 +2701,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "红黑树 标签",
+    "title": "二叉树 标签",
     "headers": [],
-    "path": "/tag/%E7%BA%A2%E9%BB%91%E6%A0%91/",
+    "path": "/tag/%E4%BA%8C%E5%8F%89%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2548,9 +2715,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "AVL树 标签",
+    "title": "二叉搜索树 标签",
     "headers": [],
-    "path": "/tag/avl%E6%A0%91/",
+    "path": "/tag/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2562,9 +2729,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "哈夫曼树 标签",
+    "title": "红黑树 标签",
     "headers": [],
-    "path": "/tag/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/",
+    "path": "/tag/%E7%BA%A2%E9%BB%91%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2576,9 +2743,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "并查集 标签",
+    "title": "AVL树 标签",
     "headers": [],
-    "path": "/tag/%E5%B9%B6%E6%9F%A5%E9%9B%86/",
+    "path": "/tag/avl%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2590,9 +2757,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "B 树 标签",
+    "title": "哈夫曼树 标签",
     "headers": [],
-    "path": "/tag/b-%E6%A0%91/",
+    "path": "/tag/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2604,9 +2771,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "线性数据结构 标签",
+    "title": "并查集 标签",
     "headers": [],
-    "path": "/tag/%E7%BA%BF%E6%80%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/",
+    "path": "/tag/%E5%B9%B6%E6%9F%A5%E9%9B%86/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2618,9 +2785,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "leetcode 标签",
+    "title": "B 树 标签",
     "headers": [],
-    "path": "/tag/leetcode/",
+    "path": "/tag/b-%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2632,9 +2799,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "决策树 标签",
+    "title": "线性数据结构 标签",
     "headers": [],
-    "path": "/tag/%E5%86%B3%E7%AD%96%E6%A0%91/",
+    "path": "/tag/%E7%BA%BF%E6%80%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2646,9 +2813,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "行列式 标签",
+    "title": "leetcode 标签",
     "headers": [],
-    "path": "/tag/%E8%A1%8C%E5%88%97%E5%BC%8F/",
+    "path": "/tag/leetcode/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2660,9 +2827,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "矩阵 标签",
+    "title": "决策树 标签",
     "headers": [],
-    "path": "/tag/%E7%9F%A9%E9%98%B5/",
+    "path": "/tag/%E5%86%B3%E7%AD%96%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2674,9 +2841,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "数论 标签",
+    "title": "行列式 标签",
     "headers": [],
-    "path": "/tag/%E6%95%B0%E8%AE%BA/",
+    "path": "/tag/%E8%A1%8C%E5%88%97%E5%BC%8F/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2688,9 +2855,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "算法 标签",
+    "title": "矩阵 标签",
     "headers": [],
-    "path": "/tag/%E7%AE%97%E6%B3%95/",
+    "path": "/tag/%E7%9F%A9%E9%98%B5/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2702,9 +2869,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "C、C++ 指针 标签",
+    "title": "数论 标签",
     "headers": [],
-    "path": "/tag/c%E3%80%81c++-%E6%8C%87%E9%92%88/",
+    "path": "/tag/%E6%95%B0%E8%AE%BA/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2716,9 +2883,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "mybatis 标签",
+    "title": "算法 标签",
     "headers": [],
-    "path": "/tag/mybatis/",
+    "path": "/tag/%E7%AE%97%E6%B3%95/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2730,9 +2897,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "spring 标签",
+    "title": "C、C++ 指针 标签",
     "headers": [],
-    "path": "/tag/spring/",
+    "path": "/tag/c%E3%80%81c++-%E6%8C%87%E9%92%88/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2744,9 +2911,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "springMVC 标签",
+    "title": "mybatis 标签",
     "headers": [],
-    "path": "/tag/springmvc/",
+    "path": "/tag/mybatis/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2754,6 +2921,20 @@ export const searchIndex = [
     "title": "Kubernetes 分类",
     "headers": [],
     "path": "/category/kubernetes/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "spring 标签",
+    "headers": [],
+    "path": "/tag/spring/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "springMVC 标签",
+    "headers": [],
+    "path": "/tag/springmvc/",
     "pathLocale": "/",
     "extraFields": []
   },

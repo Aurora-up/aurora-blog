@@ -12,28 +12,6 @@ icon: base
 
 ### [分治](./2.md)
 
+### [字符串处理](./3.md)
 
-
-
-
-:::code-tabs#language
-
-@tab rust#rust
-
-```rust
-
-```
-
-@tab java#java
-
-```java
-
-```
-
-@tab c++#c++
-
-```cpp
-
-```
-
-:::
+### [二分](./4.md)

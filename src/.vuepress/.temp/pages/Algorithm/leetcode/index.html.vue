@@ -2,6 +2,7 @@
 <!-- more -->
 <ul>
 <li><RouterLink to="/Algorithm/leetcode/1.html">1-20题</RouterLink></li>
+<li><RouterLink to="/Algorithm/leetcode/2.html">剑指 offer 系列</RouterLink></li>
 </ul>
 </div></template>
 
