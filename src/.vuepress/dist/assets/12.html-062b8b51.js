@@ -1,0 +1,1 @@
+import{aP as e,S as t,U as c,ac as a,V as o}from"./framework-b86c3bdd.js";const n={},r=o("p",null,"「栈 Stack 」",-1);function s(_,l){return t(),c("div",null,[r,a(" more ")])}const d=e(n,[["render",s],["__file","12.html.vue"]]);export{d as default};
