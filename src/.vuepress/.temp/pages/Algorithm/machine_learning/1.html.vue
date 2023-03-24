@@ -3,9 +3,9 @@
 <h1 id="决策树" tabindex="-1"><a class="header-anchor" href="#决策树" aria-hidden="true">#</a> 决策树</h1>
 <p>Decision Tree — 非参数的有监督学习</p>
 <p>基本流程：</p>
-<p><img src="@source/Algorithm/machine_learning/image/image-20221106144427088.png" alt="image-20221106144427088" loading="lazy"></p>
-<div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+<p><img src="@source/Algorithm/machine_learning/image/image-20221106144427088.png" alt="image-20221106144427088"></p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p>三种情况导致递归返回：</p>
 <ol>
 <li>当前结点包含的样本全属于同一类别，无需划分；</li>
@@ -24,8 +24,8 @@
 <h4 id="划分选择" tabindex="-1"><a class="header-anchor" href="#划分选择" aria-hidden="true">#</a> 划分选择</h4>
 <p>​		算法关键在于选择【最优划分属性】，一个好的属性可以将对类别进行明确的划分。随着划分过程的不断进行，希望决策树的分支节点所包含的样本尽可能的属于同一类别。即该节点的 “<strong>纯度</strong>” 越来越高。</p>
 <p>​		与纯度相反的一个概念是 <strong>熵</strong>。</p>
-<div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p>熵：熵是描述信息的不确定度的，是随机变量不确定度的度量。熵越大，信息的不确定度越大，信息越”混乱”，越不符合决策树分类的需求。</p>
 </div>
 <p>信息熵:</p>

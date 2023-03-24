@@ -2,32 +2,32 @@
 <!-- more -->
 <h2 id="http-协议的发展概述" tabindex="-1"><a class="header-anchor" href="#http-协议的发展概述" aria-hidden="true">#</a> HTTP 协议的发展概述</h2>
 <p>HTTP 1.0 到 HTTP 3.0 的发展：</p>
-<p><img src="@source/demo/image/image-20221222210453436.png" alt="image-20221222210453436" loading="lazy"></p>
+<p><img src="@source/demo/image/image-20221222210453436.png" alt="image-20221222210453436"></p>
 <ul>
 <li>HTTP 1.0 对同一服务器的每个请求都需要单独的 TCP 连接。</li>
 <li>HTTP 1.1 中 TCP 连接可以保持打开状态以供重用（持久连接），但它不能解决 HOL（行头）阻塞问题。</li>
 </ul>
-<div class="custom-container info">
-<p class="custom-container-title">HOL 阻塞</p>
+<div class="hint-container info">
+<p class="hint-container-title">HOL 阻塞</p>
 <p>HOL 阻塞 - 当浏览器中允许的并行请求数用完时，后续请求需要等待前一个请求完成。</p>
 </div>
 <ul>
 <li>HTTP 2.0 通过请求多路复用解决了 HOL 问题，从而消除了应用层的 HOL 阻塞，但是 HOL 阻塞仍然存在于传输层（TCP）中。</li>
 </ul>
-<div class="custom-container info">
-<p class="custom-container-title">HTTP Streams</p>
+<div class="hint-container info">
+<p class="hint-container-title">HTTP Streams</p>
 <p>在上图中可以看到，HTTP 2.0 引入了 “ HTTP Streams ” 的概念，其是对允许多个不同的 HTTP 请求多路复用到同一个 TCP 连接上的一种抽象，每个流不需要按照顺序去发送。</p>
 </div>
 <ul>
 <li>HTTP 3.0 底层使用 QUIC 而不是 TCP 作为底层传输协议，从而消除了传输层中的 HOL 阻塞。</li>
 </ul>
-<div class="custom-container info">
-<p class="custom-container-title">QUIC协议</p>
+<div class="hint-container info">
+<p class="hint-container-title">QUIC协议</p>
 <p>QUIC 基于 UDP，其将 “Streams” 作为一等公民引入传输层。QUIC Steams 共享相同的 QUIC 连接，因此不需要额外的握手和缓慢启动来创建新的 Stream，但 QUIC Streams 是独立交付的，因此在大多数情况下，一个 Stream 的数据包丢失不会影响其他的 Stream。</p>
 </div>
 <h2 id="http-请求" tabindex="-1"><a class="header-anchor" href="#http-请求" aria-hidden="true">#</a> HTTP 请求</h2>
 <p>​		HTTP 协议的请求格式如下图所示：</p>
-<p><img src="@source/demo/image/image-20221223170842311.png" alt="image-20221223170842311" loading="lazy"></p>
+<p><img src="@source/demo/image/image-20221223170842311.png" alt="image-20221223170842311"></p>
 <h3 id="常用请求方法" tabindex="-1"><a class="header-anchor" href="#常用请求方法" aria-hidden="true">#</a> 常用请求方法</h3>
 <table>
 <thead>
@@ -112,7 +112,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="http-响应" tabindex="-1"><a class="header-anchor" href="#http-响应" aria-hidden="true">#</a> HTTP 响应<img src="@source/demo/image/image-20221223171200266.png" alt="image-20221223171200266" loading="lazy"></h2>
+<h2 id="http-响应" tabindex="-1"><a class="header-anchor" href="#http-响应" aria-hidden="true">#</a> HTTP 响应<img src="@source/demo/image/image-20221223171200266.png" alt="image-20221223171200266"></h2>
 <h2 id="uri" tabindex="-1"><a class="header-anchor" href="#uri" aria-hidden="true">#</a> URI</h2>
 </div></template>
 

@@ -6,8 +6,8 @@
 <li>每个结点<strong>至多有两颗子树</strong> ( 即不存在度大于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span> 的结点 )</li>
 <li>二叉树的子树有左右之分，其次序是不能任意颠倒。( 若将二叉树的左、右子树颠倒，其会变为另一颗二叉树 )</li>
 </ul>
-<div class="custom-container warning">
-<p class="custom-container-title">区分二叉树与度为 2 的树</p>
+<div class="hint-container warning">
+<p class="hint-container-title">区分二叉树与度为 2 的树</p>
 <ul>
 <li>二叉树并不是度为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span> 的树，二叉树上的结点的度可以是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">0,1,2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span></span></span></span> 。</li>
 </ul>
@@ -23,32 +23,32 @@
 <li>结点「深度 Depth」 ：根结点到该结点走过边的数量；(根 — 结点)</li>
 <li>结点「高度 Height」：最远叶结点到该结点走过边的数量；(结点 — 叶)</li>
 </ul>
-<p><img src="@source/Algorithm/data_struct/image/image-20221226171731561.png" alt="image-20221226171731561" loading="lazy"></p>
-<div class="custom-container info">
-<p class="custom-container-title">高度和深度的定义</p>
+<p><img src="@source/Algorithm/data_struct/image/image-20221226171731561.png" alt="image-20221226171731561"></p>
+<div class="hint-container info">
+<p class="hint-container-title">高度和深度的定义</p>
 <p>高度和深度的定义并不只有 <strong>“边”</strong> 的定义，也有以 <strong>“结点个数”</strong> 定义的，所以当以结点个数作为定义时，需要在以边为标准的基础上 + 1.</p>
 </div>
 <h2 id="常见二叉树" tabindex="-1"><a class="header-anchor" href="#常见二叉树" aria-hidden="true">#</a> 常见二叉树</h2>
 <h3 id="完美二叉树-满二叉树" tabindex="-1"><a class="header-anchor" href="#完美二叉树-满二叉树" aria-hidden="true">#</a> 完美二叉树（满二叉树）</h3>
 <p>​		「完美二叉树 Perfect Binary Tree」的所有层的结点都被完全填满。在完美二叉树中，所有结点的度 = 2 ；若树高度 = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span> ，则结点总数 = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mi>h</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^{h+1}-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9324em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">h</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> ，呈标准的指数级关系。</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20221226170711039.png" alt="image-20221226170711039" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20221226170711039.png" alt="image-20221226170711039"></p>
 <h3 id="完全二叉树" tabindex="-1"><a class="header-anchor" href="#完全二叉树" aria-hidden="true">#</a> 完全二叉树</h3>
 <p>「完全二叉树 Complete Binary Tree」只有最底层的结点未被填满，且最底层结点尽量靠左填充。</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20221226171138593.png" alt="image-20221226171138593" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20221226171138593.png" alt="image-20221226171138593"></p>
 <p><strong>完全二叉树非常适合用数组来表示</strong>。如果按照<strong>层序遍历</strong>序列的顺序来存储，那么空结点 <code v-pre>null</code> 一定全部出现在序列的尾部，因此我们就可以不用存储这些 <code v-pre>null</code> 了。</p>
 <h3 id="完满二叉树" tabindex="-1"><a class="header-anchor" href="#完满二叉树" aria-hidden="true">#</a> 完满二叉树</h3>
 <p>「完满二叉树 Full Binary Tree」除了叶结点之外，其余所有结点都有两个子结点。</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20221226171646207.png" alt="image-20221226171646207" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20221226171646207.png" alt="image-20221226171646207"></p>
 <h3 id="平衡二叉树" tabindex="-1"><a class="header-anchor" href="#平衡二叉树" aria-hidden="true">#</a> 平衡二叉树</h3>
 <p>「平衡二叉树 Balanced Binary Tree」中任意结点的左子树和右子树的高度之差的绝对值 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">≤1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 。</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20221226172224641.png" alt="image-20221226172224641" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20221226172224641.png" alt="image-20221226172224641"></p>
 <h2 id="二叉树的退化" tabindex="-1"><a class="header-anchor" href="#二叉树的退化" aria-hidden="true">#</a> 二叉树的退化</h2>
 <p>当二叉树的每层的结点都被填满时，达到「完美二叉树」；而当所有结点都偏向一边时，二叉树退化为「链表」。</p>
 <ul>
 <li>完美二叉树是一个二叉树的“最佳状态”，可以完全发挥出二叉树“分治”的优势；</li>
 <li>链表则是另一个极端，各项操作都变为线性操作，时间复杂度退化至 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> ；</li>
 </ul>
-<p><img src="@source/Algorithm/data_struct/image/image-20221226172820794.png" alt="image-20221226172820794" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20221226172820794.png" alt="image-20221226172820794"></p>
 <p>完美二叉树和退化为链表的二叉树的叶结点数量、结点总数、高度等达到极大或极小值。</p>
 <table>
 <thead>
@@ -94,7 +94,7 @@
 </ul>
 </li>
 </ol>
-<details class="custom-container details"><summary>对性质的推导</summary>
+<details class="hint-container details"><summary>对性质的推导</summary>
 <ul>
 <li>性质 1 的证明：</li>
 </ul>
@@ -104,13 +104,12 @@
 <h3 id="_1-数组表示" tabindex="-1"><a class="header-anchor" href="#_1-数组表示" aria-hidden="true">#</a> 1.数组表示</h3>
 <p>使用普通数组存储二叉树时，不能直接在结点中存储结点之间的关系，需要推导父结点索引与子结点索引的「映射公式」：<strong>设结点的索引为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> ，则该结点的左子结点索引为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>i</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2i+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7429em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 、右子结点索引为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>i</mi><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2i+2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7429em;vertical-align:-0.0833em;"></span><span class="mord">2</span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span></strong> 。</p>
 <p>例如数组存储满二叉树：</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20221226211652090.png" alt="image-20221226211652090" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20221226211652090.png" alt="image-20221226211652090"></p>
 <p>但是满二叉树的并不常见，要想使用使用数组存储其他类型的二叉树，就必然存在 <code v-pre>null</code> 值，即需要将一颗不是满二叉树的二叉树用<strong>空结点</strong>填充为一颗满二叉树。如下图：</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20221226212356195.png" alt="image-20221226212356195" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20221226212356195.png" alt="image-20221226212356195"></p>
 <p>对于<strong>完全二叉树</strong>来说，其虽然有<strong>空结点</strong>，但是由于使用层序遍历的顺序存储的原因，这些空结点都在数组的结尾，这使得可以直接不对其进行存储，所以使用数组表示完全二叉树更加合适。</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20221226212749450.png" alt="image-20221226212749450" loading="lazy"></p>
-<CodeTabs id="290" :data='[{"title":"rust","value":"rust"},{"title":"java","value":"java"},{"title":"c++","value":"c++"}]' tab-id="language">
-
+<p><img src="@source/Algorithm/data_struct/image/image-20221226212749450.png" alt="image-20221226212749450"></p>
+<CodeTabs id="290" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -122,8 +121,7 @@
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <h3 id="_2-链表表示" tabindex="-1"><a class="header-anchor" href="#_2-链表表示" aria-hidden="true">#</a> 2.链表表示</h3>
-<CodeTabs id="304" :data='[{"title":"rust","value":"rust"},{"title":"java","value":"java"},{"title":"c++","value":"c++"}]' tab-id="language">
-
+<CodeTabs id="304" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -145,9 +143,8 @@
 <h2 id="二叉树的遍历" tabindex="-1"><a class="header-anchor" href="#二叉树的遍历" aria-hidden="true">#</a> 二叉树的遍历</h2>
 <h3 id="层序遍历" tabindex="-1"><a class="header-anchor" href="#层序遍历" aria-hidden="true">#</a> 层序遍历</h3>
 <p>「层序遍历 Hierarchical-Order Traversal」从顶至底、一层一层地遍历二叉树，并在每层中按照从左到右的顺序访问结点。层序遍历本质上是「广度优先遍历 Breadth-First Traversal」.</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20221227141036889.png" alt="层序遍历" loading="lazy"></p>
-<CodeTabs id="327" :data='[{"title":"rust","value":"rust"},{"title":"java","value":"java"},{"title":"c++","value":"c++"}]' tab-id="language">
-
+<p><img src="@source/Algorithm/data_struct/image/image-20221227141036889.png" alt="层序遍历"></p>
+<CodeTabs id="327" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -185,7 +182,7 @@
 <h3 id="前序、中序、后序遍历" tabindex="-1"><a class="header-anchor" href="#前序、中序、后序遍历" aria-hidden="true">#</a> 前序、中序、后序遍历</h3>
 <p>相对地，前、中、后序遍历皆属于「深度优先遍历 Depth-First Traversal」，即每次搜索会直接搜索到叶子结点，然后再回溯去搜索其他的结点。</p>
 <p>如下图所示，左侧是深度优先遍历的的示意图，右上方是对应的递归实现代码。深度优先遍历就像是绕着整个二叉树的外围“走”一圈，走的过程中，在每个结点都会遇到三个位置(即是向下继续搜索左子结点、右子结点或是回溯到父结点)，分别对应前序遍历、中序遍历、后序遍历。</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20221227141626481.png" alt="前序,中序,后序遍历" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20221227141626481.png" alt="前序,中序,后序遍历"></p>
 <table>
 <thead>
 <tr>
@@ -217,7 +214,7 @@
 <li>前序 / 后序遍历和中序遍历可以唯一确定一颗二叉树</li>
 <li>前序遍历和后序遍历<strong>不能</strong>唯一确定一颗二叉树</li>
 </ul>
-<p><img src="@source/Algorithm/data_struct/image/image-20230101154717176.png" alt="image-20230101154717176" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230101154717176.png" alt="image-20230101154717176"></p>
 <p>【求解一颗二叉树某一遍历顺序序列】</p>
 <p>这三种序列都是从根结点开始的深搜序列，根据其选择的优先级顺序，例如前序遍历为 <code v-pre>(根,左,右)</code> (这是根，左，右是相对而言的，不是整颗树的)，例如上图中二叉树的前序遍历思考过程如下：</p>
 <ol>
@@ -226,14 +223,13 @@
 <li>对于 <code v-pre>A</code> (根)结点来说，<code v-pre>(根,左)</code> 已经遍历完毕，然后继续遍历 “右” ，即来到 <code v-pre>E</code> ,是 “右” ，入序列，然后继续前序遍历原则直接所有结点遍历结束.</li>
 </ol>
 <p>【根据前序 / 后序遍历和中序遍历唯一确定一颗二叉树】</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20221227191400186.png" alt="image-20221227191400186" loading="lazy"></p>
-<CodeTabs id="447" :data='[{"title":"rust","value":"rust"},{"title":"java","value":"java"},{"title":"c++","value":"c++"}]' tab-id="language">
-
+<p><img src="@source/Algorithm/data_struct/image/image-20221227191400186.png" alt="image-20221227191400186"></p>
+<CodeTabs id="447" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
-<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token doc-comment comment">/**
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre java="" class="language-java"><code><span class="token doc-comment comment">/**
  * 前序遍历(递归), 序列存储在 list 中
  * <span class="token keyword">@param</span> <span class="token parameter">root</span>: 根结点
  * <span class="token keyword">@param</span> <span class="token parameter">list</span>: 存储遍历顺序
@@ -280,31 +276,33 @@
 <p>以中序遍历为例：</p>
 <Tabs id="464" :data='[{"title":"step1"},{"title":"step2"},{"title":"step3"},{"title":"step4"},{"title":"step5"},{"title":"step6"}]'>
 <template #tab0="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20221231175137232.png" alt="image-20221231175137232" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20221231175137232.png" alt="image-20221231175137232"></p>
 </template>
 <template #tab1="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20221231175204123.png" alt="image-20221231175204123" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20221231175204123.png" alt="image-20221231175204123"></p>
 </template>
 <template #tab2="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20221231175322716.png" alt="image-20221231175322716" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20221231175322716.png" alt="image-20221231175322716"></p>
+<p></p>
 </template>
 <template #tab3="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20221231175356852.png" alt="image-20221231175356852" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20221231175356852.png" alt="image-20221231175356852"></p>
+<p></p>
 </template>
 <template #tab4="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20221231175423051.png" alt="image-20221231175423051" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20221231175423051.png" alt="image-20221231175423051"></p>
+<p></p>
 </template>
 <template #tab5="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20221231175443249.png" alt="image-20221231175443249" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20221231175443249.png" alt="image-20221231175443249"></p>
 </template>
 </Tabs>
-<CodeTabs id="496" :data='[{"title":"rust","value":"rust"},{"title":"java","value":"java"},{"title":"c++","value":"c++"}]' tab-id="language">
-
+<CodeTabs id="505" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
-<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token doc-comment comment">/**
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre java="" class="language-java"><code><span class="token doc-comment comment">/**
  * 前序遍历(非递归)
  * <span class="token keyword">@param</span>  <span class="token parameter">root</span> 根结点
  * <span class="token keyword">@return</span> 前序遍历序列
@@ -356,8 +354,7 @@
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <p>后序遍历与前序遍历、中序遍历不同，后序遍历过程中，当一个结点作为 “根结点” 时，它的左子树遍历完之后不能出栈，必须等到右子树遍历完成之后才可以出栈，所以需要对当前结点的右子树是否遍历完成做出判断。</p>
-<CodeTabs id="510" :data='[{"title":"rust","value":"rust"},{"title":"java","value":"java"},{"title":"c++","value":"c++"}]' tab-id="language">
-
+<CodeTabs id="519" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -403,9 +400,8 @@
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <p>上述思路有些麻烦，原二叉树镜像之后的树的前序遍历的翻转正好是原树的后序遍历，如下图：</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230101155358861.png" alt="image-20230101155358861" loading="lazy"></p>
-<CodeTabs id="527" :data='[{"title":"rust","value":"rust"},{"title":"java","value":"java"},{"title":"c++","value":"c++"}]' tab-id="language">
-
+<p><img src="@source/Algorithm/data_struct/image/image-20230101155358861.png" alt="image-20230101155358861"></p>
+<CodeTabs id="536" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -445,15 +441,14 @@
 <p>「线索二叉树 Thread Binary Tree」利用二叉树中未被利用的指针表示某种遍历序列中前驱和后序信息的二叉树。</p>
 <p>一般的链表存储二叉树时只存储结点之间的父子关系，对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 个结点的二叉树来说，每个结点都有左右两个指针，共有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>n</mi></mrow><annotation encoding="application/x-tex">2n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mord mathnormal">n</span></span></span></span> 个，而父子关系 (二叉树中的边) 共有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> ，所以还剩 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 的指针没有表示任何关系 (未被利用)，所以引入线索二叉树的原因是加快查找某种遍历序列下结点的前驱和后继，从而通过某种遍历顺序下结点的前驱和后继直接进行某种顺序的遍历。(若不使用线索二叉树直接存储的话，每次找一个结点的前驱或者后继的时候，都需要重新进行一次遍历，这样效率很低)</p>
 <p>线索二叉树的结点表示信息如下：</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20221227194004998.png" alt="image-20221227194004998" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20221227194004998.png" alt="image-20221227194004998"></p>
 <p>为线索二叉树的结点增加信息如下:</p>
-<CodeTabs id="556" :data='[{"title":"rust","value":"rust"},{"title":"java","value":"java"},{"title":"c++","value":"c++"}]' tab-id="language">
-
+<CodeTabs id="565" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
-<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token comment">// 子结点标志</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre java="" class="language-java"><code><span class="token comment">// 子结点标志</span>
 <span class="token keyword">enum</span> <span class="token class-name">NodeTag</span> <span class="token punctuation">{</span>
   childNode<span class="token punctuation">,</span>   <span class="token comment">// 子结点</span>
   <span class="token doc-comment comment">/**
@@ -483,13 +478,12 @@
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <p>为二叉树增加一个全局前驱结点，用于线索化时处理前驱节点的后继结点</p>
-<CodeTabs id="570" :data='[{"title":"rust","value":"rust"},{"title":"java","value":"java"},{"title":"c++","value":"c++"}]' tab-id="language">
-
+<CodeTabs id="579" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
-<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">class</span> <span class="token class-name">BinaryTree</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span> <span class="token keyword">extends</span> <span class="token class-name">Comparable</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre java="" class="language-java"><code><span class="token keyword">class</span> <span class="token class-name">BinaryTree</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span> <span class="token keyword">extends</span> <span class="token class-name">Comparable</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
   <span class="token class-name">TreeNode</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> pre<span class="token punctuation">;</span>    <span class="token comment">// 全局变量, 存储前驱结点, 以处理其后继结点</span>
   <span class="token keyword">public</span> <span class="token class-name">BinaryTree</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>root <span class="token operator">=</span> root<span class="token punctuation">;</span>
@@ -502,17 +496,16 @@
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <h3 id="中序线索二叉树" tabindex="-1"><a class="header-anchor" href="#中序线索二叉树" aria-hidden="true">#</a> 中序线索二叉树</h3>
-<p><img src="@source/Algorithm/data_struct/image/image-20221227200349823.png" alt="中序线索二叉树" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20221227200349823.png" alt="中序线索二叉树"></p>
 <blockquote>
 <p>构造中序线索二叉树</p>
 </blockquote>
-<CodeTabs id="592" :data='[{"title":"rust","value":"rust"},{"title":"java","value":"java"},{"title":"c++","value":"c++"}]' tab-id="language">
-
+<CodeTabs id="601" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
-<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token doc-comment comment">/**
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre java="" class="language-java"><code><span class="token doc-comment comment">/**
  * 将基本二叉树改为中序线索二叉树
  */</span>
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token class-name">CreatInOrderThread</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -545,9 +538,8 @@
 <blockquote>
 <p>使用构造好的中序线索二叉树对二叉树进行中序遍历、找前驱、找后继</p>
 </blockquote>
-<p><img src="@source/Algorithm/data_struct/image/image-20230114213358254.png" alt="中序线索二叉树找前驱和后继" loading="lazy"></p>
-<CodeTabs id="611" :data='[{"title":"rust","value":"rust"},{"title":"java","value":"java"},{"title":"c++","value":"c++"}]' tab-id="language">
-
+<p><img src="@source/Algorithm/data_struct/image/image-20230114213358254.png" alt="中序线索二叉树找前驱和后继"></p>
+<CodeTabs id="620" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -611,17 +603,16 @@
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <h3 id="前序线索二叉树" tabindex="-1"><a class="header-anchor" href="#前序线索二叉树" aria-hidden="true">#</a> 前序线索二叉树</h3>
-<p><img src="@source/Algorithm/data_struct/image/image-20230114124339403.png" alt="前序线索二叉树" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230114124339403.png" alt="前序线索二叉树"></p>
 <blockquote>
 <p>构造前序线索二叉树</p>
 </blockquote>
-<CodeTabs id="633" :data='[{"title":"rust","value":"rust"},{"title":"java","value":"java"},{"title":"c++","value":"c++"}]' tab-id="language">
-
+<CodeTabs id="642" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
-<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token doc-comment comment">/**
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre java="" class="language-java"><code><span class="token doc-comment comment">/**
  * 将基本二叉树改为前序序线索二叉树
  * <span class="token keyword">@param</span> <span class="token parameter">node</span> 结点
  */</span>
@@ -652,22 +643,21 @@
 <div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
 </CodeTabs>
-<div class="custom-container warning">
-<p class="custom-container-title">注意</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230114125601484.png" alt="注意点" loading="lazy"></p>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230114125601484.png" alt="注意点"></p>
 </div>
 <blockquote>
 <p>使用构造好的前序线索二叉树对二叉树进行前序遍历、找前驱、找后继</p>
 </blockquote>
 <p>在前序线索二叉树中寻找结点的前驱时需要使用到结点的父结点，所以对结点信息进行修改，同时需要在构建二叉树时初始化每个结点的父结点</p>
-<details class="custom-container details"><summary>详情</summary>
-<CodeTabs id="658" :data='[{"title":"rust","value":"rust"},{"title":"java","value":"java"},{"title":"c++","value":"c++"}]' tab-id="language">
-
+<details class="hint-container details"><summary>详情</summary>
+<CodeTabs id="667" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
-<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TreeNode</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span> <span class="token keyword">extends</span> <span class="token class-name">Comparable</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre java="" class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TreeNode</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span> <span class="token keyword">extends</span> <span class="token class-name">Comparable</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
   <span class="token keyword">public</span> <span class="token class-name">T</span> value<span class="token punctuation">;</span>             <span class="token comment">// 结点值</span>
   <span class="token keyword">public</span> <span class="token keyword">int</span> height<span class="token punctuation">;</span>          <span class="token comment">// 结点高度</span>
   <span class="token keyword">public</span> <span class="token class-name">TreeNode</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> left<span class="token punctuation">;</span>    <span class="token comment">// 左子结点</span>
@@ -715,10 +705,9 @@
 <blockquote>
 <p>有了父结点就可以更加方便的寻找结点的前驱</p>
 </blockquote>
-<p><img src="@source/Algorithm/data_struct/image/image-20230114222136272.png" alt="找前序前驱" loading="lazy"></p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230114213603190.png" alt="" loading="lazy"></p>
-<CodeTabs id="681" :data='[{"title":"rust","value":"rust"},{"title":"java","value":"java"},{"title":"c++","value":"c++"}]' tab-id="language">
-
+<p><img src="@source/Algorithm/data_struct/image/image-20230114222136272.png" alt="找前序前驱"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230114213603190.png" alt=""></p>
+<CodeTabs id="690" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -797,8 +786,7 @@
 <blockquote>
 <p>构造后序线索二叉树</p>
 </blockquote>
-<CodeTabs id="700" :data='[{"title":"rust","value":"rust"},{"title":"java","value":"java"},{"title":"c++","value":"c++"}]' tab-id="language">
-
+<CodeTabs id="709" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -839,10 +827,9 @@
 <blockquote>
 <p>使用构造好的后序线索二叉树对二叉树进行后序遍历、找前驱、找后继</p>
 </blockquote>
-<p><img src="@source/Algorithm/data_struct/image/image-20230114222024356.png" alt="找后序后继" loading="lazy"></p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230114222538798.png" alt="image-20230114222538798" loading="lazy"></p>
-<CodeTabs id="722" :data='[{"title":"rust","value":"rust"},{"title":"java","value":"java"},{"title":"c++","value":"c++"}]' tab-id="language">
-
+<p><img src="@source/Algorithm/data_struct/image/image-20230114222024356.png" alt="找后序后继"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230114222538798.png" alt="image-20230114222538798"></p>
+<CodeTabs id="731" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>

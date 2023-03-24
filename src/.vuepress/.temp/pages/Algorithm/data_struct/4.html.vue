@@ -14,13 +14,13 @@
 <ul>
 <li>从根结点到叶子结点的最长的可能的路径不能多于最短的可能路径的两倍长</li>
 </ul>
-<p><img src="@source/Algorithm/data_struct/image/image-20230102212014604.png" alt="image-20230102212014604" loading="lazy"></p>
-<div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230102212014604.png" alt="image-20230102212014604"></p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p>从该性质中也可以看出红黑树避免的原始二叉搜索数据退化为链表，保证了时间复杂度.</p>
 </div>
-<div class="custom-container warning">
-<p class="custom-container-title">注意</p>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
 <p>红黑树同样是一颗二叉搜索树，所以其操作都在是二叉搜索树的操作基础之上，在下面插入和删除操作中的各种情况图均是红黑树的某个子树，而非整个红黑树.</p>
 </div>
 <h2 id="插入操作" tabindex="-1"><a class="header-anchor" href="#插入操作" aria-hidden="true">#</a> 插入操作</h2>
@@ -32,9 +32,9 @@
 <ul>
 <li>直接插入该结点，并将其染为红色.</li>
 </ul>
-<p><img src="@source/Algorithm/data_struct/image/image-20230103105024451.png" alt="image-20230103105024451" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230103105024451.png" alt="image-20230103105024451"></p>
 <p>实例，如下图：</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230102212718013.png" alt="image-20230102212718013" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230102212718013.png" alt="image-20230102212718013"></p>
 <h3 id="_3-待插入结点的父结点为红色" tabindex="-1"><a class="header-anchor" href="#_3-待插入结点的父结点为红色" aria-hidden="true">#</a> 3. 待插入结点的父结点为红色</h3>
 <p>根据待插入结点叔叔结点的不同又可以分为两种情况：</p>
 <ol>
@@ -47,7 +47,7 @@
 <li>将祖父结点变为红色</li>
 <li>以祖父结点作为 “当前结点” 继续进行后续操作 (此时整棵树还不是红黑树)</li>
 </ol>
-<p><img src="@source/Algorithm/data_struct/image/image-20230102230548949.png" alt="image-20230102230548949" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230102230548949.png" alt="image-20230102230548949"></p>
 <ol start="2">
 <li>待插入结点的叔叔结点是黑色</li>
 </ol>
@@ -58,12 +58,12 @@
 <li>将 “祖父结点” 变为红色</li>
 <li>以 “祖父结点” 为原点进行<strong>右旋 (最左侧的情况时)</strong> 或 <strong>左旋 (最右侧的情况时)</strong></li>
 </ol>
-<p><img src="@source/Algorithm/data_struct/image/image-20230102230622831.png" alt="image-20230102230622831" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230102230622831.png" alt="image-20230102230622831"></p>
 <p>实例：一次完整的插入操作：</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230102213729006.png" alt="image-20230102213729006" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230102213729006.png" alt="image-20230102213729006"></p>
 <p>将变色好的子树还原到原树中，发现整颗树现在并不是红黑树，在其中存在需要【变色 + 旋转】的子树结构，根据对应操作对红黑树进行变形，如下图所示：</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230102214213394.png" alt="image-20230102214213394" loading="lazy"></p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230102214738521.png" alt="image-20230102214738521" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230102214213394.png" alt="image-20230102214213394"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230102214738521.png" alt="image-20230102214738521"></p>
 <h2 id="删除操作" tabindex="-1"><a class="header-anchor" href="#删除操作" aria-hidden="true">#</a> 删除操作</h2>
 <p>相较于插入操作，删除操作更多种类，具体分为以下几类：</p>
 <ol>
@@ -90,7 +90,7 @@
 <p>对于删除红色结点，直接删除即可.而黑色结点需要进行相关操作。</p>
 <h3 id="_1-删除黑色结点时-其有一个红色子结点的情况" tabindex="-1"><a class="header-anchor" href="#_1-删除黑色结点时-其有一个红色子结点的情况" aria-hidden="true">#</a> 1.删除黑色结点时，其有一个红色子结点的情况</h3>
 <p>下图为可能出现的各种情况：</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230103143707584.png" alt="image-20230103143707584" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230103143707584.png" alt="image-20230103143707584"></p>
 <p>需要进行的操作：</p>
 <ol>
 <li>断开其与父结点和子结点的连接</li>
@@ -98,15 +98,15 @@
 <li>将其子结点染为黑色</li>
 </ol>
 <p>如下图：</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230103144012377.png" alt="image-20230103144012377" loading="lazy"></p>
-<div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230103144012377.png" alt="image-20230103144012377"></p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p>当删除结点有两个红色子结点时，可以忽略其中一个红色子结点，这样就可以看作有一个红色子结点的情况来进行操作</p>
 </div>
 <h3 id="_2-待删除结点为黑色叶子结点-非-null-值结点" tabindex="-1"><a class="header-anchor" href="#_2-待删除结点为黑色叶子结点-非-null-值结点" aria-hidden="true">#</a> 2.待删除结点为黑色叶子结点(非 <code v-pre>null</code> 值结点)</h3>
 <h4 id="_2-1-待删除结点的兄弟结点为黑色且其兄弟结点有红色子结点" tabindex="-1"><a class="header-anchor" href="#_2-1-待删除结点的兄弟结点为黑色且其兄弟结点有红色子结点" aria-hidden="true">#</a> 2.1.待删除结点的兄弟结点为黑色且其兄弟结点有红色子结点</h4>
 <p>有如下三种情况：</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230103144549167.png" alt="image-20230103144549167" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230103144549167.png" alt="image-20230103144549167"></p>
 <p>红色子结点为兄弟结点的<strong>左子结点</strong>时，操作如下：【<strong>单旋 + 变色</strong>】</p>
 <ol>
 <li>
@@ -120,7 +120,7 @@
 </li>
 </ol>
 <p>如下图：</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230103144709225.png" alt="image-20230103144709225" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230103144709225.png" alt="image-20230103144709225"></p>
 <p>红色子结点为兄弟结点的<strong>右子结点</strong>时，操作如下：【<strong>双旋 + 变色</strong>】</p>
 <ol>
 <li>
@@ -137,21 +137,21 @@
 </li>
 </ol>
 <p>如下图：</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230103144823496.png" alt="image-20230103144823496" loading="lazy"></p>
-<div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230103144823496.png" alt="image-20230103144823496"></p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p>而当兄弟结点有两个红色子结点时，选择上述操作中的一种即可。</p>
 </div>
 <h4 id="_2-2-待删除结点的兄弟结点为黑色且其兄弟结点没有红色子结点" tabindex="-1"><a class="header-anchor" href="#_2-2-待删除结点的兄弟结点为黑色且其兄弟结点没有红色子结点" aria-hidden="true">#</a> 2.2.待删除结点的兄弟结点为黑色且其兄弟结点没有红色子结点</h4>
 <p>有两种情况：</p>
 <p>这两种情况的都需要进行变色，但是也有不同。</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230103145537076.png" alt="image-20230103145537076" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230103145537076.png" alt="image-20230103145537076"></p>
 <p>当待删除结点的父结点为<strong>红色</strong>时，则需如下操作：【变色】</p>
 <ol>
 <li>父结点变为黑色</li>
 <li>兄弟结点变为红色</li>
 </ol>
-<p><img src="@source/Algorithm/data_struct/image/image-20230103145606506.png" alt="image-20230103145606506" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230103145606506.png" alt="image-20230103145606506"></p>
 <p>当待删除结点的父结点为<strong>黑色</strong>是，则需如下操作：【<strong>变色 + 递归</strong>】</p>
 <ol>
 <li>父结点变为黑色</li>
@@ -165,21 +165,21 @@
 <li>再将父结点作为 ”待删除的黑色叶子结点“
 进行操作. (也即递归操作下去直至整颗树满足红黑树的性质即可)</li>
 </ol>
-<div class="custom-container warning">
-<p class="custom-container-title">注意</p>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
 <p>这里的只是对其他结点进行 “删除操作”中的变色，而不直接删除父结点.</p>
 </div>
-<p><img src="@source/Algorithm/data_struct/image/image-20230103145630905.png" alt="image-20230103145630905" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230103145630905.png" alt="image-20230103145630905"></p>
 <h4 id="_3-待删除结点的兄弟结点为红色" tabindex="-1"><a class="header-anchor" href="#_3-待删除结点的兄弟结点为红色" aria-hidden="true">#</a> 3.待删除结点的兄弟结点为红色</h4>
 <p>待删除结点的兄弟结点为红色时有下面几种情况，需要进行一些操作将其转化为【待删除结点的兄弟结点为<strong>黑色</strong>】的情况，然后调用相关的操作即可.</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230103145716017.png" alt="image-20230103145716017" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230103145716017.png" alt="image-20230103145716017"></p>
 <p>所需操作如下：</p>
 <ol>
 <li>以其父结点为原点右旋</li>
 <li>父结点染为红色</li>
 <li>祖父结点染为黑色</li>
 </ol>
-<p><img src="@source/Algorithm/data_struct/image/image-20230103145755914.png" alt="image-20230103145755914" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230103145755914.png" alt="image-20230103145755914"></p>
 <p>经过上述操作之后，就完成了响应转换，再进行【待删除结点的兄弟结点为<strong>黑色</strong>】情况的操作即可.</p>
 </div></template>
 

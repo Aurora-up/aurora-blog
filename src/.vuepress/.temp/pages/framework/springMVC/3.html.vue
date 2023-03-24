@@ -4,7 +4,7 @@
 <h2 id="filter" tabindex="-1"><a class="header-anchor" href="#filter" aria-hidden="true">#</a> Filter</h2>
 <p>【Filter 的定义】</p>
 <p>当你有一堆东西的时候，你只希望选择符合你要求的某一些东西。定义这些要求的工具，就是过滤器。</p>
-<p><img src="@source/framework/springMVC/image/image-20221122215839348.png" alt="image-20221122215839348" loading="lazy"></p>
+<p><img src="@source/framework/springMVC/image/image-20221122215839348.png" alt="image-20221122215839348"></p>
 <p>【Filter 的一些使用实例、场景】</p>
 <ul>
 <li>
@@ -61,14 +61,13 @@
 </blockquote>
 <p>在 Spring boot 中而言，默认使用 Tomcat 作为网络中间层，而 Tomcat 本质也是一个 Servlet 实例。</p>
 <p>在 SpringMVC 的底层也是由 <code v-pre>DispatcherServlet</code> 来控制其整个运行的。而 <code v-pre>Filter</code> 属于 Servlet 容器的原生组件，所以可以得出 Filter 的处理 <code v-pre>request</code> 和 <code v-pre>response</code> 时的介入阶段：</p>
-<p><img src="@source/framework/springMVC/image/image-20221122164141158.png" alt="image-20221122164141158" loading="lazy"></p>
+<p><img src="@source/framework/springMVC/image/image-20221122164141158.png" alt="image-20221122164141158"></p>
 <h3 id="_1-第一种方式" tabindex="-1"><a class="header-anchor" href="#_1-第一种方式" aria-hidden="true">#</a> 1. 第一种方式</h3>
 <ol>
 <li>实现 <code v-pre>Filter</code> 接口，</li>
 <li>使用 java 配置方式配置。</li>
 </ol>
 <CodeTabs id="123" :data='[{"title":"自定义的 Filter"},{"title":"Filter 配置"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token annotation punctuation">@Slf4j</span>
 <span class="token annotation punctuation">@Component</span>
@@ -125,12 +124,12 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
-<div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p><code v-pre>Filter</code> 是底层 Servlet 中的组件，其生命周期与 Servlet 容器相关，但是要想在 Spring 中使用，那么就要将其作为 Bean 交给 Spring 管理，</p>
 </div>
 <p>日志输出：</p>
-<p><img src="@source/framework/springMVC/image/image-20221122174112638.png" alt="image-20221122174112638" loading="lazy"></p>
+<p><img src="@source/framework/springMVC/image/image-20221122174112638.png" alt="image-20221122174112638"></p>
 <h3 id="_2-第二种方式" tabindex="-1"><a class="header-anchor" href="#_2-第二种方式" aria-hidden="true">#</a> 2.第二种方式</h3>
 <p>在第一种方式中使用 java 配置来配置 Filter 的相关配置，除了这种方式，还有使用注解的形式：</p>
 <ul>
@@ -141,8 +140,8 @@
 
    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p>这样定义 <code v-pre>Filter</code> 之后，配置和实现都有了，但是其并不能被 Spring 发现，可以将 <a href="https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/web/servlet/ServletComponentScan.html" target="_blank" rel="noopener noreferrer"><code v-pre>@ServletComponentScan</code><ExternalLinkIcon/></a>添加到启动类上。</p>
 <p>在 SpringBootApplication 上使用 <code v-pre>@ServletComponentScan</code> 注解后，Servlet（控制器）、Filter（过滤器）、Listener（监听器）可以直接通过 <a href="https://docs.oracle.com/javaee/7/api/javax/servlet/annotation/WebFilter.html" target="_blank" rel="noopener noreferrer"><code v-pre>@WebServlet</code><ExternalLinkIcon/></a>、<a href="https://docs.oracle.com/javaee/7/api/javax/servlet/annotation/WebFilter.html" target="_blank" rel="noopener noreferrer"><code v-pre>@WebFilter</code><ExternalLinkIcon/></a>、<a href="https://docs.oracle.com/javaee/7/api/javax/servlet/annotation/WebListener.html" target="_blank" rel="noopener noreferrer"><code v-pre>@WebListener</code><ExternalLinkIcon/></a> 注解自动注册到Spring容器中，无需其他代码。</p>
 </div>
@@ -150,7 +149,7 @@
 <p>具体实现功能时，一个过滤器可能不够，需要使用多个过滤器，那么就需要为这多个过滤器设置执行顺序问题。</p>
 <h3 id="_1-第一种方式-1" tabindex="-1"><a class="header-anchor" href="#_1-第一种方式-1" aria-hidden="true">#</a> 1.第一种方式</h3>
 <p>使用 java 配置，<code v-pre>setOrder(int order)</code> 同一请求路径中，对应过滤器的设置的 order 越小优先级越高</p>
-<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token annotation punctuation">@Configuration</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre java="" class="language-java"><code><span class="token annotation punctuation">@Configuration</span>
 <span class="token annotation punctuation">@Slf4j</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> webFilterConfig <span class="token punctuation">{</span>
   <span class="token annotation punctuation">@Autowired</span>
@@ -180,14 +179,13 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code v-pre>LoginFilter2</code> 的 order 更小，所以先执行：</p>
-<p><img src="@source/framework/springMVC/image/image-20221122181822288.png" alt="image-20221122181822288" loading="lazy"></p>
+<p><img src="@source/framework/springMVC/image/image-20221122181822288.png" alt="image-20221122181822288"></p>
 <h3 id="_2-第二种方式-1" tabindex="-1"><a class="header-anchor" href="#_2-第二种方式-1" aria-hidden="true">#</a> 2.第二种方式</h3>
 <p>可以使用 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/core/annotation/Order.html" target="_blank" rel="noopener noreferrer"><code v-pre>@Order</code><ExternalLinkIcon/></a> 注解来控制 <code v-pre>Filter Bean</code> 的<strong>执行顺序</strong>，所以前提是将 <code v-pre>Filter</code> 的添加到 IOC 容器中，同样也是设置的值越小优先级就越高。</p>
 <p>但是这种方式并不推荐，因为有可能我们需要多条 <code v-pre>Filter chain</code> ，那么使用这个去管理就不太容易。</p>
 <CodeTabs id="192" :data='[{"title":"LoginFilter2"},{"title":"LoginFilter"}]'>
-
 <template #tab0="{ title, value, isActive }">
-<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token annotation punctuation">@Order</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre java="" class="language-java"><code><span class="token annotation punctuation">@Order</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
 <span class="token annotation punctuation">@Component</span>
 <span class="token annotation punctuation">@WebFilter</span><span class="token punctuation">(</span>filterName <span class="token operator">=</span> <span class="token string">"LoginFilter2"</span><span class="token punctuation">,</span> urlPatterns <span class="token operator">=</span> <span class="token string">"/user/all-users"</span><span class="token punctuation">)</span>
 <span class="token annotation punctuation">@Slf4j</span>
@@ -213,7 +211,7 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="highlight-lines"><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
-<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token annotation punctuation">@Slf4j</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre java="" class="language-java"><code><span class="token annotation punctuation">@Slf4j</span>
 <span class="token annotation punctuation">@Order</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
 <span class="token annotation punctuation">@Component</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LoginFilter</span> <span class="token keyword">implements</span> <span class="token class-name">Filter</span> <span class="token punctuation">{</span>
@@ -245,14 +243,14 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="highlight-lines"><br><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
-<p><img src="@source/framework/springMVC/image/image-20221122181822288.png" alt="image-20221122181822288" loading="lazy"></p>
+<p><img src="@source/framework/springMVC/image/image-20221122181822288.png" alt="image-20221122181822288"></p>
 <h2 id="interceptor" tabindex="-1"><a class="header-anchor" href="#interceptor" aria-hidden="true">#</a> Interceptor</h2>
 <p>【拦截器的定义】</p>
 <p>在一个流程正在进行的时候，你希望干预它的进展，甚至终止它进行，这是拦截器做的事情。</p>
-<p><img src="@source/framework/springMVC/image/image-20221122215351054.png" alt="image-20221122215351054" loading="lazy"></p>
+<p><img src="@source/framework/springMVC/image/image-20221122215351054.png" alt="image-20221122215351054"></p>
 <p>【拦截器的使用场景】</p>
 <p>SpringMVC 中有对应的拦截器接口 <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/servlet/HandlerInterceptor.html" target="_blank" rel="noopener noreferrer">HandlerInterceptor 接口<ExternalLinkIcon/></a> ，可通过实现该接口定制自己的拦截器。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">HandlerInterceptor</span> <span class="token punctuation">{</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre java="" class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">HandlerInterceptor</span> <span class="token punctuation">{</span>
   <span class="token keyword">default</span> <span class="token keyword">boolean</span> <span class="token function">preHandle</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> request<span class="token punctuation">,</span> 
                             <span class="token class-name">HttpServletResponse</span> response<span class="token punctuation">,</span> <span class="token class-name">Object</span> handler<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Exception</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
@@ -269,9 +267,9 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="highlight-lines"><br><div class="highlight-line">&nbsp;</div><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>一个拦截器的执行过程：</p>
-<p><img src="@source/framework/springMVC/image/image-20221122195454869.png" alt="image-20221122195454869" loading="lazy"></p>
-<div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+<p><img src="@source/framework/springMVC/image/image-20221122195454869.png" alt="image-20221122195454869"></p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <ul>
 <li><code v-pre>preHandle</code> 在执行对应的 <code v-pre>Contrlloer</code> 之前；</li>
 <li><code v-pre>postHandle</code> 在执行对应的 <code v-pre>Controller</code> 之后；</li>
@@ -362,16 +360,15 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </Tabs>
-<p><img src="@source/framework/springMVC/image/image-20221122204043542.png" alt="image-20221122204043542" loading="lazy"></p>
+<p><img src="@source/framework/springMVC/image/image-20221122204043542.png" alt="image-20221122204043542"></p>
 <h3 id="多个-interperctor-执行顺序问题。" tabindex="-1"><a class="header-anchor" href="#多个-interperctor-执行顺序问题。" aria-hidden="true">#</a> 多个 Interperctor 执行顺序问题。</h3>
 <ul>
 <li>默认为配置文件中的配置顺序</li>
 <li>使用 <code v-pre>order()</code> 方法，越小优先级越高</li>
 </ul>
 <CodeTabs id="293" :data='[{"title":"默认配置"},{"title":"order()"}]'>
-
 <template #tab0="{ title, value, isActive }">
-<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token comment">//  先执行 loginInterceptor ,  再执行 authorityInterceptor </span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre java="" class="language-java"><code><span class="token comment">//  先执行 loginInterceptor ,  再执行 authorityInterceptor </span>
 <span class="token annotation punctuation">@Configuration</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> adminWebConfig <span class="token keyword">implements</span> <span class="token class-name">WebMvcConfigurer</span> <span class="token punctuation">{</span>
 
@@ -391,7 +388,7 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><br><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
-<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token comment">//  先执行 authorityInterceptor  , 再执行loginInterceptor</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre java="" class="language-java"><code><span class="token comment">//  先执行 authorityInterceptor  , 再执行loginInterceptor</span>
 <span class="token annotation punctuation">@Configuration</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> adminWebConfig <span class="token keyword">implements</span> <span class="token class-name">WebMvcConfigurer</span> <span class="token punctuation">{</span>
 
@@ -411,7 +408,7 @@
 </code></pre><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <p>过滤器，拦截器，dispatch，Controller  整个大致的执行流程：</p>
-<p><img src="@source/framework/springMVC/image/image-20221122212812819.png" alt="image-20221122212812819" loading="lazy"></p>
+<p><img src="@source/framework/springMVC/image/image-20221122212812819.png" alt="image-20221122212812819"></p>
 </div></template>
 
 

@@ -1,18 +1,22 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import { zhNavbar } from "./navbar/index.js";
 import { zhSidebar } from "./sidebar/index.js";
+import { tr } from "element-plus/es/locale/index.js";
+import { getDirname, path } from "@vuepress/utils";
+
+const __dirname = getDirname(import.meta.url);
 
 export default hopeTheme({
 
-  hostname: 'aurora-up.github.io',
+  hostname: 'https://aurora-up.github.io',
 
   author: {
     name: "Mr.Hdd",
     url: "https://aurora-up.github.io/aurora-blog/",
+    email: "2723787996@qq.com"
   },
 
   copyright: "@Copyright | Author: hdd",
-
   logo: "/logo.jpg",
 
   // 在线编辑路径
@@ -30,22 +34,22 @@ export default hopeTheme({
       GitHub: "https://github.com/Aurora-up",
     },
   },
+  iconAssets: [
+    "//at.alicdn.com/t/c/font_3740996_9d1bjk1wpxi.css", 
+   ],
+
 
   locales: {
     "/": {
-      // navbar
       navbar: zhNavbar,
-
-      // sidebar
       sidebar: zhSidebar,
-
-      footer: "hdd❤hxy",
-
+      footer: "hdd",
       displayFooter: true,
-
       blog: {
+        name: "Aurora",
         roundAvatar:true,
         description: "努力奔跑的小孩",
+        timeline: "美好的事情即将发生",
         intro: "/intro.html",
       },
 
@@ -73,26 +77,24 @@ export default hopeTheme({
 
   // 全屏按钮
   fullscreen: true,
+  backToTop: true,
 
 
   plugins: {
-    blog: {
-      autoExcerpt: true,
-    },
+    blog: true,
 
-    // 评论配置
-    // The following config is for demo ONLY, if you need comment feature, please generate and use your own config, see comment plugin documentation for details.
-    // To avoid disturbing the theme developer and consuming his resources, please DO NOT use the following config directly in your production environment!!!!!
+    //  评论插件
     comment: {
-      /**
-       * Using Giscus
-       */
+      // 插件选项
       provider: "Giscus",
+      comment: true,
+      // 个人评论仓库：https://github.com/lindong-h/blog-comment
       repo: "Aurora-up/blog-comment",
       repoId: "R_kgDOIWQMIw",
       category: "General",
       categoryId : "DIC_kwDOIWQMI84CSTX3",
     },
+
 
     // markdown 增强
     mdEnhance: {
@@ -105,9 +107,6 @@ export default hopeTheme({
       echarts: true,
       flowchart: true,
       gfm: true,
-      imageLazyload: true,
-      imageTitle: true,
-      imageSize: true,
       include: true,
       katex: true,
       mark: true,
@@ -134,17 +133,34 @@ export default hopeTheme({
       sub: true,
       sup: true,
       tabs: true,
-      vpre: true,
+      vPre: true,
       vuePlayground: true,
+    },
+
+    // 图片预览插件
+    photoSwipe : true,
+
+    // pwa 插件
+    pwa:{
+      cachePic: true,
+      update: "available",
+      themeColor: "#121212",
+      cacheHTML: true,
+      appendBase: true,
+      maxPicSize: 6096,
     },
 
     //  版权信息
     copyright: {
-      hostname: "aurora-up.github.io",
+      // hostname: "aurora-up.github.io",
       author: " hdd ",
       license: " MIT ",
       triggerWords: 50,
       global: true,
+    },
+
+    components:{
+      components: ["PDF", "FontIcon",],
     },
   },
 },

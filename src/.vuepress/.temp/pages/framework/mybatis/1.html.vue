@@ -37,7 +37,6 @@
 <li>引入映射文件</li>
 </ul>
 <CodeTabs id="50" :data='[{"title":"xml"},{"title":"properties"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token comment">&lt;!-- mybatis-config.xml  --></span>
 <span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8" ?></span>
@@ -75,8 +74,8 @@
 <span class="token key attr-name">jdbc.password</span><span class="token punctuation">=</span><span class="token value attr-value">xxxxxx</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
-<div class="custom-container info">
-<p class="custom-container-title">url 相关</p>
+<div class="hint-container info">
+<p class="hint-container-title">url 相关</p>
 <ul>
 <li><code v-pre>serverTimezone=GMT%2B8</code> ：是配置时区</li>
 <li><code v-pre>zeroDateTimeBehavior=convertToNull</code> ：是防止数据库中出现 <code v-pre>00:00:00</code> 的时间样式导致的无法解析</li>
@@ -99,9 +98,8 @@
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="逆向工程" tabindex="-1"><a class="header-anchor" href="#逆向工程" aria-hidden="true">#</a> 逆向工程</h3>
 <p>直接使用 mybatis-plus 的生成器更加快捷。<a href="https://baomidou.com/" target="_blank" rel="noopener noreferrer">mybatis-plus<ExternalLinkIcon/></a></p>
 <p>下面是旧生成器的一个代码模板，官方又出了<a href="https://baomidou.com/pages/779a6e/" target="_blank" rel="noopener noreferrer">代码生成器（新）<ExternalLinkIcon/></a>，更加强大。根据需要进行选择。</p>
-<p><img src="@source/framework/mybatis/image/image-20221103215916326.png" alt="image-20221103215916326" loading="lazy"></p>
+<p><img src="@source/framework/mybatis/image/image-20221103215916326.png" alt="image-20221103215916326"></p>
 <CodeTabs id="100" :data='[{"title":"java"},{"title":"xml"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>generate</span><span class="token punctuation">;</span>
 

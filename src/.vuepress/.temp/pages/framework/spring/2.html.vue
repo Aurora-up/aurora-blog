@@ -3,8 +3,8 @@
 <h2 id="spring-ioc" tabindex="-1"><a class="header-anchor" href="#spring-ioc" aria-hidden="true">#</a> Spring IOC</h2>
 <p>​		IOC  (Inversion of Control) 控制反转，是 Spring 的核心思想之一；其可以简单理解为将你设计好的对象交给容器集中管理，而不是传统意义上的在你的对象内部直接控制。在 Spring 中这个容器就称为 【IOC 容器】.</p>
 <p>其本质区别如下图：</p>
-<p><img src="@source/framework/spring/image/image-20221116102111136.png" alt="image-20221116102111136" loading="lazy"></p>
-<p><img src="@source/framework/spring/image/image-20221116102141216.png" alt="image-20221116102141216" loading="lazy"></p>
+<p><img src="@source/framework/spring/image/image-20221116102111136.png" alt="image-20221116102111136"></p>
+<p><img src="@source/framework/spring/image/image-20221116102141216.png" alt="image-20221116102141216"></p>
 <h2 id="向-ioc-容器中配置-bean" tabindex="-1"><a class="header-anchor" href="#向-ioc-容器中配置-bean" aria-hidden="true">#</a> 向 IOC 容器中配置 bean</h2>
 <h3 id="xml-配置" tabindex="-1"><a class="header-anchor" href="#xml-配置" aria-hidden="true">#</a> XML 配置</h3>
 <p>XML 配置较为繁琐，大多用于不支持注解的第三方库。</p>
@@ -36,7 +36,7 @@
 <p>设置<code v-pre>ComponentScan</code>的<code v-pre>basePackage</code></p>
 </blockquote>
 <p>例如需要扫描 <code v-pre>com</code> 包中的内容：</p>
-<p><img src="@source/framework/spring/image/image-20221118112135759.png" alt="image-20221118112135759" loading="lazy"></p>
+<p><img src="@source/framework/spring/image/image-20221118112135759.png" alt="image-20221118112135759"></p>
 <Tabs id="66" :data='[{"title":"XML"},{"title":"注解"},{"title":"java"}]'>
 <template #tab0="{ title, value, isActive }">
 <div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token comment">&lt;!-- 用于 XML 配置文件中 --></span>
@@ -56,6 +56,7 @@
 </li>
 </ul>
 <p>可根据这两者属性进行自定义。来避免一些重复扫描的问题。</p>
+<p></p>
 </template>
 <template #tab1="{ title, value, isActive }">
 <p><a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/ComponentScan.html" target="_blank" rel="noopener noreferrer"><code v-pre>@ComponentScan</code><ExternalLinkIcon/></a></p>
@@ -67,8 +68,8 @@
 <span class="token keyword">new</span> <span class="token class-name">AnnotationConfigApplicationContext</span><span class="token punctuation">(</span><span class="token string">"com"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </Tabs>
-<div class="custom-container warning">
-<p class="custom-container-title">注意</p>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
 <ul>
 <li>扫描包的范围并不是越大越好，过大会导致扫描过慢，根据不同情形下的需要扫描指定目录即可。</li>
 <li><code v-pre>Springboot</code> 中默认使用启动类所在的目录作为扫描的目录。</li>
@@ -84,7 +85,7 @@
 </ol>
 <p>这四个注解的类。</p>
 <p>​		其中 <code v-pre>@Component</code> 是其他三个注解的别名，所以这四个注解的<strong>功能都一样</strong>，都是将当前类作为 <code v-pre>bean</code> 添加到 IOC 容器中；只有语义上的差别。</p>
-<Tabs id="146" :data='[{"title":"@Component"},{"title":"@Controller"},{"title":"@Service"},{"title":"@Repository"}]'>
+<Tabs id="149" :data='[{"title":"@Component"},{"title":"@Controller"},{"title":"@Service"},{"title":"@Repository"}]'>
 <template #tab0="{ title, value, isActive }">
 <div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token annotation punctuation">@Target</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token class-name">ElementType</span><span class="token punctuation">.</span><span class="token constant">TYPE</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token annotation punctuation">@Retention</span><span class="token punctuation">(</span><span class="token class-name">RetentionPolicy</span><span class="token punctuation">.</span><span class="token constant">RUNTIME</span><span class="token punctuation">)</span>
@@ -131,8 +132,8 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </Tabs>
-<div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <ul>
 <li>
 <p>使用上面注解之后，默认使用 <strong>类名首字母小写的驼峰形式</strong> 作为 <code v-pre>bean</code> 的 <code v-pre>id</code> 属性，</p>
@@ -156,7 +157,7 @@
 <ul>
 <li>在 XML 文件中配置 Setter 注入</li>
 </ul>
-<Tabs id="202" :data='[{"title":"XML"},{"title":"java"}]'>
+<Tabs id="205" :data='[{"title":"XML"},{"title":"java"}]'>
 <template #tab0="{ title, value, isActive }">
 <div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>userService<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.service.UserServiceImpl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>userDao<span class="token punctuation">"</span></span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>userDao<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
@@ -211,7 +212,7 @@
 <ul>
 <li>在 XML 文件中配置 Constructor 注入</li>
 </ul>
-<Tabs id="234" :data='[{"title":"XML"},{"title":"java"}]'>
+<Tabs id="237" :data='[{"title":"XML"},{"title":"java"}]'>
 <template #tab0="{ title, value, isActive }">
 <div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>userService<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.service.UserServiceImpl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>constructor-arg</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>userDao<span class="token punctuation">"</span></span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>userDao<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
@@ -272,8 +273,8 @@
     <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>userDao<span class="token punctuation">.</span><span class="token function">findUserList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="custom-container warning">
-<p class="custom-container-title">注意</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container warning">
+<p class="hint-container-title">注意</p>
 <ul>
 <li>当使用 <code v-pre>@Autowired</code> 注入时，默认使用 <code v-pre>byType</code> 选择对应的 <code v-pre>bean</code> 时，如果有多个 <code v-pre>bean</code> 的对应的类型是一样的，那么 <code v-pre>byType</code> 就是失效，此时就会自动转为使用 <code v-pre>byName</code> 进行选择。</li>
 <li>当上述情况无法通过 <code v-pre>byName</code> 选择时，并且此时 IOC 容器中有多个类型匹配的 <code v-pre>bean</code> ，那么此时可使用 <code v-pre>@Qualifier</code> 注解来指定 <code v-pre>bean</code> 的 <code v-pre>id</code> 即可。</li>

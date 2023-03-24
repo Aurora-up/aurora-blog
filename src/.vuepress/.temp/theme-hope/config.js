@@ -1,29 +1,13 @@
 import { defineClientConfig } from "@vuepress/client";
 
-import CommonWrapper from "@theme-hope/components/CommonWrapper.js";
-import HomePage from "@theme-hope/components/HomePage.js";
-import NormalPage from "@theme-hope/components/NormalPage.js";
-import Navbar from "@theme-hope/modules/navbar/components/Navbar.js";
-import Sidebar from "@theme-hope/modules/sidebar/components/Sidebar.js";
-import Layout from "/Users/aurora/data/笔记/aurora-blog/node_modules/vuepress-theme-hope/lib/client/layouts/Layout.js";
-import NotFound from "/Users/aurora/data/笔记/aurora-blog/node_modules/vuepress-theme-hope/lib/client/layouts/NotFound.js";
+import { HopeIcon, Layout, NotFound, useScrollPromise, injectDarkmode, setupDarkmode, setupSidebarItems } from "/Users/aurora/data/笔记/aurora-blog/node_modules/vuepress-theme-hope/lib/client/export.js";
 
-import { useScrollPromise } from "@theme-hope/composables/index.js";
-import { injectDarkMode, setupDarkMode } from "@theme-hope/modules/outlook/composables/index.js";
-import { setupSidebarItems } from "@theme-hope/modules/sidebar/composables/index.js";
+import { BlogCategory, BlogHome, BlogType, BloggerInfo, Timeline, setupBlog } from "/Users/aurora/data/笔记/aurora-blog/node_modules/vuepress-theme-hope/lib/client/modules/blog/export.js";
+import "/Users/aurora/data/笔记/aurora-blog/node_modules/vuepress-theme-hope/lib/client/modules/blog/styles/layout.scss";
+import { GlobalEncrypt, LocalEncrypt } from "/Users/aurora/data/笔记/aurora-blog/node_modules/vuepress-theme-hope/lib/client/modules/encrypt/export.js";
+import Slide from "/Users/aurora/data/笔记/aurora-blog/node_modules/vuepress-plugin-md-enhance/lib/client/SlidePage.js";
 
 import "/Users/aurora/data/笔记/aurora-blog/node_modules/vuepress-theme-hope/lib/client/styles/index.scss";
-
-import BloggerInfo from "@theme-hope/modules/blog/components/BloggerInfo.js";
-import BlogHome from "@theme-hope/modules/blog/components/BlogHome.js";
-import BlogPage from "@theme-hope/modules/blog/components/BlogPage.js";
-import { setupBlog } from "@theme-hope/modules/blog/composables/index.js";
-import "/Users/aurora/data/笔记/aurora-blog/node_modules/vuepress-theme-hope/lib/client/modules/blog/styles/layout.scss";
-import GloablEncrypt from "@theme-hope/modules/encrypt/components/GloablEncrypt.js";
-import LocalEncrypt from "@theme-hope/modules/encrypt/components/LocalEncrypt.js";
-import Slide from "/Users/aurora/data/笔记/aurora-blog/node_modules/vuepress-theme-hope/lib/client/layouts/Slide.js";
-import Blog from "/Users/aurora/data/笔记/aurora-blog/node_modules/vuepress-theme-hope/lib/client/modules/blog/layouts/Blog.js";
-
 
 export default defineClientConfig({
   enhance: ({ app, router }) => {
@@ -36,33 +20,27 @@ export default defineClientConfig({
     };
 
     // inject global properties
-    injectDarkMode(app);
+    injectDarkmode(app);
 
-    // register to inject styles
-    app.component("CommonWrapper", CommonWrapper);
-    app.component("HomePage", HomePage);
-    app.component("NormalPage", NormalPage);
-    app.component("Navbar", Navbar);
-    app.component("Sidebar", Sidebar);
+    // render icon for auto-catalog
+    app.component("HopeIcon", HopeIcon);
 
     app.component("BloggerInfo", BloggerInfo);
-    app.component("BlogHome", BlogHome);
-    app.component("BlogPage", BlogPage);
-    app.component("GloablEncrypt", GloablEncrypt);
+    app.component("GlobalEncrypt", GlobalEncrypt);
     app.component("LocalEncrypt", LocalEncrypt);
-    
   },
   setup: () => {
-    setupDarkMode();
+    setupDarkmode();
     setupSidebarItems();
     setupBlog();
-    
   },
   layouts: {
     Layout,
     NotFound,
+    BlogCategory,
+    BlogHome,
+    BlogType,
+    Timeline,
     Slide,
-    Blog,
-    
   }
 });

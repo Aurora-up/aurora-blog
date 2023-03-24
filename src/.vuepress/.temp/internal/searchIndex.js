@@ -160,6 +160,64 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "框架相关",
+    "headers": [
+      {
+        "level": 2,
+        "title": "java - Spring 系列框架",
+        "slug": "java-spring-系列框架",
+        "link": "#java-spring-系列框架",
+        "children": [
+          {
+            "level": 3,
+            "title": "spring",
+            "slug": "spring",
+            "link": "#spring",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "springboot",
+            "slug": "springboot",
+            "link": "#springboot",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "springMVC",
+            "slug": "springmvc",
+            "link": "#springmvc",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "springWebFlux",
+            "slug": "springwebflux",
+            "link": "#springwebflux",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "springcloud",
+            "slug": "springcloud",
+            "link": "#springcloud",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "mybatis",
+            "slug": "mybatis",
+            "link": "#mybatis",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/framework/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "二维数组声明时,第一维不能省略的原因",
     "headers": [],
     "path": "/demo/1.html",
@@ -236,64 +294,6 @@ export const searchIndex = [
       }
     ],
     "path": "/demo/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "框架相关",
-    "headers": [
-      {
-        "level": 2,
-        "title": "java - Spring 系列框架",
-        "slug": "java-spring-系列框架",
-        "link": "#java-spring-系列框架",
-        "children": [
-          {
-            "level": 3,
-            "title": "spring",
-            "slug": "spring",
-            "link": "#spring",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "springboot",
-            "slug": "springboot",
-            "link": "#springboot",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "springMVC",
-            "slug": "springmvc",
-            "link": "#springmvc",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "springWebFlux",
-            "slug": "springwebflux",
-            "link": "#springwebflux",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "springcloud",
-            "slug": "springcloud",
-            "link": "#springcloud",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "mybatis",
-            "slug": "mybatis",
-            "link": "#mybatis",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/framework/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -436,6 +436,13 @@ export const searchIndex = [
             "title": "2.统一实现",
             "slug": "_2-统一实现",
             "link": "#_2-统一实现",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "l 和 r 的选择",
+            "slug": "l-和-r-的选择",
+            "link": "#l-和-r-的选择",
             "children": []
           }
         ]
@@ -1430,6 +1437,13 @@ export const searchIndex = [
             "slug": "_103-二叉树的锯齿形层序遍历",
             "link": "#_103-二叉树的锯齿形层序遍历",
             "children": []
+          },
+          {
+            "level": 3,
+            "title": "310. 最小高度树",
+            "slug": "_310-最小高度树",
+            "link": "#_310-最小高度树",
+            "children": []
           }
         ]
       }
@@ -1778,6 +1792,20 @@ export const searchIndex = [
       }
     ],
     "path": "/code/c_cpp/1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "引用",
+    "headers": [],
+    "path": "/code/c_cpp/2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "智能指针",
+    "headers": [],
+    "path": "/code/c_cpp/3.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2323,6 +2351,13 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "springcloud",
+    "headers": [],
+    "path": "/framework/springcloud/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "SpringBoot小案例 - 文件上传",
     "headers": [],
     "path": "/framework/springboot/1.html",
@@ -2365,13 +2400,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "springcloud",
-    "headers": [],
-    "path": "/framework/springcloud/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Docker",
     "headers": [],
     "path": "/otherTechniques/docker/",
@@ -2410,20 +2438,6 @@ export const searchIndex = [
     "title": "文章",
     "headers": [],
     "path": "/article/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "加密",
-    "headers": [],
-    "path": "/encrypted/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "幻灯片",
-    "headers": [],
-    "path": "/slide/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2484,9 +2498,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "springboot 分类",
+    "title": "framework 分类",
     "headers": [],
-    "path": "/category/springboot/",
+    "path": "/category/framework/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2498,9 +2512,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "网络协议 分类",
+    "title": "springboot 分类",
     "headers": [],
-    "path": "/category/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/",
+    "path": "/category/springboot/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2512,9 +2526,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "随笔 分类",
+    "title": "网络协议 分类",
     "headers": [],
-    "path": "/category/%E9%9A%8F%E7%AC%94/",
+    "path": "/category/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2526,9 +2540,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "framework 分类",
+    "title": "随笔 分类",
     "headers": [],
-    "path": "/category/framework/",
+    "path": "/category/%E9%9A%8F%E7%AC%94/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2710,7 +2724,7 @@ export const searchIndex = [
   {
     "title": "C、C++ 分类",
     "headers": [],
-    "path": "/category/c%E3%80%81c++/",
+    "path": "/category/c%E3%80%81c__/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2899,7 +2913,7 @@ export const searchIndex = [
   {
     "title": "C、C++ 指针 标签",
     "headers": [],
-    "path": "/tag/c%E3%80%81c++-%E6%8C%87%E9%92%88/",
+    "path": "/tag/c%E3%80%81c__-%E6%8C%87%E9%92%88/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2911,9 +2925,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "mybatis 标签",
+    "title": "C、C++ 引用 标签",
     "headers": [],
-    "path": "/tag/mybatis/",
+    "path": "/tag/c%E3%80%81c__-%E5%BC%95%E7%94%A8/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2921,6 +2935,20 @@ export const searchIndex = [
     "title": "Kubernetes 分类",
     "headers": [],
     "path": "/category/kubernetes/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "C、C++ 智能指针 标签",
+    "headers": [],
+    "path": "/tag/c%E3%80%81c__-%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "mybatis 标签",
+    "headers": [],
+    "path": "/tag/mybatis/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2946,3 +2974,16 @@ export const searchIndex = [
     "extraFields": []
   }
 ]
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
+    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ searchIndex }) => {
+    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
+  })
+}

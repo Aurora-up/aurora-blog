@@ -1,6 +1,6 @@
 <template><div><p>mybatis 的基本使用</p>
 <!-- more -->
-<p><img src="@source/framework/mybatis/image/mybatis-logo.png" alt="mybatis" loading="lazy"></p>
+<p><img src="@source/framework/mybatis/image/mybatis-logo.png" alt="mybatis"></p>
 <p>【官网】<a href="https://mybatis.org/mybatis-3/zh/index.html" target="_blank" rel="noopener noreferrer">mybatis – MyBatis 3 | 官网<ExternalLinkIcon/></a></p>
 <p>【github】 <a href="https://github.com/mybatis/mybatis-3" target="_blank" rel="noopener noreferrer">mybatis/mybatis-3: MyBatis SQL mapper framework for Java (github.com)<ExternalLinkIcon/></a></p>
 <p>ORM（Object Relationship Mapping）对象关系映射。</p>
@@ -14,9 +14,8 @@
 <blockquote>
 <p>简单实例： 查询所有用户的信息:</p>
 </blockquote>
-<p><img src="@source/framework/mybatis/image/image-20221102170446881.png" alt="image-20221102170446881" loading="lazy"></p>
+<p><img src="@source/framework/mybatis/image/image-20221102170446881.png" alt="image-20221102170446881"></p>
 <CodeTabs id="47" :data='[{"title":"java接口"},{"title":"XML"},{"title":"java实体类"},{"title":"SQL"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserMapper</span> <span class="token punctuation">{</span>
    <span class="token doc-comment comment">/**
@@ -74,8 +73,8 @@
 <span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
-<div class="custom-container info">
-<p class="custom-container-title">映射关系</p>
+<div class="hint-container info">
+<p class="hint-container-title">映射关系</p>
 <ul>
 <li>接口 <code v-pre>getAllUser</code> 和 <code v-pre>&lt;select id=&quot;getAllUser&quot; resultType=&quot;com.pojo.User&quot;&gt;&lt;/select&gt;</code> 相映射</li>
 <li>实体类 <code v-pre>User</code> 和 <code v-pre>smbms_user</code> 表相映射。</li>
@@ -99,8 +98,8 @@
 <li><code v-pre>#{argument}</code>：本质就是占位符赋值</li>
 <li><code v-pre>${argument}</code>：本质就是字符串拼接</li>
 </ul>
-<div class="custom-container info">
-<p class="custom-container-title">注意</p>
+<div class="hint-container info">
+<p class="hint-container-title">注意</p>
 <ul>
 <li><code v-pre>${}</code> 使用字符串拼接的方式拼接 sql，若为字符串类型或日期类型的字段进行赋值时，需要<strong>手动加单引号</strong>；</li>
 <li><code v-pre>#{}</code> 使用占位符赋值的方式拼接 sql，此时为字符串类型或日期类型的字段进行赋值时，可以<strong>自动添加单引号</strong>。</li>
@@ -109,7 +108,6 @@
 <h3 id="单个参数" tabindex="-1"><a class="header-anchor" href="#单个参数" aria-hidden="true">#</a> 单个参数</h3>
 <p>如果在 mapper 接口中只有一个参数，那么在 <code v-pre>xml</code> 可用【<strong>任意名称变量</strong>】接受这个参数来赋值。</p>
 <CodeTabs id="161" :data='[{"title":"java"},{"title":"xml"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserMapper</span> <span class="token punctuation">{</span>
   <span class="token doc-comment comment">/**
@@ -140,14 +138,13 @@
 <li>以 <code v-pre>param1,param2,...</code>为键，以参数为值；</li>
 </ul>
 <p>例如通过 <code v-pre>#{arg0}</code> 或者 <code v-pre>#{param1}</code> 来获取第一个参数的值。</p>
-<div class="custom-container warning">
-<p class="custom-container-title">注意</p>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
 <p>例如：若有两个参数，<strong>不要</strong>以这样的组合获取：<code v-pre>#{arg0}, #{param2}</code></p>
 </div>
 <h3 id="使用-param-注解标识参数" tabindex="-1"><a class="header-anchor" href="#使用-param-注解标识参数" aria-hidden="true">#</a> 使用 <code v-pre>@Param()</code> 注解标识参数</h3>
 <p>在 mapper 接口中为每个参数标注 <code v-pre>@Param(&quot;参数名&quot;)</code> 注解，然后在 <code v-pre>xml</code> 文件中就可以通过 <code v-pre>#{参数名}</code> 来获取参数值。例如：</p>
 <CodeTabs id="204" :data='[{"title":"java"},{"title":"xml"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserMapper</span> <span class="token punctuation">{</span>
   <span class="token doc-comment comment">/**
@@ -179,7 +176,6 @@
 <h4 id="实体类类型的参数" tabindex="-1"><a class="header-anchor" href="#实体类类型的参数" aria-hidden="true">#</a> 实体类类型的参数</h4>
 <p>可以通过传入的实体类对象利用<strong>点操作符</strong>获取对应的属性值来赋值。例如：</p>
 <CodeTabs id="221" :data='[{"title":"java"},{"title":"xml"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserMapper</span> <span class="token punctuation">{</span>
   <span class="token doc-comment comment">/**
@@ -206,7 +202,6 @@
 <h4 id="map-类型的参数" tabindex="-1"><a class="header-anchor" href="#map-类型的参数" aria-hidden="true">#</a> <code v-pre>Map</code> 类型的参数</h4>
 <p>传多个参数的另一种解决方案，将这些参数封装到 <code v-pre>Map</code> 集合中，然后在通过<strong>对应的键</strong>获取参数值，例如：</p>
 <CodeTabs id="235" :data='[{"title":"java"},{"title":"xml"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserMapper</span> <span class="token punctuation">{</span>
     <span class="token doc-comment comment">/**
@@ -231,8 +226,8 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span><span class="token punctuation">></span></span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
-<div class="custom-container warning">
-<p class="custom-container-title">注意</p>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
 <p>使用 <code v-pre>Map</code> 作为参数时，不要使用 <code v-pre>@Param()</code> 注解，这会使 <code v-pre>Map</code> 中的键不能暴露在外面，就会导致 <code v-pre>#{key}</code> 失效。</p>
 </div>
 <h2 id="返回值相关" tabindex="-1"><a class="header-anchor" href="#返回值相关" aria-hidden="true">#</a> 返回值相关</h2>
@@ -244,7 +239,6 @@
 <li>若实体类中属性名与对应的表的字段名不一致时，可使用 <code v-pre>resultMap</code> 属性，具体用法在下面。</li>
 </ol>
 <CodeTabs id="272" :data='[{"title":"java"},{"title":"xml"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserMapper</span> <span class="token punctuation">{</span>
   <span class="token doc-comment comment">/**
@@ -270,7 +264,6 @@
 </CodeTabs>
 <h5 id="将实体类对象的属性以属性名-属性值的形式装入-map" tabindex="-1"><a class="header-anchor" href="#将实体类对象的属性以属性名-属性值的形式装入-map" aria-hidden="true">#</a> 将实体类对象的属性以属性名，属性值的形式装入 <code v-pre>Map</code></h5>
 <CodeTabs id="283" :data='[{"title":"java"},{"title":"xml"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserMapper</span> <span class="token punctuation">{</span>
   <span class="token doc-comment comment">/**
@@ -292,13 +285,12 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span><span class="token punctuation">></span></span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
-<div class="custom-container info">
-<p class="custom-container-title">注意</p>
+<div class="hint-container info">
+<p class="hint-container-title">注意</p>
 <p>注意 <code v-pre>xml</code> 文件中 <code v-pre>resultType</code> 为 <code v-pre>map</code> 类型。</p>
 </div>
 <h5 id="也可以将以主键作为-key-其他字段作为-value-。" tabindex="-1"><a class="header-anchor" href="#也可以将以主键作为-key-其他字段作为-value-。" aria-hidden="true">#</a> 也可以将以主键作为 <code v-pre>key</code> ，其他字段作为 <code v-pre>value</code> 。</h5>
 <CodeTabs id="299" :data='[{"title":"java"},{"title":"xml"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserMapper</span> <span class="token punctuation">{</span>
   <span class="token doc-comment comment">/**
@@ -321,8 +313,8 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span><span class="token punctuation">></span></span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
-<div class="custom-container info">
-<p class="custom-container-title">注意</p>
+<div class="hint-container info">
+<p class="hint-container-title">注意</p>
 <ul>
 <li><code v-pre>xml</code> 文件中 <code v-pre>resultType</code> 为 <code v-pre>map</code> 类型。</li>
 <li>需要使用 <code v-pre>@MapKey</code> 指定返回 <code v-pre>Map</code> 的 <code v-pre>key</code> 值</li>
@@ -331,7 +323,6 @@
 <h3 id="返回-list" tabindex="-1"><a class="header-anchor" href="#返回-list" aria-hidden="true">#</a> 返回 <code v-pre>List</code></h3>
 <h5 id="返回-list-实体类" tabindex="-1"><a class="header-anchor" href="#返回-list-实体类" aria-hidden="true">#</a> 返回 <code v-pre>List&lt;实体类&gt;</code></h5>
 <CodeTabs id="327" :data='[{"title":"java"},{"title":"xml"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserMapper</span> <span class="token punctuation">{</span>
   <span class="token doc-comment comment">/**
@@ -366,13 +357,12 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span><span class="token punctuation">></span></span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
-<div class="custom-container warning">
-<p class="custom-container-title">注意</p>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
 <p>虽然返回值类型是 <code v-pre>List&lt;User&gt;</code> ，但是只需要 <code v-pre>resultMap</code> 或者 <code v-pre>resultType</code> 指定 <code v-pre>List</code> 中元素的映射或类型即可。</p>
 </div>
 <h5 id="返回-list-map-string-object" tabindex="-1"><a class="header-anchor" href="#返回-list-map-string-object" aria-hidden="true">#</a> 返回 <code v-pre>List&lt;Map&lt;String, Object&gt;&gt;</code></h5>
 <CodeTabs id="343" :data='[{"title":"java"},{"title":"xml"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserMapper</span> <span class="token punctuation">{</span>
   <span class="token doc-comment comment">/**
@@ -394,8 +384,8 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span><span class="token punctuation">></span></span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
-<div class="custom-container info">
-<p class="custom-container-title">注意</p>
+<div class="hint-container info">
+<p class="hint-container-title">注意</p>
 <ul>
 <li>注意 <code v-pre>xml</code> 文件中 <code v-pre>resultType</code> 为 <code v-pre>map</code> 类型而非 <code v-pre>List</code>；</li>
 <li><code v-pre>@MapKey()</code> 注解可用在返回值为 <code v-pre>List&lt;[Object,]Map&gt;</code> 的方法上的注解。它能够将存放对象的 <code v-pre>List</code> 转化为 <code v-pre>key</code> 值为对象的某一属性的 Map。属性有：<code v-pre>value</code>，填入的是对象的某个属性名，作为 <code v-pre>Map</code> 的 <code v-pre>key</code> 值。</li>
@@ -405,7 +395,6 @@
 <h3 id="返回某个字段" tabindex="-1"><a class="header-anchor" href="#返回某个字段" aria-hidden="true">#</a> 返回某个字段</h3>
 <p>根据该字段在实体类中对应的属性的返回值来决定返回值类型</p>
 <CodeTabs id="374" :data='[{"title":"java"},{"title":"xml"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserMapper</span> <span class="token punctuation">{</span>
   <span class="token doc-comment comment">/**
@@ -497,8 +486,8 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </Tabs>
-<div class="custom-container info">
-<p class="custom-container-title">其他解决方案</p>
+<div class="hint-container info">
+<p class="hint-container-title">其他解决方案</p>
 <p>​	如果表中的所有字段都是蛇形命名，而是实体类属性都是驼峰式命名，那么可以在 XML 配置文件中对齐进行配置来解决这一问题。</p>
 <p>​	具体为配置 <code v-pre>&lt;settings&gt;</code> 中的 <code v-pre>mapUnderscoreToCamelCase</code> 属性。其默认值为 <code v-pre>false</code> (不开启)，配置为 <code v-pre>true</code> 时开启。</p>
 <div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>settings</span><span class="token punctuation">></span></span>
@@ -550,8 +539,8 @@
 </table>
 </template>
 </Tabs>
-<div class="custom-container info">
-<p class="custom-container-title">问题</p>
+<div class="hint-container info">
+<p class="hint-container-title">问题</p>
 <p>​		若要根据员工ID查询一个员工个人信息及其所在部门信息，那么员工这一个人就会对应它所在部门的所有信息，这就会导致 部分信息对应一个员工，即多对一。那么就需要将数据层面的多对一映射关系转换到实体类之间。</p>
 </div>
 <blockquote>
@@ -562,9 +551,8 @@
 </ol>
 </blockquote>
 <CodeTabs id="547" :data='[{"title":"职员信息实体类"},{"title":"公司部门实体类"},{"title":"接口"},{"title":"XML—级联"},{"title":"XML-association"}]'>
-
 <template #tab0="{ title, value, isActive }">
-<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Employee</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span><span class="token punctuation">{</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre java="" class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Employee</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span><span class="token punctuation">{</span>
   <span class="token keyword">private</span> <span class="token class-name">String</span> eid<span class="token punctuation">;</span>
   <span class="token keyword">private</span> <span class="token class-name">String</span> departId<span class="token punctuation">;</span>
   <span class="token keyword">private</span> <span class="token class-name">Integer</span> esalary<span class="token punctuation">;</span>
@@ -589,7 +577,7 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab3="{ title, value, isActive }">
-<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre xml="" class="language-xml"><code><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
 <span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">mapper</span> <span class="token name">PUBLIC</span> <span class="token string">"-//mybatis.org//DTD Mapper 3.0//EN"</span> <span class="token string">"http://mybatis.org/dtd/mybatis-3-mapper.dtd"</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span> <span class="token attr-name">namespace</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.mapper.EmployeesMapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   
@@ -614,7 +602,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span><span class="token punctuation">></span></span>
 </code></pre><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab4="{ title, value, isActive }">
-<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre xml="" class="language-xml"><code><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
 <span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">mapper</span> <span class="token name">PUBLIC</span> <span class="token string">"-//mybatis.org//DTD Mapper 3.0//EN"</span> <span class="token string">"http://mybatis.org/dtd/mybatis-3-mapper.dtd"</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span> <span class="token attr-name">namespace</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.mapper.EmployeesMapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   
@@ -641,8 +629,8 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span><span class="token punctuation">></span></span>
 </code></pre><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
-<div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>association</span> <span class="token attr-name">property</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Edepart<span class="token punctuation">"</span></span> <span class="token attr-name">javatype</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Edepartment<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ul>
 <li><code v-pre>property</code> 为实体类属性。</li>
@@ -653,7 +641,7 @@
 <p>另一种解决方案： 分部查询 + <code v-pre>association</code>；</p>
 <p>将根据员工ID查询一个员工个人信息及其所在部门信息分解为先根据员工ID查询个人信息，然后再使用员工的所在部门 ID 去查询对应的部门信息。</p>
 </blockquote>
-<Tabs id="587" :data='[{"title":"员工接口"},{"title":"部门接口"},{"title":"XML—员工"},{"title":"XML—部门"}]'>
+<Tabs id="590" :data='[{"title":"员工接口"},{"title":"部门接口"},{"title":"XML—员工"},{"title":"XML—部门"}]'>
 <template #tab0="{ title, value, isActive }">
 <div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">EmployeeMapper</span> <span class="token punctuation">{</span>
   <span class="token doc-comment comment">/**
@@ -671,7 +659,7 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre xml="" class="language-xml"><code><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
 <span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">mapper</span> <span class="token name">PUBLIC</span> <span class="token string">"-//mybatis.org//DTD Mapper 3.0//EN"</span> <span class="token string">"http://mybatis.org/dtd/mybatis-3-mapper.dtd"</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span> <span class="token attr-name">namespace</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.mapper.EmployeesMapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   
@@ -715,7 +703,7 @@
 <blockquote>
 <p>分部查询更加灵活，因为是对不同接口中功能的组合，并且各个分部语句也能实现其他所需的功能（但这个需要开启延迟加载）。</p>
 </blockquote>
-<Tabs id="623" :data='[{"title":"全局开启"},{"title":"局部可控"}]'>
+<Tabs id="626" :data='[{"title":"全局开启"},{"title":"局部可控"}]'>
 <template #tab0="{ title, value, isActive }">
 <div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>settings</span><span class="token punctuation">></span></span>
  <span class="token comment">&lt;!-- 延迟加载全局开启，开启时，所有关联对象都会延迟加载--></span>
@@ -736,7 +724,7 @@
 <p><code v-pre>association-fetchType</code> 属性 ：  <code v-pre>lazy | eager</code></p>
 </li>
 </ul>
-<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre xml="" class="language-xml"><code><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
 <span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">mapper</span> <span class="token name">PUBLIC</span> <span class="token string">"-//mybatis.org//DTD Mapper 3.0//EN"</span> <span class="token string">"http://mybatis.org/dtd/mybatis-3-mapper.dtd"</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span> <span class="token attr-name">namespace</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.mapper.EmployeesMapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   
@@ -775,9 +763,9 @@
 <blockquote>
 <p>第一种：使用 <code v-pre>collection</code></p>
 </blockquote>
-<Tabs id="671" :data='[{"title":"公司部门实体类"},{"title":"接口"},{"title":"XML"}]'>
+<Tabs id="674" :data='[{"title":"公司部门实体类"},{"title":"接口"},{"title":"XML"}]'>
 <template #tab0="{ title, value, isActive }">
-<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Edepartment</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span><span class="token punctuation">{</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre java="" class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Edepartment</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span><span class="token punctuation">{</span>
   <span class="token keyword">private</span> <span class="token class-name">String</span> departId<span class="token punctuation">;</span>
   <span class="token keyword">private</span> <span class="token class-name">String</span> departHead<span class="token punctuation">;</span>
   <span class="token keyword">private</span> <span class="token class-name">String</span> departResearchDirection<span class="token punctuation">;</span>
@@ -794,7 +782,7 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre xml="" class="language-xml"><code><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
 <span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">mapper</span> <span class="token name">PUBLIC</span> <span class="token string">"-//mybatis.org//DTD Mapper 3.0//EN"</span> <span class="token string">"http://mybatis.org/dtd/mybatis-3-mapper.dtd"</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span> <span class="token attr-name">namespace</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.mapper.EdepartmentMapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   
@@ -827,8 +815,8 @@
 </ul>
 </template>
 </Tabs>
-<div class="custom-container warning">
-<p class="custom-container-title">注意</p>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
 <p>在 <code v-pre>&lt;collection&gt;</code> 中并没有设置其属性 <code v-pre>Edepart</code> ，即部门信息，这个并不需要在这里设置，不然就成套娃了。</p>
 </div>
 <blockquote>
@@ -838,7 +826,7 @@
 <li>先根据部门ID 查询部门信息</li>
 <li>再根据部门ID 查询所有的员工信息</li>
 </ol>
-<Tabs id="719" :data='[{"title":"部门接口"},{"title":"员工接口"},{"title":"XML—部门"},{"title":"XML—员工"}]'>
+<Tabs id="722" :data='[{"title":"部门接口"},{"title":"员工接口"},{"title":"XML—部门"},{"title":"XML—员工"}]'>
 <template #tab0="{ title, value, isActive }">
 <div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">EdepartmentMapper</span> <span class="token punctuation">{</span>
   <span class="token doc-comment comment">/**
@@ -856,7 +844,7 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre xml="" class="language-xml"><code><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
 <span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">mapper</span> <span class="token name">PUBLIC</span> <span class="token string">"-//mybatis.org//DTD Mapper 3.0//EN"</span> <span class="token string">"http://mybatis.org/dtd/mybatis-3-mapper.dtd"</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span> <span class="token attr-name">namespace</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.mapper.EdepartmentMapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   
@@ -896,8 +884,8 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span><span class="token punctuation">></span></span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </Tabs>
-<div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p>延迟加载也同样适用于该分部查询。可在开启全局延迟加载的情况下设置 <code v-pre>collection-fetch</code> 属性决定这一分部查询是否开启延迟加载。</p>
 </div>
 <h2 id="缓存相关" tabindex="-1"><a class="header-anchor" href="#缓存相关" aria-hidden="true">#</a> 缓存相关</h2>

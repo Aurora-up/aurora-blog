@@ -15,9 +15,8 @@
 <li>将以二叉链表存储的完全二叉树转换为数组存储，存储顺序为层序遍历，也即对树进行「广度优先遍历」的同时存入数组。</li>
 <li>插入结点时，直接插入数组末尾即可，然后通过索引寻找「父结点」</li>
 </ol>
-<details class="custom-container details"><summary>代码实现</summary>
+<details class="hint-container details"><summary>代码实现</summary>
 <CodeTabs id="52" :data='[{"title":"c++"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token keyword">class</span> <span class="token class-name">CBTInserter</span> <span class="token punctuation">{</span>
 <span class="token keyword">private</span><span class="token operator">:</span>
@@ -72,9 +71,8 @@
 </ol>
 <p>「BFS」做法：</p>
 <p>BFS 本身就是层序遍历，每次都是遍历一层，但平时写 BFS，一次循环只遍历一层的一个结点，该层的其他结点还在队列中，所以只需要在每次循环中遍历完队列中所有的结点就可以每次遍历一层结点，然后记录最大值即可。</p>
-<details class="custom-container details"><summary>代码实现</summary>
+<details class="hint-container details"><summary>代码实现</summary>
 <CodeTabs id="94" :data='[{"title":"c++"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token comment">// DFS</span>
 <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
@@ -140,9 +138,8 @@
 <p>题目要求是找树中最底层结点的最左层结点，通过一次遍历即可，「宽度优先遍历」和「深度优先遍历」都可以做到。</p>
 <p>「宽度优先遍历」:BFS 是从上至下，从左到右的层序遍历，所以只需在 BFS 的同时记录每一层的最左结点，然后每到下一层，再更新这个最左结点即可。</p>
 <p>「深度优先遍历」:DFS 是深度优先，在 DFS 优先遍历左子树，然后到达每层时，更新最左结点即可。</p>
-<details class="custom-container details"><summary>代码实现</summary>
+<details class="hint-container details"><summary>代码实现</summary>
 <CodeTabs id="113" :data='[{"title":"c++"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token comment">// DFS</span>
 <span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
@@ -198,9 +195,8 @@
 <li>奇数深度时，队列左出右进</li>
 <li>偶数深度时，队列右出左进</li>
 </ul>
-<details class="custom-container details"><summary>代码实现</summary>
+<details class="hint-container details"><summary>代码实现</summary>
 <CodeTabs id="138" :data='[{"title":"c++"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
 <span class="token keyword">public</span><span class="token operator">:</span>
@@ -237,6 +233,8 @@
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
 </details>
+<h3 id="_310-最小高度树" tabindex="-1"><a class="header-anchor" href="#_310-最小高度树" aria-hidden="true">#</a> <a href="https://leetcode.cn/problems/minimum-height-trees/" target="_blank" rel="noopener noreferrer">310. 最小高度树<ExternalLinkIcon/></a></h3>
+<p>树形 dp 模板题。求最小高度树，也即寻找树的“中心”，</p>
 </div></template>
 
 

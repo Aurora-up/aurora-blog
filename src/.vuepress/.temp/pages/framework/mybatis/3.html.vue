@@ -20,7 +20,7 @@
 <p>查询时需要传递两个参数，一个是班级，一个是成绩。如果未传入成绩时，可以查询这个班所有学生的成绩。</p>
 <Tabs id="45" :data='[{"title":"XML"},{"title":"java"}]'>
 <template #tab0="{ title, value, isActive }">
-<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>findScoreGe<span class="token punctuation">"</span></span> <span class="token attr-name">resultType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.pojo.Student<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre xml="" class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>findScoreGe<span class="token punctuation">"</span></span> <span class="token attr-name">resultType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.pojo.Student<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   SELECT * FROM all_students
   WHERE class_name = #{className}
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>if</span> <span class="token attr-name">test</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>score!=null<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -39,8 +39,8 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </Tabs>
-<div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p>在上面语句中，如果传入的 <code v-pre>score==null</code> ，那么就不将其中的 SQL 语句进行拼接。<code v-pre>if</code> 中的 <code v-pre>test</code> 中写的就是判定条件。</p>
 </div>
 <blockquote>
@@ -48,7 +48,7 @@
 </blockquote>
 <Tabs id="63" :data='[{"title":"XML"},{"title":"java"}]'>
 <template #tab0="{ title, value, isActive }">
-<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>findScoreGeOneHundred<span class="token punctuation">"</span></span> <span class="token attr-name">resultType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.pojo.Student<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre xml="" class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>findScoreGeOneHundred<span class="token punctuation">"</span></span> <span class="token attr-name">resultType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.pojo.Student<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   SELECT * FROM all_students
   WHERE class_name = #{className}
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>if</span> <span class="token attr-name">test</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>score!=null and rank!=null<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -69,8 +69,8 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </Tabs>
-<div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p><code v-pre>&lt;if&gt;&lt;/if&gt;</code> 也可以连续多次使用，这样如果某个 <code v-pre>&lt;if&gt;&lt;/if&gt;</code> 中的条件满足时，就可以将其中的 SQL 语句加上。</p>
 </div>
 <h3 id="choose、when-、otherwise" tabindex="-1"><a class="header-anchor" href="#choose、when-、otherwise" aria-hidden="true">#</a> choose、when 、otherwise</h3>
@@ -90,8 +90,8 @@
       ...
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>otherwise</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>choose</span><span class="token punctuation">></span></span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p>依次执行 <code v-pre>when</code> 中的 <code v-pre>test</code> 判定条件，如果满足就会执行，并且跳出 <code v-pre>choose</code> ，若所有的 <code v-pre>when</code> 都没有执行，那么就是执行 <code v-pre>otherwise</code></p>
 </div>
 <blockquote>
@@ -99,7 +99,7 @@
 </blockquote>
 <Tabs id="98" :data='[{"title":"XML"},{"title":"java"}]'>
 <template #tab0="{ title, value, isActive }">
-<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>findStudent<span class="token punctuation">"</span></span>
+<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre xml="" class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>findStudent<span class="token punctuation">"</span></span>
      <span class="token attr-name">resultType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Student<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   SELECT * FROM all_students
   WHERE class_name = #{className}
@@ -129,14 +129,14 @@
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </Tabs>
 <h3 id="trim、where、-set" tabindex="-1"><a class="header-anchor" href="#trim、where、-set" aria-hidden="true">#</a> trim、where、 set</h3>
-<div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p>使用 <code v-pre>&lt;if&gt;&lt;/if&gt;</code> 和 <code v-pre>&lt;choose&gt;&lt;/choose&gt;</code> 解决了 SQL 多个筛选条件时，后续的 <code v-pre>AND</code> 语句可能失败的情况，那么如果一开始的 <code v-pre>WHERE</code> 接一个判断语句就有问题的话，该如何解决？</p>
 </div>
 <p>例如下面情况。</p>
 <Tabs id="117" :data='[{"title":"XML"},{"title":"SQL"}]'>
 <template #tab0="{ title, value, isActive }">
-<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>findStudent<span class="token punctuation">"</span></span>
+<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre xml="" class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>findStudent<span class="token punctuation">"</span></span>
      <span class="token attr-name">resultType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Student<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   SELECT * FROM all_students
   WHERE 
@@ -166,7 +166,7 @@
 <blockquote>
 <p>使用 <code v-pre>&lt;where&gt;&lt;/where&gt;</code> ：</p>
 </blockquote>
-<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>findStudent<span class="token punctuation">"</span></span>
+<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre xml="" class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>findStudent<span class="token punctuation">"</span></span>
      <span class="token attr-name">resultType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Student<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   SELECT * FROM all_students
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>where</span><span class="token punctuation">></span></span> 
@@ -181,12 +181,12 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>if</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>where</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span>
-</code></pre><div class="highlight-lines"><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+</code></pre><div class="highlight-lines"><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p><code v-pre>&lt;where&gt;&lt;/where&gt;</code> 元素只会在子元素返回任何内容的情况下才插入  <code v-pre>WHERE</code> 子句。而且，若子句的开头为 <code v-pre>AND</code> 或 <code v-pre>OR</code>，则会将它们去除。</p>
 </div>
-<div class="custom-container warning">
-<p class="custom-container-title">注意</p>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
 <p>方案一中，对于后续的所有判断语句，必须以 <code v-pre>AND</code> 或者 <code v-pre>OR</code> 来开头，这对 SQL 的规范性有所要求，如果这个 <code v-pre>AND</code> 或者 <code v-pre>OR</code> 正好出现在上一条件的末尾。而不是开头，那么其就会无法被去掉，进而造成 SQL 语句的执行失败。</p>
 </div>
 <p>【解决方案二】</p>
@@ -200,19 +200,19 @@
 <li><code v-pre>prefixOverrides</code> trim 中每个独立语句想要省去的前缀</li>
 <li><code v-pre>suffixOverrides</code> trim 中每个独立语句想要省去的后缀</li>
 </ul>
-<div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p>当 trim 中没有任何语句时，<code v-pre>prefix</code> 和 <code v-pre>suffix</code> 中的内容就不会生效。</p>
 </div>
 <p>与 <code v-pre>&lt;where&gt;&lt;/where&gt;</code> 等价的写法：</p>
 <div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>trim</span> <span class="token attr-name">prefix</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>WHERE<span class="token punctuation">"</span></span> <span class="token attr-name">prefixOverrides</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>AND | OR <span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   ...
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>trim</span><span class="token punctuation">></span></span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p><code v-pre>prefixOverrides=&quot;AND | OR &quot;</code> 标签前缀为 <code v-pre>AND</code> 或者 <code v-pre>OR</code> 的都会省去</p>
 </div>
-<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>findStudent<span class="token punctuation">"</span></span>
+<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre xml="" class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>findStudent<span class="token punctuation">"</span></span>
      <span class="token attr-name">resultType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Student<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   SELECT * FROM all_students
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>trim</span> <span class="token attr-name">prefix</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>WHERE<span class="token punctuation">"</span></span> <span class="token attr-name">prefixOverrides</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>AND | OR <span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -229,7 +229,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span>
 </code></pre><div class="highlight-lines"><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在更新语句中，也可以使用 <code v-pre>&lt;trim&gt;&lt;/trim&gt;</code> 元素来替代 <code v-pre>&lt;set&gt;&lt;/set&gt;</code> 元素，并且可以将条件不成立语句后面的 <code v-pre>,</code> 省去。</p>
 <p>对于 <code v-pre>&lt;set&gt;&lt;/set&gt;</code> 元素本身来说，若子句的开头为 【<code v-pre>,</code>】 , 则会将其去除。</p>
-<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>update</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modifyUserInfo<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre xml="" class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>update</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modifyUserInfo<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   update smbms.smbms_user
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>trim</span> <span class="token attr-name">prefix</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>SET<span class="token punctuation">"</span></span> <span class="token attr-name">suffixOverrides</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>,<span class="token punctuation">"</span></span> <span class="token attr-name">suffix</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>WHERE id = #{id}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>if</span> <span class="token attr-name">test</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>userCode != null<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>userCode = #{user.userCode},<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>if</span><span class="token punctuation">></span></span>
@@ -263,7 +263,7 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
-<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>delete</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>deleteUsersById<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre xml="" class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>delete</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>deleteUsersById<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   DELETE FROM smbms.smbms_user
   WHERE smbms_user.id IN
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>foreach</span> <span class="token attr-name">collection</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ids<span class="token punctuation">"</span></span> <span class="token attr-name">item</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>id<span class="token punctuation">"</span></span>
@@ -276,7 +276,7 @@
 <span class="token keyword">WHERE</span> smbms_user<span class="token punctuation">.</span>id <span class="token operator">IN</span> <span class="token punctuation">(</span> ? <span class="token punctuation">,</span> ? <span class="token punctuation">,</span> ?<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>delete</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>deleteUsersById<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre xml="" class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>delete</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>deleteUsersById<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   DELETE FROM smbms.smbms_user
   WHERE smbms_user.id =
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>foreach</span> <span class="token attr-name">collection</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ids<span class="token punctuation">"</span></span> <span class="token attr-name">item</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>id<span class="token punctuation">"</span></span> <span class="token attr-name">separator</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>or<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -303,7 +303,7 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
-<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>insert</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>insertUsers<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<div class="language-xml line-numbers-mode" data-ext="xml"><pre v-pre xml="" class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>insert</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>insertUsers<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
   INSERT INTO smbms.smbms_user VALUES
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>foreach</span> <span class="token attr-name">collection</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>users<span class="token punctuation">"</span></span> <span class="token attr-name">item</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>user<span class="token punctuation">"</span></span> <span class="token attr-name">separator</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>,<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     (#{user.id}, #{user.userCode}, #{user.userName},null, null)

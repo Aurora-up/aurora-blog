@@ -1,1 +1,14 @@
-export const data = JSON.parse("{\"key\":\"v-4295703a\",\"path\":\"/otherTechniques/docker/\",\"title\":\"Docker\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Docker\",\"index\":false,\"icon\":\"docker\",\"category\":[\"docker\"],\"summary\":\"\",\"head\":[[\"meta\",{\"property\":\"og:url\",\"content\":\"https://aurora-up.github.io/aurora-blog/otherTechniques/docker/\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"Aurora\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Docker\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:updated_time\",\"content\":\"2022-11-24T01:00:16.000Z\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"meta\",{\"property\":\"article:modified_time\",\"content\":\"2022-11-24T01:00:16.000Z\"}]]},\"excerpt\":\"\",\"headers\":[],\"git\":{\"createdTime\":1669251616000,\"updatedTime\":1669251616000,\"contributors\":[{\"name\":\"HouDongDong\",\"email\":\"2723787996@qq.com\",\"commits\":1}]},\"readingTime\":{\"minutes\":0.03,\"words\":8},\"copyright\":\"著作权归 hdd 所有\\n基于 MIT 协议\\n原文链接：https://aurora-up.github.io/aurora-blog/otherTechniques/docker/\",\"filePathRelative\":\"otherTechniques/docker/README.md\",\"localizedDate\":\"2022年11月24日\"}")
+export const data = JSON.parse("{\"key\":\"v-4295703a\",\"path\":\"/otherTechniques/docker/\",\"title\":\"Docker\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Docker\",\"index\":false,\"icon\":\"docker\",\"category\":[\"docker\"],\"description\":\"\",\"head\":[[\"meta\",{\"property\":\"og:url\",\"content\":\"https://aurora-up.github.io/aurora-blog/otherTechniques/docker/\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"Aurora\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Docker\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"meta\",{\"property\":\"article:author\",\"content\":\"Mr.Hdd\"}],[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Docker\\\",\\\"image\\\":[\\\"\\\"],\\\"dateModified\\\":null,\\\"author\\\":[{\\\"@type\\\":\\\"Person\\\",\\\"name\\\":\\\"Mr.Hdd\\\",\\\"url\\\":\\\"https://aurora-up.github.io/aurora-blog/\\\",\\\"email\\\":\\\"2723787996@qq.com\\\"}]}\"]]},\"headers\":[],\"readingTime\":{\"minutes\":0.03,\"words\":8},\"filePathRelative\":\"otherTechniques/docker/README.md\",\"excerpt\":\"\",\"copyright\":{\"author\":\" hdd \",\"license\":\" MIT \"},\"autoDesc\":true}")
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

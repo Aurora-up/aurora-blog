@@ -10,9 +10,9 @@
 <li>所有的叶结点都出现在同一层次上，并且<strong>不带信息</strong> (可视为外部结点或者类似于折半查找判定树的查找失败结点，实际这些结点并不存在，<strong>指向这些结点的指针为空</strong>)</li>
 </ol>
 <p>例如下图为一颗 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">5</span></span></span></span> 阶 B 树 .</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230110121421600-1673752540636-1.png" alt="" loading="lazy"></p>
-<div class="custom-container warning">
-<p class="custom-container-title">注意</p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110121421600-1673752540636-1.png" alt=""></p>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
 <p>计算高度时并不包含 “叶子结点” ，即不带信息的结点不会被计算到高度中，并且表示查找失败的结点。</p>
 </div>
 <p>含有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> 个关键字的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">m</span></span></span></span> 阶 B 树，最小高度，最大高度是多少？</p>
@@ -29,8 +29,8 @@ h≥log_m(n+1)
 <ul>
 <li><strong>最大高度</strong>——让各层的分支尽可能的少，即根结点只有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span> 个分支，其他结点只有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">⌈</mo><mfrac><mi>m</mi><mn>2</mn></mfrac><mo stretchy="false">⌉</mo></mrow><annotation encoding="application/x-tex">⌈\frac{m}{2}⌉</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.095em;vertical-align:-0.345em;"></span><span class="mopen">⌈</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6954em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">⌉</span></span></span></span> 个分支，各层结点至少有：第一层 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 个、第二层 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span> 个、第三层 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo stretchy="false">⌈</mo><mfrac><mi>m</mi><mn>2</mn></mfrac><mo stretchy="false">⌉</mo></mrow><annotation encoding="application/x-tex">2⌈\frac{m}{2}⌉</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.095em;vertical-align:-0.345em;"></span><span class="mord">2</span><span class="mopen">⌈</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6954em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">⌉</span></span></span></span> 个 … 第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span> 层 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo stretchy="false">(</mo><mo stretchy="false">⌈</mo><mfrac><mi>m</mi><mn>2</mn></mfrac><mo stretchy="false">⌉</mo><msup><mo stretchy="false">)</mo><mrow><mi>h</mi><mo>−</mo><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2(⌈\frac{m}{2}⌉)^{h-2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1941em;vertical-align:-0.345em;"></span><span class="mord">2</span><span class="mopen">(⌈</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6954em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">⌉</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">h</span><span class="mbin mtight">−</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span> ，第 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">h+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> 层共有 “叶子结点” <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo stretchy="false">(</mo><mo stretchy="false">⌈</mo><mfrac><mi>m</mi><mn>2</mn></mfrac><mo stretchy="false">⌉</mo><msup><mo stretchy="false">)</mo><mrow><mi>h</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2(⌈\frac{m}{2}⌉)^{h-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1941em;vertical-align:-0.345em;"></span><span class="mord">2</span><span class="mopen">(⌈</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6954em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">⌉</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">h</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span> 个 .</li>
 </ul>
-<p><img src="@source/Algorithm/data_struct/image/image-20230115163511700.png" alt="image-20230115163511700" loading="lazy"></p>
-<details class="custom-container details"><summary>计算最大高度的另一种思路</summary>
+<p><img src="@source/Algorithm/data_struct/image/image-20230115163511700.png" alt="image-20230115163511700"></p>
+<details class="hint-container details"><summary>计算最大高度的另一种思路</summary>
 <p>记 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mo stretchy="false">⌈</mo><mfrac><mi>m</mi><mn>2</mn></mfrac><mo stretchy="false">⌉</mo></mrow><annotation encoding="application/x-tex">k=⌈\frac{m}{2}⌉</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.095em;vertical-align:-0.345em;"></span><span class="mopen">⌈</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6954em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">⌉</span></span></span></span> .</p>
 <table>
 <thead>
@@ -91,16 +91,16 @@ h≤log_{k} \frac{n+1}{2}+1=log_{⌈\frac{m}{2}⌉} \frac{n+1}{2}+1
 <p>在下列 B 树 中添加 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>73</mn></mrow><annotation encoding="application/x-tex">73</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">73</span></span></span></span> 号关键字：</p>
 <Tabs id="196" :data='[{"title":"step1"},{"title":"step2"},{"title":"step3"},{"title":"step4"}]'>
 <template #tab0="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110125100926-1673752540636-2.png" alt="" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110125100926-1673752540636-2.png" alt=""></p>
 </template>
 <template #tab1="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110125134540-1673752540637-3.png" alt="" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110125134540-1673752540637-3.png" alt=""></p>
 </template>
 <template #tab2="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110125214108-1673752540637-4.png" alt="" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110125214108-1673752540637-4.png" alt=""></p>
 </template>
 <template #tab3="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110125247722-1673752540637-5.png" alt="" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110125247722-1673752540637-5.png" alt=""></p>
 </template>
 </Tabs>
 <h2 id="b树的删除操作" tabindex="-1"><a class="header-anchor" href="#b树的删除操作" aria-hidden="true">#</a> B树的删除操作</h2>
@@ -114,10 +114,10 @@ h≤log_{k} \frac{n+1}{2}+1=log_{⌈\frac{m}{2}⌉} \frac{n+1}{2}+1
 <p>此时直接删除该终端关键字即可，例如下面 B 树 中删除 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>77</mn></mrow><annotation encoding="application/x-tex">77</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">77</span></span></span></span> 号关键字.</p>
 <Tabs id="245" :data='[{"title":"step1"},{"title":"step2"}]'>
 <template #tab0="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110143246091-1673752540637-6.png" alt="image-20230110143246091" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110143246091-1673752540637-6.png" alt="image-20230110143246091"></p>
 </template>
 <template #tab1="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110143310700-1673752540637-7.png" alt="image-20230110143310700" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110143310700-1673752540637-7.png" alt="image-20230110143310700"></p>
 </template>
 </Tabs>
 <h4 id="_1-2-含有的关键字的个数" tabindex="-1"><a class="header-anchor" href="#_1-2-含有的关键字的个数" aria-hidden="true">#</a> 1.2.含有的关键字的个数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mo stretchy="false">⌈</mo><mfrac><mi>m</mi><mn>2</mn></mfrac><mo stretchy="false">⌉</mo><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">=⌈\frac{m}{2}⌉-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.3669em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.095em;vertical-align:-0.345em;"></span><span class="mopen">⌈</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6954em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">m</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">⌉</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></h4>
@@ -125,13 +125,13 @@ h≤log_{k} \frac{n+1}{2}+1=log_{⌈\frac{m}{2}⌉} \frac{n+1}{2}+1
 <p>例如：删除下面 B 树 中的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>70</mn></mrow><annotation encoding="application/x-tex">70</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">70</span></span></span></span> 号关键字:</p>
 <Tabs id="266" :data='[{"title":"step1"},{"title":"step2"},{"title":"step3"}]'>
 <template #tab0="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110144848073-1673752540637-8.png" alt="image-20230110144848073" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110144848073-1673752540637-8.png" alt="image-20230110144848073"></p>
 </template>
 <template #tab1="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110145037949-1673752540637-9.png" alt="image-20230110145037949" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110145037949-1673752540637-9.png" alt="image-20230110145037949"></p>
 </template>
 <template #tab2="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110145116709-1673752540637-10.png" alt="image-20230110145116709" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110145116709-1673752540637-10.png" alt="image-20230110145116709"></p>
 </template>
 </Tabs>
 <h4 id="_1-3-兄弟结点中关键字不够借" tabindex="-1"><a class="header-anchor" href="#_1-3-兄弟结点中关键字不够借" aria-hidden="true">#</a> 1.3.兄弟结点中关键字不够借</h4>
@@ -140,16 +140,16 @@ h≤log_{k} \frac{n+1}{2}+1=log_{⌈\frac{m}{2}⌉} \frac{n+1}{2}+1
 <p>例如：删除下面 B 树 中的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>73</mn></mrow><annotation encoding="application/x-tex">73</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">73</span></span></span></span> 号关键字:</p>
 <Tabs id="295" :data='[{"title":"step1"},{"title":"step2"},{"title":"step3"},{"title":"step4"}]'>
 <template #tab0="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110150232176-1673752540637-11.png" alt="image-20230110150232176" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110150232176-1673752540637-11.png" alt="image-20230110150232176"></p>
 </template>
 <template #tab1="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110151315292-1673752540637-12.png" alt="image-20230110151315292" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110151315292-1673752540637-12.png" alt="image-20230110151315292"></p>
 </template>
 <template #tab2="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110152117558-1673752540637-13.png" alt="image-20230110152117558" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110152117558-1673752540637-13.png" alt="image-20230110152117558"></p>
 </template>
 <template #tab3="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110151856632-1673752540637-14.png" alt="image-20230110151856632" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110151856632-1673752540637-14.png" alt="image-20230110151856632"></p>
 </template>
 </Tabs>
 <h3 id="_2-删除非终端关键字" tabindex="-1"><a class="header-anchor" href="#_2-删除非终端关键字" aria-hidden="true">#</a> 2.删除非终端关键字</h3>
@@ -161,13 +161,13 @@ h≤log_{k} \frac{n+1}{2}+1=log_{⌈\frac{m}{2}⌉} \frac{n+1}{2}+1
 </ul>
 <Tabs id="336" :data='[{"title":"step1"},{"title":"step2"},{"title":"step3"}]'>
 <template #tab0="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110142129488-1673752540637-15.png" alt="image-20230110142129488" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110142129488-1673752540637-15.png" alt="image-20230110142129488"></p>
 </template>
 <template #tab1="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110141237446-1673752540637-16.png" alt="image-20230110141237446" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110141237446-1673752540637-16.png" alt="image-20230110141237446"></p>
 </template>
 <template #tab2="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110141603275-1673752540637-17.png" alt="image-20230110141603275" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110141603275-1673752540637-17.png" alt="image-20230110141603275"></p>
 </template>
 </Tabs>
 <p>在下列 B 树 中删除 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>80</mn></mrow><annotation encoding="application/x-tex">80</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">80</span></span></span></span> 号关键字：</p>
@@ -176,13 +176,13 @@ h≤log_{k} \frac{n+1}{2}+1=log_{⌈\frac{m}{2}⌉} \frac{n+1}{2}+1
 </ul>
 <Tabs id="363" :data='[{"title":"step1"},{"title":"step2"},{"title":"step3"}]'>
 <template #tab0="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110142129488-1673752540637-15.png" alt="image-20230110142129488" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110142129488-1673752540637-15.png" alt="image-20230110142129488"></p>
 </template>
 <template #tab1="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110141804938-1673752540637-18.png" alt="image-20230110141804938" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110141804938-1673752540637-18.png" alt="image-20230110141804938"></p>
 </template>
 <template #tab2="{ title, value, isActive }">
-<p><img src="@source/Algorithm/data_struct/image/image-20230110141909614-1673752540637-19.png" alt="image-20230110141909614" loading="lazy"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110141909614-1673752540637-19.png" alt="image-20230110141909614"></p>
 </template>
 </Tabs>
 <h2 id="b-tree-的基本概念" tabindex="-1"><a class="header-anchor" href="#b-tree-的基本概念" aria-hidden="true">#</a> B+ Tree 的基本概念</h2>
@@ -195,9 +195,9 @@ h≤log_{k} \frac{n+1}{2}+1=log_{⌈\frac{m}{2}⌉} \frac{n+1}{2}+1
 <li>所有<strong>分支结点</strong>中仅包含它的各个子结点中关键字的最大值及指向其子结点的指针.(不包含该关键字对应记录的存储地址，目的减少该关键字的空间占用，以<strong>让更多关键字可以存入固定的磁盘空间中</strong>，使得 B+ Tree 的阶树更大，树更矮，<strong>读盘次数更少，查找更快</strong>)</li>
 </ol>
 <p>一颗 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">4</span></span></span></span> 阶 B+ Tree 如下：</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230110162339130-1673752540637-20.png" alt="image-20230110162339130" loading="lazy"></p>
-<div class="custom-container warning">
-<p class="custom-container-title">注意</p>
+<p><img src="@source/Algorithm/data_struct/image/image-20230110162339130-1673752540637-20.png" alt="image-20230110162339130"></p>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
 <p>注意 B 树 与 B+ Tree 有本质的不同，B 树 是多叉平衡查找树，其每个结点都存储着对应记录的指针；而 B+ Tree 本质是一颗索引树，上层分支结点存储索引关系，最下层叶子结点存储指向记录的指针，以此来获得更快的查找速度.</p>
 </div>
 </div></template>

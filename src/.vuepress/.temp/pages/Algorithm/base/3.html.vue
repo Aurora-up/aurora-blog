@@ -3,8 +3,7 @@
 <h2 id="kmp-算法" tabindex="-1"><a class="header-anchor" href="#kmp-算法" aria-hidden="true">#</a> Kmp 算法</h2>
 <h2 id="字符串哈希" tabindex="-1"><a class="header-anchor" href="#字符串哈希" aria-hidden="true">#</a> 字符串哈希</h2>
 <h2 id="manacher-算法" tabindex="-1"><a class="header-anchor" href="#manacher-算法" aria-hidden="true">#</a> Manacher 算法</h2>
-<CodeTabs id="13" :data='[{"title":"rust","value":"rust"},{"title":"java","value":"java"},{"title":"c++","value":"c++"}]' tab-id="language">
-
+<CodeTabs id="13" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>

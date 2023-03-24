@@ -1,19 +1,29 @@
-import { fetchArticleCounter, updateArticleCounter } from './articleCounter';
+import { getArticleCounter, updateArticleCounter } from './articleCounter';
+import type { BaseAPIOptions } from './utils';
 
-interface FetchPageviewOptions {
-  serverURL: string;
-  lang: string;
+interface GetPageviewOptions extends BaseAPIOptions {
+  /**
+   * 待获取页面的 path
+   *
+   * Path of pages
+   */
   paths: string[];
-  signal: AbortSignal;
+
+  /**
+   * 取消请求的信号
+   *
+   * AbortSignal to cancel request
+   */
+  signal?: AbortSignal;
 }
 
-export const fetchPageviews = ({
+export const getPageview = ({
   serverURL,
   lang,
   paths,
   signal,
-}: FetchPageviewOptions): Promise<number[]> =>
-  fetchArticleCounter({
+}: GetPageviewOptions): Promise<number[]> =>
+  getArticleCounter({
     serverURL,
     lang,
     paths,
@@ -25,17 +35,20 @@ export const fetchPageviews = ({
     number[]
   >;
 
-export interface UpdatePageviewOptions {
-  serverURL: string;
-  lang: string;
+export interface UpdatePageviewOptions extends BaseAPIOptions {
+  /**
+   * 待更新页面的 path
+   *
+   * Path of pages
+   */
   path: string;
-  action?: 'inc' | 'desc';
 }
 
-export const updatePageviews = (
+export const updatePageview = (
   options: UpdatePageviewOptions
 ): Promise<number> =>
   updateArticleCounter({
     ...options,
     type: 'time',
+    action: 'inc',
   });

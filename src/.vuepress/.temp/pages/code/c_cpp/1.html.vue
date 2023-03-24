@@ -1,4 +1,4 @@
-<template><div><p>C 和 C ++指针与引用</p>
+<template><div><p>C 和 C ++ 原始指针</p>
 <!-- more -->
 <p>指针在 C 语言中本质就是一种数据类型，不过其他数据类型的变量是指向地址中的存储的数据，而指针是<strong>指向存储数据的地址</strong>。</p>
 <h2 id="指针的使用" tabindex="-1"><a class="header-anchor" href="#指针的使用" aria-hidden="true">#</a> 指针的使用</h2>
@@ -62,13 +62,13 @@
 </tr>
 </tbody>
 </table>
-<div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p>虽然指针的占用空间是固定的，但是在进行指针运算时，<strong>每次移动的位数与对应的基本类型相关</strong>。</p>
 </div>
-<div class="custom-container warning">
-<p class="custom-container-title">基本类型指针之间进行「强制类型转换」时需要注意的问题</p>
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">1025</span><span class="token punctuation">;</span>   <span class="token comment">// 转为 32 位二进制: 00000000 00000000 00000100 00000001</span>
+<div class="hint-container warning">
+<p class="hint-container-title">基本类型指针之间进行「强制类型转换」时需要注意的问题</p>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre cpp="" class="language-cpp"><code><span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">1025</span><span class="token punctuation">;</span>   <span class="token comment">// 转为 32 位二进制: 00000000 00000000 00000100 00000001</span>
 <span class="token keyword">int</span><span class="token operator">*</span> pa <span class="token operator">=</span> <span class="token operator">&amp;</span>a<span class="token punctuation">;</span>   <span class="token comment">// pa 指向 a</span>
 
 <span class="token comment">/* 
@@ -87,16 +87,16 @@
 <p><code v-pre>void*</code> 类型指针</p>
 </blockquote>
 <p><code v-pre>void*</code> 指针类型是可以指向<strong>任意类型的数据</strong>，也即可以将 指向任意类型的指针 <strong>直接赋值</strong> 给<code v-pre>void*</code> 类型的指针，例如：</p>
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token keyword">int</span><span class="token operator">*</span> pa<span class="token punctuation">;</span>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre cpp="" class="language-cpp"><code><span class="token keyword">int</span><span class="token operator">*</span> pa<span class="token punctuation">;</span>
 <span class="token keyword">void</span><span class="token operator">*</span> pv <span class="token operator">=</span> pa<span class="token punctuation">;</span>   <span class="token comment">// 将 int* 赋值给 void* </span>
 </code></pre><div class="highlight-lines"><br><div class="highlight-line">&nbsp;</div></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>若想将 <code v-pre>void*</code> 类型的指针赋值给其他类型的指针，则需要进行<strong>强制类型转换</strong>才可以完成赋值，例如：</p>
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token keyword">int</span><span class="token operator">*</span> pa<span class="token punctuation">;</span>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre cpp="" class="language-cpp"><code><span class="token keyword">int</span><span class="token operator">*</span> pa<span class="token punctuation">;</span>
 <span class="token keyword">void</span><span class="token operator">*</span> pv<span class="token punctuation">;</span>
 pa <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span> pv<span class="token punctuation">;</span>   <span class="token comment">// 将 void* 强制转换为 int*</span>
 </code></pre><div class="highlight-lines"><br><div class="highlight-line">&nbsp;</div><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在使用内存分配函数 <code v-pre>malloc</code> 函数时，由于其返回值是 <code v-pre>void*</code> ，则需要显式说明该指针指向的内存存放的是什么类型的数据，所以需要对其进行强制类型转换，例如：需要分配 100 个整数的内存空间：</p>
 <div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token keyword">int</span><span class="token operator">*</span> pa <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><div class="custom-container warning">
-<p class="custom-container-title">注意</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><div class="hint-container warning">
+<p class="hint-container-title">注意</p>
 <p>对于 <code v-pre>void*</code> 型的指针，其是否可以进行<strong>指针运算</strong>取决于编译器遵循的标准，在 GNU 中，<code v-pre>void*</code> 在进行指针运算时就像 <code v-pre>char*</code> 一样；而在 ANSI 的标准，对 <code v-pre>void*</code> 类型的指针进行运算时不被允许的。</p>
 </div>
 <p><code v-pre>void*</code> 属于无类型的指针，那么可以通过其在 C 语言中实现泛型编程。具体参考：<a href="https://www.runoob.com/w3cnote/c-general-function.html" target="_blank" rel="noopener noreferrer">C 语言中的泛型编程<ExternalLinkIcon/></a></p>
@@ -142,8 +142,8 @@ pa <span class="token operator">=</span> <span class="token punctuation">(</span
 
 <span class="token punctuation">}</span> <span class="token keyword">nullptr</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>更多细节在: <a href="https://www.stroustrup.com/N1488-nullptr.pdf" target="_blank" rel="noopener noreferrer">nullptr<ExternalLinkIcon/></a></p>
-<div class="custom-container warning">
-<p class="custom-container-title">注意</p>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
 <ul>
 <li>解引用 <code v-pre>NULL</code> 指针是非法的行为，在解引用之前，必须保证它是非 <code v-pre>NULL</code> 的指针。</li>
 <li><code v-pre>nullptr</code> 一些易错点</li>
@@ -178,8 +178,8 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>还有一种用法是使用 <code v-pre>char*</code> 指向一连串字符的首个字符，使其代表这一连串的字符。</p>
 <div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token keyword">char</span><span class="token operator">*</span> pstr <span class="token operator">=</span> <span class="token string">"hello world!"</span><span class="token punctuation">;</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>此时 <code v-pre>pstr</code> 指向的字符 <code v-pre>h</code> 所在的地址，</p>
-<div class="custom-container warning">
-<p class="custom-container-title">char[] 和 char* 的区别</p>
+<div class="hint-container warning">
+<p class="hint-container-title">char[] 和 char* 的区别</p>
 <p><code v-pre>char[]</code> 是字符数组，是数组；而 <code v-pre>char*</code> 是字符指针，是指针。</p>
 <div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token keyword">char</span> sc1<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"houdongdong"</span><span class="token punctuation">;</span>
 <span class="token keyword">char</span> sc2<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"houdongdong"</span><span class="token punctuation">;</span>
@@ -236,8 +236,8 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
 <h3 id="_4-数组指针" tabindex="-1"><a class="header-anchor" href="#_4-数组指针" aria-hidden="true">#</a> 4.数组指针</h3>
 <p>数组指针本质就是指针，例如上面的字符指针，实际就是字符数组；即指针代表数组。例如：整形指针 <code v-pre>int* pa</code> 可以代表数组 <code v-pre>int pa[]</code> ，或者  <code v-pre>int (*pa)[10]</code> 可以代表 <code v-pre>int pa[][10]</code>。</p>
-<div class="custom-container warning">
-<p class="custom-container-title">* 和 [] 同时出现时结合的优先级顺序问题</p>
+<div class="hint-container warning">
+<p class="hint-container-title">* 和 [] 同时出现时结合的优先级顺序问题</p>
 <p><code v-pre>[]</code> 要比 <code v-pre>*</code> 的优先级大，所以下面表达式中：</p>
 <div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token keyword">int</span><span class="token operator">*</span> pa<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>     <span class="token comment">// 指针数组</span>
 <span class="token keyword">int</span> <span class="token punctuation">(</span><span class="token operator">*</span>pa<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>   <span class="token comment">// 数组指针</span>
@@ -389,8 +389,8 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation
 <li>它指向的指针对象且是一个常量，即它指向的对象不能变化。</li>
 </ul>
 <div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token keyword">const</span> <span class="token keyword">int</span><span class="token operator">*</span> <span class="token keyword">const</span> p<span class="token punctuation">;</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><div class="custom-container info">
-<p class="custom-container-title">实例</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><div class="hint-container info">
+<p class="hint-container-title">实例</p>
 <div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token keyword">int</span> a<span class="token punctuation">,</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token comment">//--------常量指针--------//</span>
 <span class="token keyword">const</span> <span class="token keyword">int</span> <span class="token operator">*</span>p1 <span class="token operator">=</span> <span class="token operator">&amp;</span>a<span class="token punctuation">;</span>
@@ -433,8 +433,8 @@ a <span class="token operator">=</span> <span class="token number">600</span><sp
 </tr>
 </tbody>
 </table>
-<div class="custom-container warning">
-<p class="custom-container-title">注意</p>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
 <p>当 <code v-pre>*</code> 作为间接操作符时，只能作用于指针类型的表达式，不能作用于常量，例如：<code v-pre>*100 = 25</code> 是错误的写法。</p>
 </div>
 <table>
@@ -459,7 +459,7 @@ a <span class="token operator">=</span> <span class="token number">600</span><sp
 </tr>
 </tbody>
 </table>
-<details class="custom-container details"><summary>&& 与 & 的区别</summary>
+<details class="hint-container details"><summary>&& 与 & 的区别</summary>
 <p>相同点：</p>
 <ul>
 <li>都可以作为<strong>逻辑与操作符</strong>，</li>
@@ -476,8 +476,8 @@ a <span class="token operator">=</span> <span class="token number">600</span><sp
   cout <span class="token operator">&lt;&lt;</span> n <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span> <span class="token operator">&lt;&lt;</span> m <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>  <span class="token comment">// 输出结果: 10 101</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details>
-<div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p>使用 <code v-pre>&amp;</code> 按位与的功能可以实现判别整数的奇偶性：</p>
 <ul>
 <li>当 <code v-pre>x &amp; 1 == 0</code> 时为偶数；</li>
@@ -490,7 +490,7 @@ a <span class="token operator">=</span> <span class="token number">600</span><sp
 <p>指针常量</p>
 </blockquote>
 <p>间接操作符 <code v-pre>*</code> 只作用于指针类型的表达式，而不直接作用于常量。例如：</p>
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token operator">*</span><span class="token number">100</span> <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">;</span>            <span class="token comment">// 错误</span>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre cpp="" class="language-cpp"><code><span class="token operator">*</span><span class="token number">100</span> <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">;</span>            <span class="token comment">// 错误</span>
 <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token number">100</span> <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">;</span>    <span class="token comment">// 正确</span>
 </code></pre><div class="highlight-lines"><br><div class="highlight-line">&nbsp;</div></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>上面错误写法中，就是直接作用于常量，这是非法的，若想将数据 25 存储于地址 <code v-pre>100</code> 处，可以通过强制类型转换写法，即上面的正确写法。这里的地址是内存中真正存在的地址，但是由于编译器的在每次编译时，其所分配的地址都是随机的，那么这种赋值是非常危险的，一般情况下绝不会这样使用 <code v-pre>*</code> 操作符，除非在某种特定的、需要使用固定内存地址的情况下才会使用。</p>
 <h3 id="_2-空指针、野指针使用时的注意点" tabindex="-1"><a class="header-anchor" href="#_2-空指针、野指针使用时的注意点" aria-hidden="true">#</a> 2.空指针、野指针使用时的注意点</h3>

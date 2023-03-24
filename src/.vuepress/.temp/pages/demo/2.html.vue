@@ -1,10 +1,10 @@
 <template><div><p>springboot 整和 Swagger</p>
 <!-- more -->
-<p><img src="@source/demo/image/image-20221126151324513.png" alt="image-20221126151324513" loading="lazy"></p>
+<p><img src="@source/demo/image/image-20221126151324513.png" alt="image-20221126151324513"></p>
 <p>【<a href="https://swagger.io/" target="_blank" rel="noopener noreferrer">Swagger 官网<ExternalLinkIcon/></a>】</p>
 <p>其是一个使用文档快速生成 API 接口文档的工具，既可以使用 <a href="https://editor.swagger.io/" target="_blank" rel="noopener noreferrer">Swagger Editor<ExternalLinkIcon/></a> 去生成 API 接口文档，也可以使用在各种语言或者框架中对 Swagger 的集成。</p>
 <p><a href="https://app.swaggerhub.com" target="_blank" rel="noopener noreferrer">SwaggerHub<ExternalLinkIcon/></a>  可以在线编写 API 文档，并且可以生成不同语言的的版本.</p>
-<p><img src="@source/demo/image/image-20221126155118210.png" alt="image-20221126155118210" loading="lazy"></p>
+<p><img src="@source/demo/image/image-20221126155118210.png" alt="image-20221126155118210"></p>
 <p><a href="http://springfox.github.io/springfox/" target="_blank" rel="noopener noreferrer">Springfox<ExternalLinkIcon/></a> 是在 Spring 中的对 Swagger 的集成. Swagger 同时还支持自定义 UI 界面. <a href="https://doc.xiaominfo.com/" target="_blank" rel="noopener noreferrer">Knife4j<ExternalLinkIcon/></a> 是一个开源的 Swagger UI</p>
 <blockquote>
 <p>🚀 实例：在 Springboot 项目中使用 Springfox 和 Knife4j 生成 OpenAPI3 规范的 API 接口文档。</p>
@@ -30,7 +30,6 @@
 </Tabs>
 <p>配置相关：</p>
 <CodeTabs id="47" :data='[{"title":"java 配置类"},{"title":"yaml 配置文件"}]'>
-
 <template #tab0="{ title, value, isActive }">
 <div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token annotation punctuation">@Configuration</span>
 <span class="token annotation punctuation">@EnableOpenApi</span>
@@ -74,8 +73,8 @@
   <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
-<div class="custom-container info">
-<p class="custom-container-title">相关信息</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
 <p>配置文件中主要使用的两个 API：</p>
 <ul>
 <li>
@@ -89,9 +88,8 @@
 </div>
 <p>使用相关：</p>
 <CodeTabs id="78" :data='[{"title":"Controller"},{"title":"Entity"}]'>
-
 <template #tab0="{ title, value, isActive }">
-<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token annotation punctuation">@RestController</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre java="" class="language-java"><code><span class="token annotation punctuation">@RestController</span>
 <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/user"</span><span class="token punctuation">)</span>
 <span class="token annotation punctuation">@Api</span><span class="token punctuation">(</span>tags <span class="token operator">=</span> <span class="token string">"UserController接口"</span><span class="token punctuation">)</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserHandler</span> <span class="token punctuation">{</span>
@@ -116,7 +114,7 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="highlight-lines"><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
-<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre class="language-java"><code><span class="token annotation punctuation">@Data</span>
+<div class="language-java line-numbers-mode" data-ext="java"><pre v-pre java="" class="language-java"><code><span class="token annotation punctuation">@Data</span>
 <span class="token annotation punctuation">@EqualsAndHashCode</span><span class="token punctuation">(</span>callSuper <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span>
 <span class="token annotation punctuation">@Builder</span>
 <span class="token annotation punctuation">@TableName</span><span class="token punctuation">(</span><span class="token string">"user"</span><span class="token punctuation">)</span>
@@ -165,8 +163,8 @@
 </code></pre><div class="highlight-lines"><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <p>效果如下:</p>
-<p><img src="@source/demo/image/image-20221126165547977.png" alt="image-20221126165547977" loading="lazy"></p>
-<p><img src="@source/demo/image/image-20221126165634719.png" alt="image-20221126165634719" loading="lazy"></p>
+<p><img src="@source/demo/image/image-20221126165547977.png" alt="image-20221126165547977"></p>
+<p><img src="@source/demo/image/image-20221126165634719.png" alt="image-20221126165634719"></p>
 </div></template>
 
 
