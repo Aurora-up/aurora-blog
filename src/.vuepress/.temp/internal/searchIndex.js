@@ -218,6 +218,36 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "其他",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Devops 相关",
+        "slug": "devops-相关",
+        "link": "#devops-相关",
+        "children": [
+          {
+            "level": 3,
+            "title": "docker",
+            "slug": "docker",
+            "link": "#docker",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "kubernetes",
+            "slug": "kubernetes",
+            "link": "#kubernetes",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/otherTechniques/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "二维数组声明时,第一维不能省略的原因",
     "headers": [],
     "path": "/demo/1.html",
@@ -294,36 +324,6 @@ export const searchIndex = [
       }
     ],
     "path": "/demo/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "其他",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Devops 相关",
-        "slug": "devops-相关",
-        "link": "#devops-相关",
-        "children": [
-          {
-            "level": 3,
-            "title": "docker",
-            "slug": "docker",
-            "link": "#docker",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "kubernetes",
-            "slug": "kubernetes",
-            "link": "#kubernetes",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/otherTechniques/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1859,245 +1859,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "mybatis 引入和基本配置",
-    "headers": [
-      {
-        "level": 3,
-        "title": "在项目使用 mybatis",
-        "slug": "在项目使用-mybatis",
-        "link": "#在项目使用-mybatis",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "xml 基本配置文件",
-        "slug": "xml-基本配置文件",
-        "link": "#xml-基本配置文件",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "完整的 XML 配置文件",
-        "slug": "完整的-xml-配置文件",
-        "link": "#完整的-xml-配置文件",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "其他常用配置",
-        "slug": "其他常用配置",
-        "link": "#其他常用配置",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "逆向工程",
-        "slug": "逆向工程",
-        "link": "#逆向工程",
-        "children": []
-      }
-    ],
-    "path": "/framework/mybatis/1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "mybatis 的基本使用 —— XML 配置",
-    "headers": [
-      {
-        "level": 2,
-        "title": "XML 映射文件中内容",
-        "slug": "xml-映射文件中内容",
-        "link": "#xml-映射文件中内容",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "参数相关",
-        "slug": "参数相关",
-        "link": "#参数相关",
-        "children": [
-          {
-            "level": 3,
-            "title": "单个参数",
-            "slug": "单个参数",
-            "link": "#单个参数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "多个参数",
-            "slug": "多个参数",
-            "link": "#多个参数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用 @Param() 注解标识参数",
-            "slug": "使用-param-注解标识参数",
-            "link": "#使用-param-注解标识参数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "其他参数",
-            "slug": "其他参数",
-            "link": "#其他参数",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "返回值相关",
-        "slug": "返回值相关",
-        "link": "#返回值相关",
-        "children": [
-          {
-            "level": 3,
-            "title": "返回实体类对象",
-            "slug": "返回实体类对象",
-            "link": "#返回实体类对象",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "返回 List",
-            "slug": "返回-list",
-            "link": "#返回-list",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "返回某个字段",
-            "slug": "返回某个字段",
-            "link": "#返回某个字段",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "返回结果映射 (resultMap)",
-        "slug": "返回结果映射-resultmap",
-        "link": "#返回结果映射-resultmap",
-        "children": [
-          {
-            "level": 3,
-            "title": "多对一映射",
-            "slug": "多对一映射",
-            "link": "#多对一映射",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "一对多映射",
-            "slug": "一对多映射",
-            "link": "#一对多映射",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "缓存相关",
-        "slug": "缓存相关",
-        "link": "#缓存相关",
-        "children": [
-          {
-            "level": 3,
-            "title": "一级缓存",
-            "slug": "一级缓存",
-            "link": "#一级缓存",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "二级缓存",
-            "slug": "二级缓存",
-            "link": "#二级缓存",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "第三方二级缓存",
-            "slug": "第三方二级缓存",
-            "link": "#第三方二级缓存",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/framework/mybatis/2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "mybatis 基本使用 —— 动态SQL",
-    "headers": [
-      {
-        "level": 3,
-        "title": "if",
-        "slug": "if",
-        "link": "#if",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "choose、when 、otherwise",
-        "slug": "choose、when-、otherwise",
-        "link": "#choose、when-、otherwise",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "trim、where、 set",
-        "slug": "trim、where、-set",
-        "link": "#trim、where、-set",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "foreach",
-        "slug": "foreach",
-        "link": "#foreach",
-        "children": []
-      }
-    ],
-    "path": "/framework/mybatis/3.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "mybatis 基本使用 —— java API",
-    "headers": [],
-    "path": "/framework/mybatis/4.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "mybatis 原理性知识",
-    "headers": [],
-    "path": "/framework/mybatis/5.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "mybatis 框架",
-    "headers": [
-      {
-        "level": 2,
-        "title": "目录",
-        "slug": "目录",
-        "link": "#目录",
-        "children": []
-      }
-    ],
-    "path": "/framework/mybatis/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Spring 概述",
     "headers": [
       {
@@ -2344,13 +2105,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Spring WebFlux",
-    "headers": [],
-    "path": "/framework/springWebFlux/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "springcloud",
     "headers": [],
     "path": "/framework/springcloud/",
@@ -2400,9 +2154,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Docker",
+    "title": "Spring WebFlux",
     "headers": [],
-    "path": "/otherTechniques/docker/",
+    "path": "/framework/springWebFlux/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2410,6 +2164,252 @@ export const searchIndex = [
     "title": "Kubernetes",
     "headers": [],
     "path": "/otherTechniques/kubernetes/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Docker",
+    "headers": [],
+    "path": "/otherTechniques/docker/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "mybatis 引入和基本配置",
+    "headers": [
+      {
+        "level": 3,
+        "title": "在项目使用 mybatis",
+        "slug": "在项目使用-mybatis",
+        "link": "#在项目使用-mybatis",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "xml 基本配置文件",
+        "slug": "xml-基本配置文件",
+        "link": "#xml-基本配置文件",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "完整的 XML 配置文件",
+        "slug": "完整的-xml-配置文件",
+        "link": "#完整的-xml-配置文件",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "其他常用配置",
+        "slug": "其他常用配置",
+        "link": "#其他常用配置",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "逆向工程",
+        "slug": "逆向工程",
+        "link": "#逆向工程",
+        "children": []
+      }
+    ],
+    "path": "/framework/mybatis/1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "mybatis 的基本使用 —— XML 配置",
+    "headers": [
+      {
+        "level": 2,
+        "title": "XML 映射文件中内容",
+        "slug": "xml-映射文件中内容",
+        "link": "#xml-映射文件中内容",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "参数相关",
+        "slug": "参数相关",
+        "link": "#参数相关",
+        "children": [
+          {
+            "level": 3,
+            "title": "单个参数",
+            "slug": "单个参数",
+            "link": "#单个参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "多个参数",
+            "slug": "多个参数",
+            "link": "#多个参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用 @Param() 注解标识参数",
+            "slug": "使用-param-注解标识参数",
+            "link": "#使用-param-注解标识参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "其他参数",
+            "slug": "其他参数",
+            "link": "#其他参数",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "返回值相关",
+        "slug": "返回值相关",
+        "link": "#返回值相关",
+        "children": [
+          {
+            "level": 3,
+            "title": "返回实体类对象",
+            "slug": "返回实体类对象",
+            "link": "#返回实体类对象",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "返回 List",
+            "slug": "返回-list",
+            "link": "#返回-list",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "返回某个字段",
+            "slug": "返回某个字段",
+            "link": "#返回某个字段",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "返回结果映射 (resultMap)",
+        "slug": "返回结果映射-resultmap",
+        "link": "#返回结果映射-resultmap",
+        "children": [
+          {
+            "level": 3,
+            "title": "多对一映射",
+            "slug": "多对一映射",
+            "link": "#多对一映射",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "一对多映射",
+            "slug": "一对多映射",
+            "link": "#一对多映射",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "缓存相关",
+        "slug": "缓存相关",
+        "link": "#缓存相关",
+        "children": [
+          {
+            "level": 3,
+            "title": "一级缓存",
+            "slug": "一级缓存",
+            "link": "#一级缓存",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "二级缓存",
+            "slug": "二级缓存",
+            "link": "#二级缓存",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "第三方二级缓存",
+            "slug": "第三方二级缓存",
+            "link": "#第三方二级缓存",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/framework/mybatis/2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "mybatis 基本使用 —— 动态SQL",
+    "headers": [
+      {
+        "level": 3,
+        "title": "if",
+        "slug": "if",
+        "link": "#if",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "choose、when 、otherwise",
+        "slug": "choose、when-、otherwise",
+        "link": "#choose、when-、otherwise",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "trim、where、 set",
+        "slug": "trim、where、-set",
+        "link": "#trim、where、-set",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "foreach",
+        "slug": "foreach",
+        "link": "#foreach",
+        "children": []
+      }
+    ],
+    "path": "/framework/mybatis/3.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "mybatis 基本使用 —— java API",
+    "headers": [],
+    "path": "/framework/mybatis/4.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "mybatis 原理性知识",
+    "headers": [],
+    "path": "/framework/mybatis/5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "mybatis 框架",
+    "headers": [
+      {
+        "level": 2,
+        "title": "目录",
+        "slug": "目录",
+        "link": "#目录",
+        "children": []
+      }
+    ],
+    "path": "/framework/mybatis/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2848,9 +2848,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "mybatis 分类",
+    "title": "spring 分类",
     "headers": [],
-    "path": "/category/mybatis/",
+    "path": "/category/spring/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2862,9 +2862,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "spring 分类",
+    "title": "springMVC 分类",
     "headers": [],
-    "path": "/category/spring/",
+    "path": "/category/springmvc/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2876,9 +2876,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "springMVC 分类",
+    "title": "springcloud 分类",
     "headers": [],
-    "path": "/category/springmvc/",
+    "path": "/category/springcloud/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2904,9 +2904,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "springcloud 分类",
+    "title": "Kubernetes 分类",
     "headers": [],
-    "path": "/category/springcloud/",
+    "path": "/category/kubernetes/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2932,9 +2932,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Kubernetes 分类",
+    "title": "mybatis 分类",
     "headers": [],
-    "path": "/category/kubernetes/",
+    "path": "/category/mybatis/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2942,13 +2942,6 @@ export const searchIndex = [
     "title": "C、C++ 智能指针 标签",
     "headers": [],
     "path": "/tag/c%E3%80%81c__-%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "mybatis 标签",
-    "headers": [],
-    "path": "/tag/mybatis/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2972,18 +2965,12 @@ export const searchIndex = [
     "path": "/tag/springboot/",
     "pathLocale": "/",
     "extraFields": []
+  },
+  {
+    "title": "mybatis 标签",
+    "headers": [],
+    "path": "/tag/mybatis/",
+    "pathLocale": "/",
+    "extraFields": []
   }
 ]
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ searchIndex }) => {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  })
-}
