@@ -298,36 +298,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "其他",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Devops 相关",
-        "slug": "devops-相关",
-        "link": "#devops-相关",
-        "children": [
-          {
-            "level": 3,
-            "title": "docker",
-            "slug": "docker",
-            "link": "#docker",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "kubernetes",
-            "slug": "kubernetes",
-            "link": "#kubernetes",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/otherTechniques/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "快速导航",
     "headers": [],
     "path": "/resourceNav/",
@@ -396,6 +366,36 @@ export const searchIndex = [
     "title": "工具",
     "headers": [],
     "path": "/resourceNav/tools.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "其他",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Devops 相关",
+        "slug": "devops-相关",
+        "link": "#devops-相关",
+        "children": [
+          {
+            "level": 3,
+            "title": "docker",
+            "slug": "docker",
+            "link": "#docker",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "kubernetes",
+            "slug": "kubernetes",
+            "link": "#kubernetes",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/otherTechniques/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2140,125 +2140,58 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Spring 概述",
-    "headers": [
-      {
-        "level": 3,
-        "title": "学习文档：",
-        "slug": "学习文档",
-        "link": "#学习文档",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "API 使用参考文档：",
-        "slug": "api-使用参考文档",
-        "link": "#api-使用参考文档",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Spring 中常用注解 API 文档",
-        "slug": "spring-中常用注解-api-文档",
-        "link": "#spring-中常用注解-api-文档",
-        "children": []
-      }
-    ],
-    "path": "/framework/spring/1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring IOC",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Spring IOC",
-        "slug": "spring-ioc",
-        "link": "#spring-ioc",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "向 IOC 容器中配置 bean",
-        "slug": "向-ioc-容器中配置-bean",
-        "link": "#向-ioc-容器中配置-bean",
-        "children": [
-          {
-            "level": 3,
-            "title": "XML 配置",
-            "slug": "xml-配置",
-            "link": "#xml-配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "java 配置",
-            "slug": "java-配置",
-            "link": "#java-配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "注解配置",
-            "slug": "注解配置",
-            "link": "#注解配置",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "为 IOC 容器中的 bean 作依赖注入",
-        "slug": "为-ioc-容器中的-bean-作依赖注入",
-        "link": "#为-ioc-容器中的-bean-作依赖注入",
-        "children": [
-          {
-            "level": 3,
-            "title": "Setter 注入",
-            "slug": "setter-注入",
-            "link": "#setter-注入",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Constructor 注入",
-            "slug": "constructor-注入",
-            "link": "#constructor-注入",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "基于注解的注入",
-            "slug": "基于注解的注入",
-            "link": "#基于注解的注入",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/framework/spring/2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring AOP",
+    "title": "Spring WebFlux",
     "headers": [],
-    "path": "/framework/spring/3.html",
+    "path": "/framework/springWebFlux/",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "Spring IOC (官文)",
+    "title": "SpringBoot小案例 - 文件上传",
     "headers": [],
-    "path": "/framework/spring/4.html",
+    "path": "/framework/springboot/1.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "Spring",
+    "title": "SpringBoot小案例",
     "headers": [],
-    "path": "/framework/spring/",
+    "path": "/framework/springboot/2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/framework/springboot/3.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/framework/springboot/4.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/framework/springboot/5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "springboot",
+    "headers": [],
+    "path": "/framework/springboot/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Docker",
+    "headers": [],
+    "path": "/otherTechniques/docker/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2386,55 +2319,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Spring WebFlux",
-    "headers": [],
-    "path": "/framework/springWebFlux/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "SpringBoot小案例 - 文件上传",
-    "headers": [],
-    "path": "/framework/springboot/1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "SpringBoot小案例",
-    "headers": [],
-    "path": "/framework/springboot/2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/framework/springboot/3.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/framework/springboot/4.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/framework/springboot/5.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "springboot",
-    "headers": [],
-    "path": "/framework/springboot/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "springcloud",
     "headers": [],
     "path": "/framework/springcloud/",
@@ -2442,9 +2326,125 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Docker",
+    "title": "Spring 概述",
+    "headers": [
+      {
+        "level": 3,
+        "title": "学习文档：",
+        "slug": "学习文档",
+        "link": "#学习文档",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "API 使用参考文档：",
+        "slug": "api-使用参考文档",
+        "link": "#api-使用参考文档",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Spring 中常用注解 API 文档",
+        "slug": "spring-中常用注解-api-文档",
+        "link": "#spring-中常用注解-api-文档",
+        "children": []
+      }
+    ],
+    "path": "/framework/spring/1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Spring IOC",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Spring IOC",
+        "slug": "spring-ioc",
+        "link": "#spring-ioc",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "向 IOC 容器中配置 bean",
+        "slug": "向-ioc-容器中配置-bean",
+        "link": "#向-ioc-容器中配置-bean",
+        "children": [
+          {
+            "level": 3,
+            "title": "XML 配置",
+            "slug": "xml-配置",
+            "link": "#xml-配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "java 配置",
+            "slug": "java-配置",
+            "link": "#java-配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "注解配置",
+            "slug": "注解配置",
+            "link": "#注解配置",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "为 IOC 容器中的 bean 作依赖注入",
+        "slug": "为-ioc-容器中的-bean-作依赖注入",
+        "link": "#为-ioc-容器中的-bean-作依赖注入",
+        "children": [
+          {
+            "level": 3,
+            "title": "Setter 注入",
+            "slug": "setter-注入",
+            "link": "#setter-注入",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Constructor 注入",
+            "slug": "constructor-注入",
+            "link": "#constructor-注入",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "基于注解的注入",
+            "slug": "基于注解的注入",
+            "link": "#基于注解的注入",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/framework/spring/2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Spring AOP",
     "headers": [],
-    "path": "/otherTechniques/docker/",
+    "path": "/framework/spring/3.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Spring IOC (官文)",
+    "headers": [],
+    "path": "/framework/spring/4.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Spring",
+    "headers": [],
+    "path": "/framework/spring/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2904,9 +2904,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "spring 分类",
+    "title": "Spring-WebFlux 分类",
     "headers": [],
-    "path": "/category/spring/",
+    "path": "/category/spring-webflux/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2918,9 +2918,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "springMVC 分类",
+    "title": "docker 分类",
     "headers": [],
-    "path": "/category/springmvc/",
+    "path": "/category/docker/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2932,9 +2932,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Spring-WebFlux 分类",
+    "title": "springMVC 分类",
     "headers": [],
-    "path": "/category/spring-webflux/",
+    "path": "/category/springmvc/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2960,9 +2960,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "docker 分类",
+    "title": "spring 分类",
     "headers": [],
-    "path": "/category/docker/",
+    "path": "/category/spring/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2995,9 +2995,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "spring 标签",
+    "title": "springboot 标签",
     "headers": [],
-    "path": "/tag/spring/",
+    "path": "/tag/springboot/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3009,9 +3009,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "springboot 标签",
+    "title": "spring 标签",
     "headers": [],
-    "path": "/tag/springboot/",
+    "path": "/tag/spring/",
     "pathLocale": "/",
     "extraFields": []
   }
