@@ -1,0 +1,1 @@
+import{_ as e,X as o,Y as t,a1 as s,Z as c}from"./framework-bc96d6c5.js";const a={},n=c("p",null,"常用工具",-1);function r(_,l){return o(),t("div",null,[n,s(" more ")])}const d=e(a,[["render",r],["__file","tools.html.vue"]]);export{d as default};
