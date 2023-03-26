@@ -2,7 +2,7 @@ import {
   setupDevtoolsPlugin
 } from "./chunk-RFQTXRIF.js";
 import {
-  computed2 as computed,
+  computed,
   defineComponent,
   getCurrentInstance,
   h,
@@ -18,8 +18,8 @@ import {
   unref,
   watch,
   watchEffect
-} from "./chunk-XYKEYQA4.js";
-import "./chunk-ZPAKX4FI.js";
+} from "./chunk-AWA6B2ZS.js";
+import "./chunk-JXWQMH7G.js";
 import "./chunk-OZI5HTJH.js";
 
 // node_modules/vue-router/dist/vue-router.mjs

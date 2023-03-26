@@ -122,6 +122,86 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "二维数组声明时,第一维不能省略的原因",
+    "headers": [],
+    "path": "/demo/1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "springboot 整和 Swagger",
+    "headers": [],
+    "path": "/demo/2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "HTTP 协议与 HTTPS 协议",
+    "headers": [
+      {
+        "level": 2,
+        "title": "HTTP 协议的发展概述",
+        "slug": "http-协议的发展概述",
+        "link": "#http-协议的发展概述",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "HTTP 请求",
+        "slug": "http-请求",
+        "link": "#http-请求",
+        "children": [
+          {
+            "level": 3,
+            "title": "常用请求方法",
+            "slug": "常用请求方法",
+            "link": "#常用请求方法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "请求首部字段",
+            "slug": "请求首部字段",
+            "link": "#请求首部字段",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "HTTP 响应",
+        "slug": "http-响应",
+        "link": "#http-响应",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "URI",
+        "slug": "uri",
+        "link": "#uri",
+        "children": []
+      }
+    ],
+    "path": "/demo/3.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "随笔",
+    "headers": [
+      {
+        "level": 2,
+        "title": "目录",
+        "slug": "目录",
+        "link": "#目录",
+        "children": []
+      }
+    ],
+    "path": "/demo/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "数据库相关",
     "headers": [
       {
@@ -218,86 +298,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "二维数组声明时,第一维不能省略的原因",
-    "headers": [],
-    "path": "/demo/1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "springboot 整和 Swagger",
-    "headers": [],
-    "path": "/demo/2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "HTTP 协议与 HTTPS 协议",
-    "headers": [
-      {
-        "level": 2,
-        "title": "HTTP 协议的发展概述",
-        "slug": "http-协议的发展概述",
-        "link": "#http-协议的发展概述",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "HTTP 请求",
-        "slug": "http-请求",
-        "link": "#http-请求",
-        "children": [
-          {
-            "level": 3,
-            "title": "常用请求方法",
-            "slug": "常用请求方法",
-            "link": "#常用请求方法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "请求首部字段",
-            "slug": "请求首部字段",
-            "link": "#请求首部字段",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "HTTP 响应",
-        "slug": "http-响应",
-        "link": "#http-响应",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "URI",
-        "slug": "uri",
-        "link": "#uri",
-        "children": []
-      }
-    ],
-    "path": "/demo/3.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "随笔",
-    "headers": [
-      {
-        "level": 2,
-        "title": "目录",
-        "slug": "目录",
-        "link": "#目录",
-        "children": []
-      }
-    ],
-    "path": "/demo/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "其他",
     "headers": [
       {
@@ -329,38 +329,73 @@ export const searchIndex = [
   },
   {
     "title": "快速导航",
+    "headers": [],
+    "path": "/resourceNav/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "常用文档",
     "headers": [
       {
         "level": 2,
-        "title": "rust",
-        "slug": "rust",
-        "link": "#rust",
+        "title": "本站",
+        "slug": "本站",
+        "link": "#本站",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "本站进阶",
+        "slug": "本站进阶",
+        "link": "#本站进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Web",
+        "slug": "web",
+        "link": "#web",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Serve",
+        "slug": "serve",
+        "link": "#serve",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "code",
+        "slug": "code",
+        "link": "#code",
         "children": [
           {
             "level": 3,
-            "title": "rust 相关书籍",
-            "slug": "rust-相关书籍",
-            "link": "#rust-相关书籍",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "rust 常用第三方库",
-            "slug": "rust-常用第三方库",
-            "link": "#rust-常用第三方库",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "其他",
-            "slug": "其他",
-            "link": "#其他",
+            "title": "rust",
+            "slug": "rust",
+            "link": "#rust",
             "children": []
           }
         ]
       }
     ],
-    "path": "/resourceNav/",
+    "path": "/resourceNav/document.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "友情链接",
+    "headers": [],
+    "path": "/resourceNav/friend.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "工具",
+    "headers": [],
+    "path": "/resourceNav/tools.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -958,6 +993,13 @@ export const searchIndex = [
         "title": "二叉搜索树的退化",
         "slug": "二叉搜索树的退化",
         "link": "#二叉搜索树的退化",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "二叉搜索树的性能分析",
+        "slug": "二叉搜索树的性能分析",
+        "link": "#二叉搜索树的性能分析",
         "children": []
       }
     ],
@@ -2351,13 +2393,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "springcloud",
-    "headers": [],
-    "path": "/framework/springcloud/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "SpringBoot小案例 - 文件上传",
     "headers": [],
     "path": "/framework/springboot/1.html",
@@ -2396,6 +2431,13 @@ export const searchIndex = [
     "title": "springboot",
     "headers": [],
     "path": "/framework/springboot/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "springcloud",
+    "headers": [],
+    "path": "/framework/springcloud/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2484,9 +2526,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "数据库 分类",
+    "title": "springboot 分类",
     "headers": [],
-    "path": "/category/%E6%95%B0%E6%8D%AE%E5%BA%93/",
+    "path": "/category/springboot/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2498,9 +2540,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "framework 分类",
+    "title": "网络协议 分类",
     "headers": [],
-    "path": "/category/framework/",
+    "path": "/category/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2512,9 +2554,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "springboot 分类",
+    "title": "随笔 分类",
     "headers": [],
-    "path": "/category/springboot/",
+    "path": "/category/%E9%9A%8F%E7%AC%94/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2526,9 +2568,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "网络协议 分类",
+    "title": "数据库 分类",
     "headers": [],
-    "path": "/category/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/",
+    "path": "/category/%E6%95%B0%E6%8D%AE%E5%BA%93/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2540,9 +2582,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "随笔 分类",
+    "title": "framework 分类",
     "headers": [],
-    "path": "/category/%E9%9A%8F%E7%AC%94/",
+    "path": "/category/framework/",
     "pathLocale": "/",
     "extraFields": []
   },

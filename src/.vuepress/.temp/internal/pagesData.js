@@ -7,10 +7,6 @@ export const pagesData = {
   "v-30e3f50e": () => import(/* webpackChunkName: "v-30e3f50e" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/Algorithm/index.html.js").then(({ data }) => data),
   // path: /code/
   "v-146a1089": () => import(/* webpackChunkName: "v-146a1089" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/code/index.html.js").then(({ data }) => data),
-  // path: /database/
-  "v-2e25198a": () => import(/* webpackChunkName: "v-2e25198a" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/database/index.html.js").then(({ data }) => data),
-  // path: /framework/
-  "v-7d72c4ac": () => import(/* webpackChunkName: "v-7d72c4ac" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/framework/index.html.js").then(({ data }) => data),
   // path: /demo/1.html
   "v-1537274a": () => import(/* webpackChunkName: "v-1537274a" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/demo/1.html.js").then(({ data }) => data),
   // path: /demo/2.html
@@ -19,10 +15,20 @@ export const pagesData = {
   "v-0e63c4ce": () => import(/* webpackChunkName: "v-0e63c4ce" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/demo/3.html.js").then(({ data }) => data),
   // path: /demo/
   "v-1473bf53": () => import(/* webpackChunkName: "v-1473bf53" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/demo/index.html.js").then(({ data }) => data),
+  // path: /database/
+  "v-2e25198a": () => import(/* webpackChunkName: "v-2e25198a" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/database/index.html.js").then(({ data }) => data),
+  // path: /framework/
+  "v-7d72c4ac": () => import(/* webpackChunkName: "v-7d72c4ac" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/framework/index.html.js").then(({ data }) => data),
   // path: /otherTechniques/
   "v-37513035": () => import(/* webpackChunkName: "v-37513035" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/otherTechniques/index.html.js").then(({ data }) => data),
   // path: /resourceNav/
   "v-0cd54213": () => import(/* webpackChunkName: "v-0cd54213" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/resourceNav/index.html.js").then(({ data }) => data),
+  // path: /resourceNav/document.html
+  "v-faf4452a": () => import(/* webpackChunkName: "v-faf4452a" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/resourceNav/document.html.js").then(({ data }) => data),
+  // path: /resourceNav/friend.html
+  "v-8a3825f0": () => import(/* webpackChunkName: "v-8a3825f0" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/resourceNav/friend.html.js").then(({ data }) => data),
+  // path: /resourceNav/tools.html
+  "v-315d239e": () => import(/* webpackChunkName: "v-315d239e" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/resourceNav/tools.html.js").then(({ data }) => data),
   // path: /Algorithm/base/1.html
   "v-7d170da6": () => import(/* webpackChunkName: "v-7d170da6" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/Algorithm/base/1.html.js").then(({ data }) => data),
   // path: /Algorithm/base/2.html
@@ -155,8 +161,6 @@ export const pagesData = {
   "v-5726df28": () => import(/* webpackChunkName: "v-5726df28" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/framework/springMVC/index.html.js").then(({ data }) => data),
   // path: /framework/springWebFlux/
   "v-103ce9c9": () => import(/* webpackChunkName: "v-103ce9c9" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/framework/springWebFlux/index.html.js").then(({ data }) => data),
-  // path: /framework/springcloud/
-  "v-db4048de": () => import(/* webpackChunkName: "v-db4048de" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/framework/springcloud/index.html.js").then(({ data }) => data),
   // path: /framework/springboot/1.html
   "v-9f624f24": () => import(/* webpackChunkName: "v-9f624f24" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/framework/springboot/1.html.js").then(({ data }) => data),
   // path: /framework/springboot/2.html
@@ -169,6 +173,8 @@ export const pagesData = {
   "v-91bb8a2c": () => import(/* webpackChunkName: "v-91bb8a2c" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/framework/springboot/5.html.js").then(({ data }) => data),
   // path: /framework/springboot/
   "v-8b4d14b4": () => import(/* webpackChunkName: "v-8b4d14b4" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/framework/springboot/index.html.js").then(({ data }) => data),
+  // path: /framework/springcloud/
+  "v-db4048de": () => import(/* webpackChunkName: "v-db4048de" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/framework/springcloud/index.html.js").then(({ data }) => data),
   // path: /otherTechniques/docker/
   "v-4295703a": () => import(/* webpackChunkName: "v-4295703a" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/otherTechniques/docker/index.html.js").then(({ data }) => data),
   // path: /otherTechniques/kubernetes/
@@ -193,24 +199,24 @@ export const pagesData = {
   "v-129832f2": () => import(/* webpackChunkName: "v-129832f2" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/category/语法相关/index.html.js").then(({ data }) => data),
   // path: /tag/swagger/
   "v-79936c33": () => import(/* webpackChunkName: "v-79936c33" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/tag/swagger/index.html.js").then(({ data }) => data),
-  // path: /category/%E6%95%B0%E6%8D%AE%E5%BA%93/
-  "v-5e0b61bd": () => import(/* webpackChunkName: "v-5e0b61bd" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/category/数据库/index.html.js").then(({ data }) => data),
-  // path: /tag/http-%E5%8D%8F%E8%AE%AE/
-  "v-10814b37": () => import(/* webpackChunkName: "v-10814b37" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/tag/http-协议/index.html.js").then(({ data }) => data),
-  // path: /category/framework/
-  "v-3b776fee": () => import(/* webpackChunkName: "v-3b776fee" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/category/framework/index.html.js").then(({ data }) => data),
-  // path: /tag/%E8%B5%84%E6%BA%90%E7%AB%99%E7%82%B9/
-  "v-094d0db6": () => import(/* webpackChunkName: "v-094d0db6" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/tag/资源站点/index.html.js").then(({ data }) => data),
   // path: /category/springboot/
   "v-0667aa78": () => import(/* webpackChunkName: "v-0667aa78" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/category/springboot/index.html.js").then(({ data }) => data),
-  // path: /tag/%E9%80%92%E5%BD%92/
-  "v-6eeb82a2": () => import(/* webpackChunkName: "v-6eeb82a2" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/tag/递归/index.html.js").then(({ data }) => data),
+  // path: /tag/http-%E5%8D%8F%E8%AE%AE/
+  "v-10814b37": () => import(/* webpackChunkName: "v-10814b37" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/tag/http-协议/index.html.js").then(({ data }) => data),
   // path: /category/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/
   "v-56cf1fbc": () => import(/* webpackChunkName: "v-56cf1fbc" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/category/网络协议/index.html.js").then(({ data }) => data),
-  // path: /tag/%E5%88%86%E6%B2%BB/
-  "v-4795e2ce": () => import(/* webpackChunkName: "v-4795e2ce" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/tag/分治/index.html.js").then(({ data }) => data),
+  // path: /tag/%E8%B5%84%E6%BA%90%E7%AB%99%E7%82%B9/
+  "v-094d0db6": () => import(/* webpackChunkName: "v-094d0db6" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/tag/资源站点/index.html.js").then(({ data }) => data),
   // path: /category/%E9%9A%8F%E7%AC%94/
   "v-60649a06": () => import(/* webpackChunkName: "v-60649a06" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/category/随笔/index.html.js").then(({ data }) => data),
+  // path: /tag/%E9%80%92%E5%BD%92/
+  "v-6eeb82a2": () => import(/* webpackChunkName: "v-6eeb82a2" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/tag/递归/index.html.js").then(({ data }) => data),
+  // path: /category/%E6%95%B0%E6%8D%AE%E5%BA%93/
+  "v-5e0b61bd": () => import(/* webpackChunkName: "v-5e0b61bd" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/category/数据库/index.html.js").then(({ data }) => data),
+  // path: /tag/%E5%88%86%E6%B2%BB/
+  "v-4795e2ce": () => import(/* webpackChunkName: "v-4795e2ce" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/tag/分治/index.html.js").then(({ data }) => data),
+  // path: /category/framework/
+  "v-3b776fee": () => import(/* webpackChunkName: "v-3b776fee" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/category/framework/index.html.js").then(({ data }) => data),
   // path: /tag/%E5%AD%97%E7%AC%A6%E4%B8%B2/
   "v-93cb9d6e": () => import(/* webpackChunkName: "v-93cb9d6e" */"/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pages/tag/字符串/index.html.js").then(({ data }) => data),
   // path: /category/%E5%BF%AB%E9%80%9F%E5%AF%BC%E8%88%AA/

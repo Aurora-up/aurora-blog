@@ -4,8 +4,9 @@ layout: Blog
 icon: home
 title: Aurora
 heroImage: /logo.svg
-heroText: Aurora-Blog
+heroText: Aurora
 heroFullScreen: true
+bgImage: /img/bg.jpg
 tagline: 不要因为走的太远而忘记为什么出发!
 projects:
   - icon: project

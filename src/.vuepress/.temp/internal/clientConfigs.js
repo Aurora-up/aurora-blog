@@ -13,8 +13,7 @@ import clientConfig11 from '/Users/aurora/data/笔记/aurora-blog/node_modules/v
 import clientConfig12 from '/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/pwa2/config.js'
 import clientConfig13 from '/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/theme-hope/config.js'
 import clientConfig14 from '/Users/aurora/data/笔记/aurora-blog/node_modules/@vuepress/plugin-search/lib/client/config.js'
-import clientConfig15 from '/Users/aurora/data/笔记/aurora-blog/src/.vuepress/.temp/register-components/clientConfig.5a76d91b.js'
-import clientConfig16 from '/Users/aurora/data/笔记/aurora-blog/src/.vuepress/client.ts'
+import clientConfig15 from '/Users/aurora/data/笔记/aurora-blog/src/.vuepress/client.ts'
 
 export const clientConfigs = [
   clientConfig0,
@@ -33,5 +32,4 @@ export const clientConfigs = [
   clientConfig13,
   clientConfig14,
   clientConfig15,
-  clientConfig16,
 ]

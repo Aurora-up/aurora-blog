@@ -1,10 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import { zhNavbar } from "./navbar/index.js";
 import { zhSidebar } from "./sidebar/index.js";
-import { tr } from "element-plus/es/locale/index.js";
-import { getDirname, path } from "@vuepress/utils";
 
-const __dirname = getDirname(import.meta.url);
 
 export default hopeTheme({
 
@@ -13,8 +10,10 @@ export default hopeTheme({
   author: {
     name: "Mr.Hdd",
     url: "https://aurora-up.github.io/aurora-blog/",
-    email: "2723787996@qq.com"
+    email: "2723787996@qq.com",
+    
   },
+  
 
   copyright: "@Copyright | Author: hdd",
   logo: "/logo.jpg",
@@ -24,7 +23,9 @@ export default hopeTheme({
   docsDir: "src",
   docsBranch: "master",
 
-  pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
+  // 文章元信息
+  pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime", "PageView"],
+
 
   blog: {
     medias: {
@@ -33,7 +34,11 @@ export default hopeTheme({
       Gitee: "https://gitee.com/Aurora-up",
       GitHub: "https://github.com/Aurora-up",
     },
+    
   },
+
+  
+
   iconAssets: [
     "//at.alicdn.com/t/c/font_3740996_9d1bjk1wpxi.css", 
    ],
@@ -60,7 +65,7 @@ export default hopeTheme({
     },
   },
 
-  //  加密配置
+  //  文章加密配置
   encrypt: {
     config: {
       "/demo/encrypt.html": ["1234"],
@@ -77,7 +82,10 @@ export default hopeTheme({
 
   // 全屏按钮
   fullscreen: true,
+  // 返回顶部按钮
   backToTop: true,
+
+
 
 
   plugins: {
@@ -85,16 +93,20 @@ export default hopeTheme({
 
     //  评论插件
     comment: {
-      // 插件选项
-      provider: "Giscus",
-      comment: true,
-      // 个人评论仓库：https://github.com/lindong-h/blog-comment
-      repo: "Aurora-up/blog-comment",
-      repoId: "R_kgDOIWQMIw",
-      category: "General",
-      categoryId : "DIC_kwDOIWQMI84CSTX3",
-    },
+      // Giscus 评论插件
+      // provider: "Giscus",
+      // comment: true,
+      // // 个人评论仓库：https://github.com/lindong-h/blog-comment
+      // repo: "Aurora-up/blog-comment",
+      // repoId: "R_kgDOIWQMIw",
+      // category: "General",
+      // categoryId : "DIC_kwDOIWQMI84CSTX3",
 
+      // Waline 评论插件
+      provider: "Waline",
+      serverURL: "https://waline-blog-commit.vercel.app", 
+      reaction: true
+    },
 
     // markdown 增强
     mdEnhance: {
@@ -137,6 +149,13 @@ export default hopeTheme({
       vuePlayground: true,
     },
 
+    // 代码主题
+    prismjs: {
+      light: "one-light",
+      dark: "dracula"
+    },
+
+
     // 图片预览插件
     photoSwipe : true,
 
@@ -152,7 +171,6 @@ export default hopeTheme({
 
     //  版权信息
     copyright: {
-      // hostname: "aurora-up.github.io",
       author: " hdd ",
       license: " MIT ",
       triggerWords: 50,
@@ -163,6 +181,7 @@ export default hopeTheme({
       components: ["PDF", "FontIcon",],
     },
   },
+
 },
 
 );

@@ -1,0 +1,1 @@
+import{_ as e,X as t,Y as o,a1 as c,Z as _}from"./framework-bc96d6c5.js";const a={},n=_("p",null,"「队列 Queue 」",-1);function r(s,l){return t(),o("div",null,[n,c(" more ")])}const u=e(a,[["render",r],["__file","13.html.vue"]]);export{u as default};

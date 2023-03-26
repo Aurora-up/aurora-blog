@@ -1,0 +1,107 @@
+[
+    {
+        "name": "Rust 官网",
+        "href": "https://www.rust-lang.org/",
+        "desc": "Rust Programming Lang",
+        "cover": "/navcover/rust.png",
+        "type": ["rust"]
+    },
+    {
+        "name": "crates.io",
+        "href": "https://crates.io/",
+        "desc": "rust 语言第三方库集合",
+        "cover": "/navcover/cratesio.png",
+        "type": ["rust"]
+    },
+    {
+        "name": "lib.rs",
+        "href": "https://lib.rs/",
+        "desc": "对 rust 的第三方库进行了分类",
+        "cover": "/navcover/librs.png",
+        "type": ["rust"]
+    },
+    {
+        "name": "中文站点",
+        "href": "https://rustwiki.org/",
+        "desc": "对rust标准库,cargo手册登书籍进行了翻译",
+        "cover": "/navcover/rust.png",
+        "type": ["rust"]
+    },
+    {
+        "name": "官方教程",
+        "href": "https://doc.rust-lang.org/book/ch00-00-introduction.html",
+        "desc": "rust 官方教程",
+        "cover": "/navcover/rustbook.png",
+        "type": ["rust"]
+    },
+    {
+        "name": "Rust 异步",
+        "href": "https://rust-lang.github.io/async-book/",
+        "desc": "rust 异步相关的基础知识",
+        "cover": "/navcover/rustbook.png",
+        "type": ["rust"]
+    },
+    {
+        "name": "Rust 异步 ",
+        "href": "https://huangjj27.github.io/async-book/01_getting_started/01_chapter.html",
+        "desc": "rust 异步相关的基础知识 (中文版)",
+        "cover": "/navcover/rustbook.png",
+        "type": ["rust"]
+    },
+    {
+        "name": "Design Patterns",
+        "href": "https://fomalhauthmj.github.io/patterns/intro.html",
+        "desc": "rust 中的设计模式",
+        "cover": "/navcover/rustbook.png",
+        "type": ["rust"]
+    },
+    {
+        "name": "tokio",
+        "href": "https://tokio.rs/",
+        "desc": "rust 异步运行时",
+        "cover": "/navcover/tokio.svg",
+        "type": ["rust"]
+    },
+    {
+        "name": "Actix",
+        "href": "https://actix.rs/",
+        "desc": "高性能 web 框架",
+        "cover": "/navcover/actix.png",
+        "type": ["rust"]
+    },
+    {
+        "name": "Axum",
+        "href": "https://github.com/tokio-rs/axum",
+        "desc": "专注于模块化和人体工程学的 web 框架",
+        "cover": "/navcover/cratesio.png",
+        "type": ["rust"]
+    },
+    {
+        "name": "Tauri",
+        "href": "https://tauri.app/",
+        "desc": "使用web前端构建桌面级应用",
+        "cover": "/navcover/tauri.png",
+        "type": ["rust"]
+    },
+    {
+        "name": "axum中文网",
+        "href": "https://axum.rs/",
+        "desc": "一些使用 axum 的小案例",
+        "cover": "/navcover/axumzh.svg",
+        "type": ["rust"]
+    },
+    {
+        "name": "OS",
+        "href": "https://os.phil-opp.com/",
+        "desc": "使用 rust 从零开始编写一个小型操作系统",
+        "cover": "/navcover/rustbook.png",
+        "type": ["rust"]
+    },
+    {
+        "name": "官方教程",
+        "href": "https://doc.rust-lang.org/book/ch00-00-introduction.html",
+        "desc": "rust 官方教程",
+        "cover": "/navcover/rustbook.png",
+        "type": ["rust"]
+    }
+]

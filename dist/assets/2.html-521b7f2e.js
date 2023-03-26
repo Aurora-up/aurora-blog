@@ -1,0 +1,1 @@
+import{_ as e,X as t,Y as o,a1 as c,Z as n}from"./framework-bc96d6c5.js";const a={},r=n("p",null,"「分治 divide and conquer」",-1);function _(s,l){return t(),o("div",null,[r,c(" more ")])}const m=e(a,[["render",_],["__file","2.html.vue"]]);export{m as default};

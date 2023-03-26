@@ -3,7 +3,25 @@ $theme-color: #77e1cf;
 
 
 // content
-$content-width: 850px;
+$content-width: 900px;
 $navbar-height: 3rem;
 
 
+$border-color: (
+  light: #ddd,
+  dark: #444,
+);
+
+// sidebar
+$sidebar-width: 15rem;
+$sidebar-mobile-width: 16rem !default;
+
+$bg-color: (
+  light: #fff,
+  dark: #2e303e,
+);
+
+$text-color: (
+  light: #2c3e50,
+  dark: #f8f8f8,
+);

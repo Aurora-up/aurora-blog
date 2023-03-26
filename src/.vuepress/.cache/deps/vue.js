@@ -18,7 +18,7 @@ import {
   cloneVNode,
   compatUtils,
   compile,
-  computed2 as computed,
+  computed,
   createApp,
   createBaseVNode,
   createBlock,
@@ -138,7 +138,7 @@ import {
   withMemo,
   withModifiers,
   withScopeId
-} from "./chunk-XYKEYQA4.js";
+} from "./chunk-AWA6B2ZS.js";
 import {
   camelize,
   capitalize,
@@ -147,7 +147,7 @@ import {
   normalizeStyle,
   toDisplayString,
   toHandlerKey
-} from "./chunk-ZPAKX4FI.js";
+} from "./chunk-JXWQMH7G.js";
 import "./chunk-OZI5HTJH.js";
 export {
   BaseTransition,
