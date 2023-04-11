@@ -3,10 +3,7 @@ import theme from "./theme.js";
 import { searchPlugin } from '@vuepress/plugin-search'
 export default defineUserConfig({
   base: "/aurora-blog/",
-
   dest: "dist",
-  host: "0.0.0.0",
-  port: 8080,
 
   locales: {
     "/": {

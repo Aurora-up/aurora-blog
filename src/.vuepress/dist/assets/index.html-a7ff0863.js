@@ -1,1 +1,0 @@
-import{aP as e,S as t,U as n,ac as c,V as o}from"./framework-b86c3bdd.js";const a={},r=o("p",null,"Spring WebFlux",-1);function s(_,l){return t(),n("div",null,[r,c(" more ")])}const i=e(a,[["render",s],["__file","index.html.vue"]]);export{i as default};

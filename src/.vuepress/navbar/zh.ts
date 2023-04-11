@@ -33,6 +33,11 @@ export const zhNavbar = navbar([
         link: "search/"
       },
       {
+        text: "字符串",
+        icon: "string",
+        link: "string/"
+      },
+      {
         text: "数论",
         icon: "number_theory",
         link: "number_theory/"

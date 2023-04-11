@@ -38,6 +38,13 @@ export const searchIndex = [
           },
           {
             "level": 3,
+            "title": "字符串",
+            "slug": "字符串",
+            "link": "#字符串",
+            "children": []
+          },
+          {
+            "level": 3,
             "title": "数论",
             "slug": "数论",
             "link": "#数论",
@@ -122,6 +129,44 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "数据库相关",
+    "headers": [
+      {
+        "level": 2,
+        "title": "关系型数据库",
+        "slug": "关系型数据库",
+        "link": "#关系型数据库",
+        "children": [
+          {
+            "level": 3,
+            "title": "mysql",
+            "slug": "mysql",
+            "link": "#mysql",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "NoSql",
+        "slug": "nosql",
+        "link": "#nosql",
+        "children": [
+          {
+            "level": 3,
+            "title": "redis",
+            "slug": "redis",
+            "link": "#redis",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/database/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "二维数组声明时,第一维不能省略的原因",
     "headers": [],
     "path": "/demo/1.html",
@@ -202,44 +247,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "数据库相关",
-    "headers": [
-      {
-        "level": 2,
-        "title": "关系型数据库",
-        "slug": "关系型数据库",
-        "link": "#关系型数据库",
-        "children": [
-          {
-            "level": 3,
-            "title": "mysql",
-            "slug": "mysql",
-            "link": "#mysql",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "NoSql",
-        "slug": "nosql",
-        "link": "#nosql",
-        "children": [
-          {
-            "level": 3,
-            "title": "redis",
-            "slug": "redis",
-            "link": "#redis",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/database/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "框架相关",
     "headers": [
       {
@@ -294,6 +301,36 @@ export const searchIndex = [
       }
     ],
     "path": "/framework/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "其他",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Devops 相关",
+        "slug": "devops-相关",
+        "link": "#devops-相关",
+        "children": [
+          {
+            "level": 3,
+            "title": "docker",
+            "slug": "docker",
+            "link": "#docker",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "kubernetes",
+            "slug": "kubernetes",
+            "link": "#kubernetes",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/otherTechniques/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -364,38 +401,23 @@ export const searchIndex = [
   },
   {
     "title": "工具",
-    "headers": [],
-    "path": "/resourceNav/tools.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "其他",
     "headers": [
       {
         "level": 2,
-        "title": "Devops 相关",
-        "slug": "devops-相关",
-        "link": "#devops-相关",
-        "children": [
-          {
-            "level": 3,
-            "title": "docker",
-            "slug": "docker",
-            "link": "#docker",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "kubernetes",
-            "slug": "kubernetes",
-            "link": "#kubernetes",
-            "children": []
-          }
-        ]
+        "title": "数学辅助工具",
+        "slug": "数学辅助工具",
+        "link": "#数学辅助工具",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "其他小工具",
+        "slug": "其他小工具",
+        "link": "#其他小工具",
+        "children": []
       }
     ],
-    "path": "/otherTechniques/",
+    "path": "/resourceNav/tools.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -418,35 +440,6 @@ export const searchIndex = [
     "title": "分治",
     "headers": [],
     "path": "/Algorithm/base/2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "字符串处理",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Kmp 算法",
-        "slug": "kmp-算法",
-        "link": "#kmp-算法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "字符串哈希",
-        "slug": "字符串哈希",
-        "link": "#字符串哈希",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Manacher 算法",
-        "slug": "manacher-算法",
-        "link": "#manacher-算法",
-        "children": []
-      }
-    ],
-    "path": "/Algorithm/base/3.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1708,6 +1701,42 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "字符串匹配",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Kmp 算法",
+        "slug": "kmp-算法",
+        "link": "#kmp-算法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "字符串哈希",
+        "slug": "字符串哈希",
+        "link": "#字符串哈希",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Manacher 算法",
+        "slug": "manacher-算法",
+        "link": "#manacher-算法",
+        "children": []
+      }
+    ],
+    "path": "/Algorithm/string/1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "字符串",
+    "headers": [],
+    "path": "/Algorithm/string/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "指针",
     "headers": [
       {
@@ -2140,58 +2169,125 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Spring WebFlux",
-    "headers": [],
-    "path": "/framework/springWebFlux/",
+    "title": "Spring 概述",
+    "headers": [
+      {
+        "level": 3,
+        "title": "学习文档：",
+        "slug": "学习文档",
+        "link": "#学习文档",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "API 使用参考文档：",
+        "slug": "api-使用参考文档",
+        "link": "#api-使用参考文档",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Spring 中常用注解 API 文档",
+        "slug": "spring-中常用注解-api-文档",
+        "link": "#spring-中常用注解-api-文档",
+        "children": []
+      }
+    ],
+    "path": "/framework/spring/1.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "SpringBoot小案例 - 文件上传",
-    "headers": [],
-    "path": "/framework/springboot/1.html",
+    "title": "Spring IOC",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Spring IOC",
+        "slug": "spring-ioc",
+        "link": "#spring-ioc",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "向 IOC 容器中配置 bean",
+        "slug": "向-ioc-容器中配置-bean",
+        "link": "#向-ioc-容器中配置-bean",
+        "children": [
+          {
+            "level": 3,
+            "title": "XML 配置",
+            "slug": "xml-配置",
+            "link": "#xml-配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "java 配置",
+            "slug": "java-配置",
+            "link": "#java-配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "注解配置",
+            "slug": "注解配置",
+            "link": "#注解配置",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "为 IOC 容器中的 bean 作依赖注入",
+        "slug": "为-ioc-容器中的-bean-作依赖注入",
+        "link": "#为-ioc-容器中的-bean-作依赖注入",
+        "children": [
+          {
+            "level": 3,
+            "title": "Setter 注入",
+            "slug": "setter-注入",
+            "link": "#setter-注入",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Constructor 注入",
+            "slug": "constructor-注入",
+            "link": "#constructor-注入",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "基于注解的注入",
+            "slug": "基于注解的注入",
+            "link": "#基于注解的注入",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/framework/spring/2.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "SpringBoot小案例",
+    "title": "Spring AOP",
     "headers": [],
-    "path": "/framework/springboot/2.html",
+    "path": "/framework/spring/3.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "",
+    "title": "Spring IOC (官文)",
     "headers": [],
-    "path": "/framework/springboot/3.html",
+    "path": "/framework/spring/4.html",
     "pathLocale": "/",
     "extraFields": []
   },
   {
-    "title": "",
+    "title": "Spring",
     "headers": [],
-    "path": "/framework/springboot/4.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [],
-    "path": "/framework/springboot/5.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "springboot",
-    "headers": [],
-    "path": "/framework/springboot/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Docker",
-    "headers": [],
-    "path": "/otherTechniques/docker/",
+    "path": "/framework/spring/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2319,6 +2415,55 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "Spring WebFlux",
+    "headers": [],
+    "path": "/framework/springWebFlux/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "SpringBoot小案例 - 文件上传",
+    "headers": [],
+    "path": "/framework/springboot/1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "SpringBoot小案例",
+    "headers": [],
+    "path": "/framework/springboot/2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/framework/springboot/3.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/framework/springboot/4.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [],
+    "path": "/framework/springboot/5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "springboot",
+    "headers": [],
+    "path": "/framework/springboot/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "springcloud",
     "headers": [],
     "path": "/framework/springcloud/",
@@ -2326,125 +2471,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Spring 概述",
-    "headers": [
-      {
-        "level": 3,
-        "title": "学习文档：",
-        "slug": "学习文档",
-        "link": "#学习文档",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "API 使用参考文档：",
-        "slug": "api-使用参考文档",
-        "link": "#api-使用参考文档",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Spring 中常用注解 API 文档",
-        "slug": "spring-中常用注解-api-文档",
-        "link": "#spring-中常用注解-api-文档",
-        "children": []
-      }
-    ],
-    "path": "/framework/spring/1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring IOC",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Spring IOC",
-        "slug": "spring-ioc",
-        "link": "#spring-ioc",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "向 IOC 容器中配置 bean",
-        "slug": "向-ioc-容器中配置-bean",
-        "link": "#向-ioc-容器中配置-bean",
-        "children": [
-          {
-            "level": 3,
-            "title": "XML 配置",
-            "slug": "xml-配置",
-            "link": "#xml-配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "java 配置",
-            "slug": "java-配置",
-            "link": "#java-配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "注解配置",
-            "slug": "注解配置",
-            "link": "#注解配置",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "为 IOC 容器中的 bean 作依赖注入",
-        "slug": "为-ioc-容器中的-bean-作依赖注入",
-        "link": "#为-ioc-容器中的-bean-作依赖注入",
-        "children": [
-          {
-            "level": 3,
-            "title": "Setter 注入",
-            "slug": "setter-注入",
-            "link": "#setter-注入",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Constructor 注入",
-            "slug": "constructor-注入",
-            "link": "#constructor-注入",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "基于注解的注入",
-            "slug": "基于注解的注入",
-            "link": "#基于注解的注入",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/framework/spring/2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring AOP",
+    "title": "Docker",
     "headers": [],
-    "path": "/framework/spring/3.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring IOC (官文)",
-    "headers": [],
-    "path": "/framework/spring/4.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring",
-    "headers": [],
-    "path": "/framework/spring/",
+    "path": "/otherTechniques/docker/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2526,9 +2555,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "springboot 分类",
+    "title": "数据库 分类",
     "headers": [],
-    "path": "/category/springboot/",
+    "path": "/category/%E6%95%B0%E6%8D%AE%E5%BA%93/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2540,9 +2569,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "网络协议 分类",
+    "title": "springboot 分类",
     "headers": [],
-    "path": "/category/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/",
+    "path": "/category/springboot/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2554,9 +2583,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "随笔 分类",
+    "title": "网络协议 分类",
     "headers": [],
-    "path": "/category/%E9%9A%8F%E7%AC%94/",
+    "path": "/category/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2568,9 +2597,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "数据库 分类",
+    "title": "随笔 分类",
     "headers": [],
-    "path": "/category/%E6%95%B0%E6%8D%AE%E5%BA%93/",
+    "path": "/category/%E9%9A%8F%E7%AC%94/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2589,9 +2618,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "字符串 标签",
+    "title": "二分 标签",
     "headers": [],
-    "path": "/tag/%E5%AD%97%E7%AC%A6%E4%B8%B2/",
+    "path": "/tag/%E4%BA%8C%E5%88%86/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2603,9 +2632,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "二分 标签",
+    "title": "树 标签",
     "headers": [],
-    "path": "/tag/%E4%BA%8C%E5%88%86/",
+    "path": "/tag/%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2617,9 +2646,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "树 标签",
+    "title": "图数据结构 标签",
     "headers": [],
-    "path": "/tag/%E6%A0%91/",
+    "path": "/tag/%E5%9B%BE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2631,9 +2660,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "图数据结构 标签",
+    "title": "链表 标签",
     "headers": [],
-    "path": "/tag/%E5%9B%BE%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/",
+    "path": "/tag/%E9%93%BE%E8%A1%A8/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2645,9 +2674,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "链表 标签",
+    "title": "栈 标签",
     "headers": [],
-    "path": "/tag/%E9%93%BE%E8%A1%A8/",
+    "path": "/tag/%E6%A0%88/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2659,9 +2688,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "栈 标签",
+    "title": "队列 标签",
     "headers": [],
-    "path": "/tag/%E6%A0%88/",
+    "path": "/tag/%E9%98%9F%E5%88%97/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2673,9 +2702,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "队列 标签",
+    "title": "哈希表 标签",
     "headers": [],
-    "path": "/tag/%E9%98%9F%E5%88%97/",
+    "path": "/tag/%E5%93%88%E5%B8%8C%E8%A1%A8/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2687,9 +2716,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "哈希表 标签",
+    "title": "邻接表和邻接矩阵 标签",
     "headers": [],
-    "path": "/tag/%E5%93%88%E5%B8%8C%E8%A1%A8/",
+    "path": "/tag/%E9%82%BB%E6%8E%A5%E8%A1%A8%E5%92%8C%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2701,9 +2730,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "邻接表和邻接矩阵 标签",
+    "title": "堆 标签",
     "headers": [],
-    "path": "/tag/%E9%82%BB%E6%8E%A5%E8%A1%A8%E5%92%8C%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5/",
+    "path": "/tag/%E5%A0%86/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2715,9 +2744,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "堆 标签",
+    "title": "查找技术 标签",
     "headers": [],
-    "path": "/tag/%E5%A0%86/",
+    "path": "/tag/%E6%9F%A5%E6%89%BE%E6%8A%80%E6%9C%AF/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2729,9 +2758,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "查找技术 标签",
+    "title": "排序 标签",
     "headers": [],
-    "path": "/tag/%E6%9F%A5%E6%89%BE%E6%8A%80%E6%9C%AF/",
+    "path": "/tag/%E6%8E%92%E5%BA%8F/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2743,9 +2772,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "排序 标签",
+    "title": "二叉树 标签",
     "headers": [],
-    "path": "/tag/%E6%8E%92%E5%BA%8F/",
+    "path": "/tag/%E4%BA%8C%E5%8F%89%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2757,9 +2786,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "二叉树 标签",
+    "title": "二叉搜索树 标签",
     "headers": [],
-    "path": "/tag/%E4%BA%8C%E5%8F%89%E6%A0%91/",
+    "path": "/tag/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2771,9 +2800,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "二叉搜索树 标签",
+    "title": "红黑树 标签",
     "headers": [],
-    "path": "/tag/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/",
+    "path": "/tag/%E7%BA%A2%E9%BB%91%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2785,9 +2814,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "红黑树 标签",
+    "title": "AVL树 标签",
     "headers": [],
-    "path": "/tag/%E7%BA%A2%E9%BB%91%E6%A0%91/",
+    "path": "/tag/avl%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2799,9 +2828,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "AVL树 标签",
+    "title": "哈夫曼树 标签",
     "headers": [],
-    "path": "/tag/avl%E6%A0%91/",
+    "path": "/tag/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2813,9 +2842,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "哈夫曼树 标签",
+    "title": "并查集 标签",
     "headers": [],
-    "path": "/tag/%E5%93%88%E5%A4%AB%E6%9B%BC%E6%A0%91/",
+    "path": "/tag/%E5%B9%B6%E6%9F%A5%E9%9B%86/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2827,9 +2856,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "并查集 标签",
+    "title": "B 树 标签",
     "headers": [],
-    "path": "/tag/%E5%B9%B6%E6%9F%A5%E9%9B%86/",
+    "path": "/tag/b-%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2841,9 +2870,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "B 树 标签",
+    "title": "线性数据结构 标签",
     "headers": [],
-    "path": "/tag/b-%E6%A0%91/",
+    "path": "/tag/%E7%BA%BF%E6%80%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2855,9 +2884,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "线性数据结构 标签",
+    "title": "leetcode 标签",
     "headers": [],
-    "path": "/tag/%E7%BA%BF%E6%80%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/",
+    "path": "/tag/leetcode/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2869,9 +2898,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "leetcode 标签",
+    "title": "决策树 标签",
     "headers": [],
-    "path": "/tag/leetcode/",
+    "path": "/tag/%E5%86%B3%E7%AD%96%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2883,9 +2912,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "决策树 标签",
+    "title": "行列式 标签",
     "headers": [],
-    "path": "/tag/%E5%86%B3%E7%AD%96%E6%A0%91/",
+    "path": "/tag/%E8%A1%8C%E5%88%97%E5%BC%8F/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2897,20 +2926,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "行列式 标签",
-    "headers": [],
-    "path": "/tag/%E8%A1%8C%E5%88%97%E5%BC%8F/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring-WebFlux 分类",
-    "headers": [],
-    "path": "/category/spring-webflux/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "矩阵 标签",
     "headers": [],
     "path": "/tag/%E7%9F%A9%E9%98%B5/",
@@ -2918,9 +2933,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "docker 分类",
+    "title": "spring 分类",
     "headers": [],
-    "path": "/category/docker/",
+    "path": "/category/spring/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2946,6 +2961,20 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "Spring-WebFlux 分类",
+    "headers": [],
+    "path": "/category/spring-webflux/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "字符串 标签",
+    "headers": [],
+    "path": "/tag/%E5%AD%97%E7%AC%A6%E4%B8%B2/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "springcloud 分类",
     "headers": [],
     "path": "/category/springcloud/",
@@ -2960,9 +2989,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "spring 分类",
+    "title": "docker 分类",
     "headers": [],
-    "path": "/category/spring/",
+    "path": "/category/docker/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2995,9 +3024,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "springboot 标签",
+    "title": "spring 标签",
     "headers": [],
-    "path": "/tag/springboot/",
+    "path": "/tag/spring/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3009,10 +3038,23 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "spring 标签",
+    "title": "springboot 标签",
     "headers": [],
-    "path": "/tag/spring/",
+    "path": "/tag/springboot/",
     "pathLocale": "/",
     "extraFields": []
   }
 ]
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
+    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ searchIndex }) => {
+    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
+  })
+}

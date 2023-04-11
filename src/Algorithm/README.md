@@ -17,6 +17,8 @@ category:
 
 ### [搜索](search/README.md)
 
+### [字符串](./string/README.md)
+
 ### [数论](number_theory/README.md)
 
 ### [动态规划](dynamic_programming/README.md)

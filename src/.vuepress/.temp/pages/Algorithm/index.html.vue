@@ -4,6 +4,7 @@
 <h3 id="基本算法-思想" tabindex="-1"><a class="header-anchor" href="#基本算法-思想" aria-hidden="true">#</a> <RouterLink to="/Algorithm/base/">基本算法 / 思想</RouterLink></h3>
 <h3 id="数据结构" tabindex="-1"><a class="header-anchor" href="#数据结构" aria-hidden="true">#</a> <RouterLink to="/Algorithm/data_struct/">数据结构</RouterLink></h3>
 <h3 id="搜索" tabindex="-1"><a class="header-anchor" href="#搜索" aria-hidden="true">#</a> <RouterLink to="/Algorithm/search/">搜索</RouterLink></h3>
+<h3 id="字符串" tabindex="-1"><a class="header-anchor" href="#字符串" aria-hidden="true">#</a> <RouterLink to="/Algorithm/string/">字符串</RouterLink></h3>
 <h3 id="数论" tabindex="-1"><a class="header-anchor" href="#数论" aria-hidden="true">#</a> <RouterLink to="/Algorithm/number_theory/">数论</RouterLink></h3>
 <h3 id="动态规划" tabindex="-1"><a class="header-anchor" href="#动态规划" aria-hidden="true">#</a> <RouterLink to="/Algorithm/dynamic_programming/">动态规划</RouterLink></h3>
 <h3 id="图论" tabindex="-1"><a class="header-anchor" href="#图论" aria-hidden="true">#</a> <RouterLink to="/Algorithm/graph/">图论</RouterLink></h3>

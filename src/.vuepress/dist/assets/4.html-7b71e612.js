@@ -1,1 +1,0 @@
-import{aP as t,S as a,U as o,ac as c,V as e}from"./framework-b86c3bdd.js";const s={},n=e("p",null,"mybatis — java API",-1),_=e("p",null,"使用 XML 与 接口的映射，再加上动态 SQL，可以使得 SQL 语句的编写变得容易，那么 SQL 创建好之后，如何在 Java 程序中使用呢？",-1);function r(l,m){return a(),o("div",null,[n,c(" more "),_])}const i=t(s,[["render",r],["__file","4.html.vue"]]);export{i as default};

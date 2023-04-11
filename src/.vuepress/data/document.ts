@@ -218,7 +218,49 @@ export const document = [
     "desc": "rust 官方教程",
     "cover": "/navicon/rustbook.png",
     "type": ["rust"]
+  } ,
+
+  
+
+  {
+    "name": "函数画图",
+    "href": "https://www.desmos.com/calculator?lang=zh-CN",
+    "desc": "数学函数可视化",
+    "cover": "/navicon/desmos.jpg",
+    "type": ["math-tools"]
+  },
+  {
+    "name": "求导",
+    "href": "https://www.derivative-calculator.net",
+    "desc": "强大求导工具，还可以给出具体的求导过程",
+    "cover": "/navicon/derivative-calculator.png",
+    "type": ["math-tools"]
+  },
+  {
+    "name": "求积分",
+    "href": "https://www.integral-calculator.com",
+    "desc": "强大求积分工具，还可以给出具体的求导过程",
+    "cover": "/navicon/integral-calculator.png",
+    "type": ["math-tools"]
+  },
+  {
+    "name": "多元计算引擎",
+    "href": "https://www.wolframalpha.com",
+    "desc": "可以进行复杂积分、求导运算。还有专门的微积分最优值问题，切线问题，高阶级数展开问题的模块",
+    "cover": "/navicon/wolframalpha.ico",
+    "type": ["math-tools"]
+  },
+
+  {
+    "name": "小工具大集合",
+    "href": "https://c.runoob.com",
+    "desc": "各种在线小工具:图片处理,",
+    "cover": "/navicon/c-runoob-logo.ico",
+    "type": ["code-tools"]
   }
+  
+
+
 
 /*
  

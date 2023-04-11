@@ -37,11 +37,10 @@ export default hopeTheme({
     
   },
 
-  
-
+  // 图标地址
   iconAssets: [
-    "//at.alicdn.com/t/c/font_3740996_9d1bjk1wpxi.css", 
-   ],
+    "//at.alicdn.com/t/c/font_3740996_moytgcv7izc.css", 
+  ],
 
 
   locales: {
@@ -178,7 +177,7 @@ export default hopeTheme({
     },
 
     components:{
-      components: ["PDF", "FontIcon",],
+      components: ["PDF", "FontIcon","BiliBili", "ArtPlayer"],
     },
   },
 

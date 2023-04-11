@@ -1,1 +1,0 @@
-import{aP as e,S as t,U as c,ac as n}from"./framework-b86c3bdd.js";const o={};function r(a,_){return t(),c("div",null,[n(" more ")])}const l=e(o,[["render",r],["__file","index.html.vue"]]);export{l as default};
