@@ -513,13 +513,6 @@ export const searchIndex = [
       },
       {
         "level": 3,
-        "title": "字符串处理",
-        "slug": "字符串处理",
-        "link": "#字符串处理",
-        "children": []
-      },
-      {
-        "level": 3,
         "title": "二分",
         "slug": "二分",
         "link": "#二分",
@@ -533,6 +526,13 @@ export const searchIndex = [
   {
     "title": "树",
     "headers": [
+      {
+        "level": 2,
+        "title": "树的基本术语",
+        "slug": "树的基本术语",
+        "link": "#树的基本术语",
+        "children": []
+      },
       {
         "level": 2,
         "title": "树形数据结构",
@@ -741,6 +741,13 @@ export const searchIndex = [
             "children": []
           }
         ]
+      },
+      {
+        "level": 2,
+        "title": "扩展：完全 M 叉树使用数组存储",
+        "slug": "扩展-完全-m-叉树使用数组存储",
+        "link": "#扩展-完全-m-叉树使用数组存储",
+        "children": []
       },
       {
         "level": 2,
@@ -2292,6 +2299,13 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "Spring WebFlux",
+    "headers": [],
+    "path": "/framework/springWebFlux/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "SpringMVC概述",
     "headers": [],
     "path": "/framework/springMVC/1.html",
@@ -2415,9 +2429,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Spring WebFlux",
+    "title": "springcloud",
     "headers": [],
-    "path": "/framework/springWebFlux/",
+    "path": "/framework/springcloud/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2460,13 +2474,6 @@ export const searchIndex = [
     "title": "springboot",
     "headers": [],
     "path": "/framework/springboot/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "springcloud",
-    "headers": [],
-    "path": "/framework/springcloud/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2947,9 +2954,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "springMVC 分类",
+    "title": "Spring-WebFlux 分类",
     "headers": [],
-    "path": "/category/springmvc/",
+    "path": "/category/spring-webflux/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2961,9 +2968,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Spring-WebFlux 分类",
+    "title": "springMVC 分类",
     "headers": [],
-    "path": "/category/spring-webflux/",
+    "path": "/category/springmvc/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3045,16 +3052,3 @@ export const searchIndex = [
     "extraFields": []
   }
 ]
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateSearchIndex) {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ searchIndex }) => {
-    __VUE_HMR_RUNTIME__.updateSearchIndex(searchIndex)
-  })
-}

@@ -1,0 +1,1 @@
+import{_ as o,X as n,Y as a,a1 as r,Z as e,a0 as l,a2 as s,E as c,$ as _}from"./framework-4e490e68.js";const i={};function m(d,u){const t=c("RouterLink");return n(),a("div",null,[r(" more "),e("ul",null,[e("li",null,[l(t,{to:"/Algorithm/string/1.html"},{default:s(()=>[_("字符串匹配")]),_:1})])])])}const x=o(i,[["render",m],["__file","index.html.vue"]]);export{x as default};

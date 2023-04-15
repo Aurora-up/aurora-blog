@@ -1,0 +1,1 @@
+import{_ as e,X as t,Y as o,a1 as c,Z as n}from"./framework-4e490e68.js";const r={},_=n("p",null,"Spring AOP",-1);function a(s,l){return t(),o("div",null,[_,c(" more ")])}const d=e(r,[["render",a],["__file","3.html.vue"]]);export{d as default};
