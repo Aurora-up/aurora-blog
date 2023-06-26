@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://aurora-up.github.io/aurora-blog/sitemap.xml
+Sitemap: https://aurora-up.github.io/aurora-blog/aurora-blog/sitemap.xml

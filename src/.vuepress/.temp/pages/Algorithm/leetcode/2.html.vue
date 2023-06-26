@@ -228,6 +228,7 @@
 </details>
 <h3 id="_310-最小高度树" tabindex="-1"><a class="header-anchor" href="#_310-最小高度树" aria-hidden="true">#</a> <a href="https://leetcode.cn/problems/minimum-height-trees/" target="_blank" rel="noopener noreferrer">310. 最小高度树<ExternalLinkIcon/></a></h3>
 <p>树形 dp 模板题。求最小高度树，也即寻找树的“中心”，</p>
+<h3 id="_199-二叉树的右侧视图" tabindex="-1"><a class="header-anchor" href="#_199-二叉树的右侧视图" aria-hidden="true">#</a> <a href="https://leetcode.cn/problems/binary-tree-right-side-view/" target="_blank" rel="noopener noreferrer">199.二叉树的右侧视图<ExternalLinkIcon/></a></h3>
 </div></template>
 
 

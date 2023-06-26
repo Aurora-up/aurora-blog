@@ -165,8 +165,16 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token keyword">template</span> <span class="token operator">&lt;</span><span class="token keyword">typename</span> <span class="token class-name">T</span><span class="token operator">></span> <span class="token keyword">struct</span> <span class="token class-name">TreeNode</span> <span class="token punctuation">{</span>
+  T value<span class="token punctuation">;</span>
+  TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>left<span class="token punctuation">;</span>
+  TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>right<span class="token punctuation">;</span>
+
+  <span class="token keyword">explicit</span> <span class="token generic-function"><span class="token function">TreeNode</span><span class="token generic class-name"><span class="token operator">&lt;</span>T<span class="token operator">></span></span></span><span class="token punctuation">(</span>T value<span class="token punctuation">,</span> TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>left <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">,</span>
+                       TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>right <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">,</span><span class="token punctuation">)</span>
+      <span class="token operator">:</span> <span class="token function">value</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">left</span><span class="token punctuation">(</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">right</span><span class="token punctuation">(</span>right<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <h2 id="二叉树的遍历" tabindex="-1"><a class="header-anchor" href="#二叉树的遍历" aria-hidden="true">#</a> 二叉树的遍历</h2>
 <h3 id="层序遍历" tabindex="-1"><a class="header-anchor" href="#层序遍历" aria-hidden="true">#</a> 层序遍历</h3>
@@ -204,8 +212,29 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token comment">/**
+ * @brief 层序遍历
+ * @return std::vector&lt;T> 层序遍历顺序
+ */</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token function">bfs</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span> ans<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-></span>root <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+  TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>cur <span class="token operator">=</span> <span class="token keyword">this</span><span class="token operator">-></span>root<span class="token punctuation">;</span>
+  std<span class="token double-colon punctuation">::</span>queue<span class="token operator">&lt;</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span><span class="token operator">></span> q<span class="token punctuation">;</span>
+  q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>q<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node <span class="token operator">=</span> q<span class="token punctuation">.</span><span class="token function">front</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    q<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ans<span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span>node<span class="token operator">-></span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>left <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+      q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>node<span class="token operator">-></span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>right <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+      q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>node<span class="token operator">-></span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <h3 id="前序、中序、后序遍历" tabindex="-1"><a class="header-anchor" href="#前序、中序、后序遍历" aria-hidden="true">#</a> 前序、中序、后序遍历</h3>
 <p>相对地，前、中、后序遍历皆属于「深度优先遍历 Depth-First Traversal」，即每次搜索会直接搜索到叶子结点，然后再回溯去搜索其他的结点。</p>
@@ -252,7 +281,8 @@
 </ol>
 <p>【根据前序 / 后序遍历和中序遍历唯一确定一颗二叉树】</p>
 <p><img src="@source/Algorithm/data_struct/image/image-20221227191400186.png" alt="image-20221227191400186"></p>
-<CodeTabs id="506" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
+<h4 id="递归实现各种遍历" tabindex="-1"><a class="header-anchor" href="#递归实现各种遍历" aria-hidden="true">#</a> 递归实现各种遍历</h4>
+<CodeTabs id="509" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -297,12 +327,45 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="highlight-lines"><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre cpp="" class="language-cpp"><code><span class="token comment">/**
+ * @brief 先序遍历 (递归)
+ * @param cur 当前结点
+ * @param ans 遍历结果
+ */</span>
+<span class="token keyword">void</span> <span class="token function">pre_order_rec</span><span class="token punctuation">(</span><span class="token keyword">const</span> TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token operator">*</span> cur<span class="token punctuation">,</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token operator">&amp;</span> ans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>cur <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+  ans<span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span>cur<span class="token operator">-></span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>cur<span class="token operator">-></span>left <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token function">pre_order_cur</span><span class="token punctuation">(</span>cur<span class="token operator">-></span>left<span class="token punctuation">,</span> ans<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>cur<span class="token operator">-></span>right <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token function">pre_order_rec</span><span class="token punctuation">(</span>cur<span class="token operator">-></span>right<span class="token punctuation">,</span> ans<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> 
+<span class="token comment">/**
+ * @brief 中序遍历 (递归)
+ * @param cur 当前结点
+ * @param ans 遍历结果
+ */</span>
+<span class="token keyword">void</span> <span class="token function">in_order_rec</span><span class="token punctuation">(</span><span class="token keyword">const</span> TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token operator">*</span> cur<span class="token punctuation">,</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token operator">&amp;</span> ans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>cur <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>cur<span class="token operator">-></span>left <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token function">in_order_rec</span><span class="token punctuation">(</span>cur<span class="token operator">-></span>left<span class="token punctuation">,</span> ans<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  ans<span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span>cur<span class="token operator">-></span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>cur<span class="token operator">-></span>right <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token function">in_order_rec</span><span class="token punctuation">(</span>cur<span class="token operator">-></span>right<span class="token punctuation">,</span> ans<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * @brief 后序遍历 (递归)
+ * @param cur 当前结点
+ * @param ans 遍历结果
+ */</span>
+<span class="token keyword">void</span> <span class="token function">post_order_rec</span><span class="token punctuation">(</span><span class="token keyword">const</span> TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token operator">*</span> cur<span class="token punctuation">,</span> std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token operator">&amp;</span> ans<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>cur <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>cur<span class="token operator">-></span>left <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token function">pre_order_cur</span><span class="token punctuation">(</span>cur<span class="token operator">-></span>left<span class="token punctuation">,</span> ans<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>cur<span class="token operator">-></span>right <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token function">pre_order_rec</span><span class="token punctuation">(</span>cur<span class="token operator">-></span>right<span class="token punctuation">,</span> ans<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+  ans<span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span>cur<span class="token operator">-></span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="highlight-lines"><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
+<h4 id="非递归实现各种遍历" tabindex="-1"><a class="header-anchor" href="#非递归实现各种遍历" aria-hidden="true">#</a> 非递归实现各种遍历</h4>
 <p>「深度优先遍历 Depth-First Traversal」使用栈作为数据存储结构，递归中使用的系统栈，系统栈会使用后自己回溯，也可以模拟栈来完成遍历。</p>
 <p>以中序遍历为例：</p>
-<Tabs id="523" :data='[{"title":"step1"},{"title":"step2"},{"title":"step3"},{"title":"step4"},{"title":"step5"},{"title":"step6"}]'>
+<Tabs id="529" :data='[{"title":"step1"},{"title":"step2"},{"title":"step3"},{"title":"step4"},{"title":"step5"},{"title":"step6"}]'>
 <template #tab0="{ title, value, isActive }">
 <p><img src="@source/Algorithm/data_struct/image/image-20221231175137232.png" alt="image-20221231175137232"></p>
 </template>
@@ -325,7 +388,7 @@
 <p><img src="@source/Algorithm/data_struct/image/image-20221231175443249.png" alt="image-20221231175443249"></p>
 </template>
 </Tabs>
-<CodeTabs id="564" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
+<CodeTabs id="570" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -378,11 +441,108 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><div class="highlight-line">&nbsp;</div><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token comment">/**
+ * @brief 先序非递归遍历 (根左右)
+ * @return std::vector&lt;T> 先序遍历顺序
+ */</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token function">pre_order</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span> ans<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-></span>root <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+  TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node <span class="token operator">=</span> <span class="token keyword">this</span><span class="token operator">-></span>root<span class="token punctuation">;</span>
+  std<span class="token double-colon punctuation">::</span>stack<span class="token operator">&lt;</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span><span class="token operator">></span> st<span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>node <span class="token operator">!=</span> <span class="token keyword">nullptr</span> <span class="token operator">||</span> <span class="token operator">!</span>st<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>node <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      st<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      ans<span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span>node<span class="token operator">-></span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      node <span class="token operator">=</span> node<span class="token operator">-></span>left<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>st<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      node <span class="token operator">=</span> st<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      st<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      node <span class="token operator">=</span> node<span class="token operator">-></span>right<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * @brief 中序非递归遍历 (左根右)
+ * @return std::vector&lt;T>  中序遍历顺序
+ */</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token function">in_order</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span> ans<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-></span>root <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+  TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node <span class="token operator">=</span> <span class="token keyword">this</span><span class="token operator">-></span>root<span class="token punctuation">;</span>
+  std<span class="token double-colon punctuation">::</span>stack<span class="token operator">&lt;</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span><span class="token operator">></span> st<span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>node <span class="token operator">!=</span> <span class="token keyword">nullptr</span> <span class="token operator">||</span> <span class="token operator">!</span>st<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>node <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      st<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      node <span class="token operator">=</span> node<span class="token operator">-></span>left<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>st<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      node <span class="token operator">=</span> st<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      st<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      ans<span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span>node<span class="token operator">-></span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      node <span class="token operator">=</span> node<span class="token operator">-></span>right<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <p>后序遍历与前序遍历、中序遍历不同，后序遍历过程中，当一个结点作为 “根结点” 时，它的左子树遍历完之后不能出栈，必须等到右子树遍历完成之后才可以出栈，所以需要对当前结点的右子树是否遍历完成做出判断。</p>
-<CodeTabs id="578" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
+<p>思路：</p>
+<ul>
+<li>使用一个 <code v-pre>visited</code> 变量记录栈顶元素的左右子结点是否被遍历
+<ul>
+<li>若栈顶元素是次栈顶元素的左子结点，则 <code v-pre>visited = false</code> ，即此时栈顶元素不能出栈，须遍历完其右子树才可以出栈；</li>
+<li>若栈顶元素是次栈顶元素的右子结点，则栈顶出栈后，置 <code v-pre>visited = true</code> ，因为次栈顶的元素的左右子结点已经被访问，所以栈顶可以出栈。</li>
+</ul>
+</li>
+</ul>
+<Tabs id="606" :data='[{"title":"3"},{"title":"4"},{"title":"5"},{"title":"6"},{"title":"7"},{"title":"8"},{"title":"9"},{"title":"10"},{"title":"11"},{"title":"12"},{"title":"13"},{"title":"14"},{"title":"15"}]'>
+<template #tab0="{ title, value, isActive }">
+<p><img src="@source/Algorithm/data_struct/image/image-20230429081534432.png" alt="image-20230429081534432"></p>
+</template>
+<template #tab1="{ title, value, isActive }">
+<p><img src="@source/Algorithm/data_struct/image/image-20230429081614366.png" alt="image-20230429081614366"></p>
+</template>
+<template #tab2="{ title, value, isActive }">
+<p><img src="@source/Algorithm/data_struct/image/image-20230429081705386.png" alt="image-20230429081705386"></p>
+</template>
+<template #tab3="{ title, value, isActive }">
+<p><img src="@source/Algorithm/data_struct/image/image-20230429081822757.png" alt="image-20230429081822757"></p>
+</template>
+<template #tab4="{ title, value, isActive }">
+<p><img src="@source/Algorithm/data_struct/image/image-20230429081747547.png" alt="image-20230429081747547"></p>
+</template>
+<template #tab5="{ title, value, isActive }">
+<p><img src="@source/Algorithm/data_struct/image/image-20230429081848035.png" alt="image-20230429081848035"></p>
+</template>
+<template #tab6="{ title, value, isActive }">
+<p><img src="@source/Algorithm/data_struct/image/image-20230429081903632.png" alt="image-20230429081903632"></p>
+</template>
+<template #tab7="{ title, value, isActive }">
+<p><img src="@source/Algorithm/data_struct/image/image-20230429082005148.png" alt="image-20230429082005148"></p>
+</template>
+<template #tab8="{ title, value, isActive }">
+<p><img src="@source/Algorithm/data_struct/image/image-20230429082022950.png" alt="image-20230429082022950"></p>
+</template>
+<template #tab9="{ title, value, isActive }">
+<p><img src="@source/Algorithm/data_struct/image/image-20230429082040633.png" alt="image-20230429082040633"></p>
+</template>
+<template #tab10="{ title, value, isActive }">
+<p><img src="@source/Algorithm/data_struct/image/image-20230429082101244.png" alt="image-20230429082101244"></p>
+</template>
+<template #tab11="{ title, value, isActive }">
+<p><img src="@source/Algorithm/data_struct/image/image-20230429082119884.png" alt="image-20230429082119884"></p>
+</template>
+<template #tab12="{ title, value, isActive }">
+<p><img src="@source/Algorithm/data_struct/image/image-20230429082136515.png" alt="image-20230429082136515"></p>
+</template>
+</Tabs>
+<CodeTabs id="673" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -392,44 +552,82 @@
  * <span class="token keyword">@param</span> <span class="token parameter">root</span> 根结点
  * <span class="token keyword">@return</span> 后序遍历序列
  */</span>
-<span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TreeNode</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span><span class="token punctuation">></span></span> <span class="token class-name">NoRecursivePostOrder2</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">Stack</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TreeNode</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span><span class="token punctuation">></span></span> stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Stack</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">boolean</span> vistited <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>  <span class="token comment">// 为 false 时 ,当前结点右子树未被访问; 为 true 时, 右子树已被访问</span>
-  <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TreeNode</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span><span class="token punctuation">></span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 存储序列</span>
-  <span class="token keyword">while</span> <span class="token punctuation">(</span>root <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token operator">!</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>root <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>vistited<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      root <span class="token operator">=</span> root<span class="token punctuation">.</span>left<span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TreeNode</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span><span class="token punctuation">></span></span> <span class="token class-name">NoRecursivePostOrderReal</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Stack</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TreeNode</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span><span class="token punctuation">></span></span> stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Stack</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">boolean</span> visited <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TreeNode</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span><span class="token punctuation">></span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>root <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token operator">!</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">while</span> <span class="token punctuation">(</span>root <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>visited<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        root <span class="token operator">=</span> root<span class="token punctuation">.</span>left<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token class-name">TreeNode</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> topNode <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>topNode<span class="token punctuation">.</span>right <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>visited<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        root <span class="token operator">=</span> topNode<span class="token punctuation">.</span>right<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token class-name">TreeNode</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> node <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">==</span> stack<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>right<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          visited <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          visited <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        root <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>right<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-    <span class="token class-name">TreeNode</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> topNode <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// 查看栈顶结点</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>topNode<span class="token punctuation">.</span>right <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>vistited<span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">// 栈顶结点右子树不为空并且未被访问时</span>
-      root <span class="token operator">=</span> topNode<span class="token punctuation">.</span>right<span class="token punctuation">;</span>                    <span class="token comment">// 遍历右子树</span>
+    <span class="token keyword">return</span> list<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
+<template #tab2="{ title, value, isActive }">
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token comment">/**
+ * @brief 后序遍历的非递归算法
+ * 后序遍历为 "左右根"， 所以在结点元素出栈之前必须保证其左右子结点都被遍历；
+ * 可以使用一个标识 visited 标识当前结点的左右子结点是否都被遍历过；
+ * @return std::vector&lt;T> 后序遍历序列
+ */</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token function">real_post_order</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span> ans<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+  TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token operator">*</span> cur <span class="token operator">=</span> <span class="token keyword">this</span><span class="token operator">-></span>root<span class="token punctuation">;</span>
+  std<span class="token double-colon punctuation">::</span>stack<span class="token operator">&lt;</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span><span class="token operator">></span> st<span class="token punctuation">;</span>
+  <span class="token comment">// 标识, 用于标识 "当前结点" 的左右子结点是否都被遍历</span>
+  <span class="token keyword">bool</span> visited <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>   <span class="token comment">// true 表示都被遍历, false 则反之</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>cur <span class="token operator">!=</span> <span class="token keyword">nullptr</span> <span class="token operator">||</span> <span class="token operator">!</span>st<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>cur <span class="token operator">!=</span> <span class="token keyword">nullptr</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>visited<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      st<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      cur <span class="token operator">=</span> cur<span class="token operator">-></span>left<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token keyword">else</span> <span class="token punctuation">{</span>                                     <span class="token comment">// 栈顶结点右子树为空 或者 已被访问</span>
-      <span class="token class-name">TreeNode</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> node <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// 此时该结点可以出栈</span>
-      list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>                          <span class="token comment">// 当前结点已被访问但是右子树不为空</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>right <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>                <span class="token comment">// 当前结点右子树不为空时,说明还未遍历其右子树</span>
-        vistited <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>                      <span class="token comment">// 目的是更新之前已经遍历完其他结点的右子树时的 visited = true</span>
-      <span class="token punctuation">}</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">break</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-      root <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>right<span class="token punctuation">;</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> node<span class="token punctuation">)</span> <span class="token punctuation">{</span>             <span class="token comment">// 如果此时栈顶的结点是当前结点作为根结点 的 右子树的根结点时</span>
-        vistited <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>              <span class="token comment">// 则右子树已遍历完成</span>
-      <span class="token punctuation">}</span>
+    TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span><span class="token operator">*</span> top_node <span class="token operator">=</span> st<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 1. 即将出栈的结点的 "右子结点" 不为空 并且其 左右子结点未全遍历完</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>top_node<span class="token operator">-></span>right <span class="token operator">!=</span> <span class="token keyword">nullptr</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>visited<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 将栈顶元素的 "右子结点" 入栈</span>
+      cur <span class="token operator">=</span> top_node<span class="token operator">-></span>right<span class="token punctuation">;</span>
+  	<span class="token punctuation">}</span>
+    <span class="token comment">// 2. 即将出栈的结点的 "右子结点" 为空 或者其 左右子结点已全遍历完</span>
+    <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      st<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 此时栈顶元素可以出栈</span>
+      ans<span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span>top_node<span class="token operator">-></span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>st<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token comment">/* 栈中相邻两个元素为 "父子结点" (靠近栈顶的为父结点)
+       当 "旧栈顶元素" 和 "新栈顶元素"的右子结点 相等时，也即：已出栈的元素为当前栈顶元素的右子结点，
+       说明此时栈顶元素的 "左右子结点" 均已被访问过，此时栈顶可以出栈。*/</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>top_node <span class="token operator">==</span> st<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-></span>right<span class="token punctuation">)</span> visited <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+      <span class="token comment">// 已出栈结点 为 当前栈顶结点的左子结点，此时当前栈顶结点的右子结点还未被访问，visited 需要为 false</span>
+      <span class="token keyword">else</span> visited <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>  
+      <span class="token comment">// 访问 "右子树"</span>
+      cur <span class="token operator">=</span> st<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-></span>right<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
-  <span class="token keyword">return</span> list<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
-<template #tab2="{ title, value, isActive }">
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
-<p>上述思路有些麻烦，原二叉树镜像之后的树的前序遍历的翻转正好是原树的后序遍历，如下图：</p>
+<p>若是只求遍历序列，可以使用下面思路：原二叉树镜像之后的树(镜像二叉树)的前序遍历的翻转正好是原树的后序遍历，如下图：</p>
 <p><img src="@source/Algorithm/data_struct/image/image-20230101155358861.png" alt="image-20230101155358861"></p>
-<CodeTabs id="595" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
+<CodeTabs id="690" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -440,30 +638,52 @@
  * <span class="token keyword">@return</span> 后序遍历序列
  */</span>
 <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TreeNode</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span><span class="token punctuation">></span></span> <span class="token class-name">NoRecursivePostOrder</span><span class="token punctuation">(</span><span class="token class-name">TreeNode</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TreeNode</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span><span class="token punctuation">></span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// 存储序列</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token class-name">Stack</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TreeNode</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span><span class="token punctuation">></span></span> stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Stack</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">;</span>                      <span class="token comment">// 根结点入栈</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>stack<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token class-name">TreeNode</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> node <span class="token operator">=</span> stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>left <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>             <span class="token comment">// 左子结点先入栈 (后出栈)</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TreeNode</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span><span class="token punctuation">></span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span> list<span class="token punctuation">;</span>
+    <span class="token class-name">TreeNode</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span></span> cur <span class="token operator">=</span> root<span class="token punctuation">;</span>
+    <span class="token class-name">Stack</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TreeNode</span><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">></span><span class="token punctuation">></span></span> st <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Stack</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>cur <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">||</span> <span class="token operator">!</span>st<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">while</span> <span class="token punctuation">(</span>cur <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        st<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span><span class="token punctuation">;</span>              <span class="token comment">// 根结点入栈</span>
+        cur <span class="token operator">=</span> cur<span class="token punctuation">.</span>right<span class="token punctuation">;</span>            <span class="token comment">// 右 </span>
       <span class="token punctuation">}</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>right <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token comment">// 右子结点后入栈 (先出栈)</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>st<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        cur <span class="token operator">=</span> st<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cur <span class="token operator">=</span> cur<span class="token punctuation">.</span>left<span class="token punctuation">;</span>             <span class="token comment">// 左</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-    <span class="token comment">// 上面出栈的顺序是   根 -> 右 -> 左 ,</span>
-    <span class="token comment">// 然后将此反转之后就是 左 -> 右 -> 根, 正好就是后序遍历</span>
-    <span class="token class-name">Collections</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">return</span> list<span class="token punctuation">;</span>
+    <span class="token class-name">Collections</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 根右左 ==> 左右根</span>
+    <span class="token keyword">return</span> list<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token comment">/**
+ * @brief 后续非递归遍历 (左右根)
+ * @return std::vector&lt;T>
+ */</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token function">post_order</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span> ans<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-></span>root <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+  TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node <span class="token operator">=</span> <span class="token keyword">this</span><span class="token operator">-></span>root<span class="token punctuation">;</span>
+  std<span class="token double-colon punctuation">::</span>stack<span class="token operator">&lt;</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span><span class="token operator">></span> st<span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>node <span class="token operator">!=</span> <span class="token keyword">nullptr</span> <span class="token operator">||</span> <span class="token operator">!</span>st<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>node <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      st<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      ans<span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span>node<span class="token operator">-></span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      node <span class="token operator">=</span> node<span class="token operator">-></span>right<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>st<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      node <span class="token operator">=</span> st<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      st<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      node <span class="token operator">=</span> node<span class="token operator">-></span>left<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  std<span class="token double-colon punctuation">::</span><span class="token function">reverse</span><span class="token punctuation">(</span>ans<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> ans<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <h2 id="线索二叉树" tabindex="-1"><a class="header-anchor" href="#线索二叉树" aria-hidden="true">#</a> 线索二叉树</h2>
 <p>「线索二叉树 Thread Binary Tree」利用二叉树中未被利用的指针表示某种遍历序列中前驱和后序信息的二叉树。</p>
@@ -471,7 +691,7 @@
 <p>线索二叉树的结点表示信息如下：</p>
 <p><img src="@source/Algorithm/data_struct/image/image-20221227194004998.png" alt="image-20221227194004998"></p>
 <p>为线索二叉树的结点增加信息如下:</p>
-<CodeTabs id="624" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
+<CodeTabs id="719" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -502,11 +722,29 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="highlight-lines"><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre cpp="" class="language-cpp"><code><span class="token keyword">enum</span> <span class="token class-name">node_tag</span> <span class="token punctuation">{</span>
+  child_node<span class="token punctuation">,</span> <span class="token comment">// 子结点</span>
+  order_node<span class="token punctuation">,</span> <span class="token comment">// 前驱或者后继结点</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">template</span> <span class="token operator">&lt;</span><span class="token keyword">typename</span> <span class="token class-name">T</span><span class="token operator">></span> <span class="token keyword">struct</span> <span class="token class-name">TreeNode</span> <span class="token punctuation">{</span>
+  T value<span class="token punctuation">;</span>
+  TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>left<span class="token punctuation">;</span>
+  TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>right<span class="token punctuation">;</span>
+
+  <span class="token comment">/* 线索二叉树节点所需 */</span>
+  node_tag left_tag <span class="token operator">=</span> child_node<span class="token punctuation">;</span>
+  node_tag right_tag <span class="token operator">=</span> child_node<span class="token punctuation">;</span>
+  
+
+  <span class="token keyword">explicit</span> <span class="token generic-function"><span class="token function">TreeNode</span><span class="token generic class-name"><span class="token operator">&lt;</span>T<span class="token operator">></span></span></span><span class="token punctuation">(</span>T value<span class="token punctuation">,</span> TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>left <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">,</span>
+                       TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>right <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+      <span class="token operator">:</span> <span class="token function">value</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">left</span><span class="token punctuation">(</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">right</span><span class="token punctuation">(</span>right<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">parent</span><span class="token punctuation">(</span>parent<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><div class="highlight-lines"><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <p>为二叉树增加一个全局前驱结点，用于线索化时处理前驱节点的后继结点</p>
-<CodeTabs id="638" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
+<CodeTabs id="733" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -520,7 +758,7 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="highlight-lines"><br><div class="highlight-line">&nbsp;</div><br><br><div class="highlight-line">&nbsp;</div><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>pre <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span> <span class="token comment">// 全局前驱结点， 初始化默认值为 nullptr</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <h3 id="中序线索二叉树" tabindex="-1"><a class="header-anchor" href="#中序线索二叉树" aria-hidden="true">#</a> 中序线索二叉树</h3>
@@ -528,7 +766,7 @@
 <blockquote>
 <p>构造中序线索二叉树</p>
 </blockquote>
-<CodeTabs id="660" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
+<CodeTabs id="755" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -560,14 +798,41 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token comment">/**
+ * @brief 构建中序线索二叉树
+ * @param node 二叉树根节点
+ */</span>
+<span class="token keyword">void</span> <span class="token function">threaded_in_order_tree</span><span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">in_order_helper</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * @brief 中序线索化 (边遍历边线索化)
+ * @param node 二叉树根节点
+ */</span>
+<span class="token keyword">void</span> <span class="token function">in_order_helper</span><span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token function">in_order_helper</span><span class="token punctuation">(</span>node<span class="token operator">-></span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>left <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    node<span class="token operator">-></span>left <span class="token operator">=</span> pre<span class="token punctuation">;</span>
+    node<span class="token operator">-></span>left_tag <span class="token operator">=</span> node_tag<span class="token double-colon punctuation">::</span>order_node<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>right <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+    node<span class="token operator">-></span>right_tag <span class="token operator">=</span> node_tag<span class="token double-colon punctuation">::</span>order_node<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>pre <span class="token operator">!=</span> <span class="token keyword">nullptr</span> <span class="token operator">&amp;&amp;</span> pre<span class="token operator">-></span>right <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+    pre<span class="token operator">-></span>right <span class="token operator">=</span> node<span class="token punctuation">;</span>
+  pre <span class="token operator">=</span> node<span class="token punctuation">;</span>
+  <span class="token function">in_order_helper</span><span class="token punctuation">(</span>node<span class="token operator">-></span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <blockquote>
 <p>使用构造好的中序线索二叉树对二叉树进行中序遍历、找前驱、找后继</p>
 </blockquote>
 <p><img src="@source/Algorithm/data_struct/image/image-20230114213358254.png" alt="中序线索二叉树找前驱和后继"></p>
-<CodeTabs id="679" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
+<CodeTabs id="774" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -616,6 +881,7 @@
   <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
   <span class="token comment">// 当左子结点存的不是前驱时</span>
 	<span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>leftTag <span class="token operator">==</span> <span class="token class-name">NodeTag</span><span class="token punctuation">.</span>childNode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    node <span class="token operator">=</span> node<span class="token punctuation">.</span>left<span class="token punctuation">;</span>
     <span class="token comment">// 返回左子树中最右下结点(rightTag == childNode,非后继结点)，即为当前结点的前驱</span>
     <span class="token keyword">while</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>rightTag <span class="token operator">==</span> <span class="token class-name">NodeTag</span><span class="token punctuation">.</span>childNode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
       node <span class="token operator">=</span> node<span class="token punctuation">.</span>right<span class="token punctuation">;</span>
@@ -625,17 +891,68 @@
   <span class="token comment">// leftTag == orderNode 时,其左子结点就是其前驱结点</span>
   <span class="token keyword">else</span> <span class="token keyword">return</span> node<span class="token punctuation">.</span>left<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token comment">/**
+ * @brief 对中序线索化后的二叉树进行遍历
+ * @return std::vector&lt;T> 遍历结果
+ */</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token function">in_order_tbt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span> ans<span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token function">take_inorder_first</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">;</span> p <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span>
+       p <span class="token operator">=</span> <span class="token function">next_node_inorder</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    ans<span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span>p<span class="token operator">-></span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * @brief 获取二叉树中第一个被中序遍历的结点
+ * @param node 二叉树根结点
+ * @return TreeNode&lt;T>* 第一个被中序遍历的结点
+ */</span>
+TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span><span class="token function">take_inorder_first</span><span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>left_tag <span class="token operator">==</span> node_tag<span class="token double-colon punctuation">::</span>child_node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    node <span class="token operator">=</span> node<span class="token operator">-></span>left<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> node<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * @brief 在中序线索二叉树中寻找结点的后继结点
+ * @param node 结点
+ * @return TreeNode&lt;T>* 结点的中序后继结点
+ */</span>
+TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span><span class="token function">next_node_inorder</span><span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>right_tag <span class="token operator">==</span> node_tag<span class="token double-colon punctuation">::</span>child_node<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token function">take_inorder_first</span><span class="token punctuation">(</span>node<span class="token operator">-></span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">else</span>
+    <span class="token keyword">return</span> node<span class="token operator">-></span>right<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * @brief 在中序线索二叉树中寻找结点的前驱结点
+ * @param node 结点
+ * @return TreeNode&lt;T>* 结点的中序前驱结点
+ */</span>
+TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span><span class="token function">last_node_inorder</span><span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>left_tag <span class="token operator">==</span> node_tag<span class="token double-colon punctuation">::</span>child_node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    node <span class="token operator">=</span> node<span class="token operator">-></span>left<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>right_tag <span class="token operator">==</span> node_tag<span class="token double-colon punctuation">::</span>child_node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      node <span class="token operator">=</span> node<span class="token operator">-></span>right<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> node<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span>
+    <span class="token keyword">return</span> node<span class="token operator">-></span>left<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <h3 id="前序线索二叉树" tabindex="-1"><a class="header-anchor" href="#前序线索二叉树" aria-hidden="true">#</a> 前序线索二叉树</h3>
 <p><img src="@source/Algorithm/data_struct/image/image-20230114124339403.png" alt="前序线索二叉树"></p>
 <blockquote>
 <p>构造前序线索二叉树</p>
 </blockquote>
-<CodeTabs id="701" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
+<CodeTabs id="796" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -666,10 +983,38 @@
   <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>leftTag <span class="token operator">==</span> <span class="token class-name">NodeTag</span><span class="token punctuation">.</span>childNode<span class="token punctuation">)</span> <span class="token function">preOrderThread</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token function">preOrderThread</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
+</code></pre><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre cpp="" class="language-cpp"><code><span class="token comment">/**
+ * @brief 构建先序线索二叉树
+ * @param node 二叉树根节点
+ */</span>
+<span class="token keyword">void</span> <span class="token function">threaded_pre_order_tree</span><span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">pre_order_helper</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>  
+<span class="token comment">/**
+ * @brief 先序线索化 (边遍历边线索化)
+ * @param node 二叉树根节点
+ */</span>
+<span class="token keyword">void</span> <span class="token function">pre_order_helper</span><span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>left <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    node<span class="token operator">-></span>left <span class="token operator">=</span> pre<span class="token punctuation">;</span>
+    node<span class="token operator">-></span>left_tag <span class="token operator">=</span> node_tag<span class="token double-colon punctuation">::</span>order_node<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>right <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+    node<span class="token operator">-></span>right_tag <span class="token operator">=</span> node_tag<span class="token double-colon punctuation">::</span>order_node<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>pre <span class="token operator">!=</span> <span class="token keyword">nullptr</span> <span class="token operator">&amp;&amp;</span> pre<span class="token operator">-></span>right <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+    pre<span class="token operator">-></span>right <span class="token operator">=</span> node<span class="token punctuation">;</span>
+  pre <span class="token operator">=</span> node<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>left_tag <span class="token operator">==</span> node_tag<span class="token double-colon punctuation">::</span>child_node<span class="token punctuation">)</span>
+    <span class="token function">pre_order_helper</span><span class="token punctuation">(</span>node<span class="token operator">-></span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">pre_order_helper</span><span class="token punctuation">(</span>node<span class="token operator">-></span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="highlight-lines"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><div class="highlight-line">&nbsp;</div><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <div class="hint-container warning">
 <p class="hint-container-title">注意</p>
@@ -680,7 +1025,7 @@
 </blockquote>
 <p>在前序线索二叉树中寻找结点的前驱时需要使用到结点的父结点，所以对结点信息进行修改，同时需要在构建二叉树时初始化每个结点的父结点</p>
 <details class="hint-container details"><summary>详情</summary>
-<CodeTabs id="726" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
+<CodeTabs id="821" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -726,16 +1071,87 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="highlight-lines"><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre cpp="" class="language-cpp"><code><span class="token keyword">template</span> <span class="token operator">&lt;</span><span class="token keyword">typename</span> <span class="token class-name">T</span><span class="token operator">></span> <span class="token keyword">struct</span> <span class="token class-name">TreeNode</span> <span class="token punctuation">{</span>
+  T value<span class="token punctuation">;</span>
+  TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>left<span class="token punctuation">;</span>
+  TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>right<span class="token punctuation">;</span>
+
+  <span class="token comment">/* 线索二叉树节点所需 */</span>
+  TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>parent<span class="token punctuation">;</span>
+  node_tag left_tag <span class="token operator">=</span> child_node<span class="token punctuation">;</span>
+  node_tag right_tag <span class="token operator">=</span> child_node<span class="token punctuation">;</span>
+  
+
+  <span class="token keyword">explicit</span> <span class="token generic-function"><span class="token function">TreeNode</span><span class="token generic class-name"><span class="token operator">&lt;</span>T<span class="token operator">></span></span></span><span class="token punctuation">(</span>T value<span class="token punctuation">,</span> TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>left <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">,</span>
+                       TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>right <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">,</span>
+                       TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>parent <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+      <span class="token operator">:</span> <span class="token function">value</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">left</span><span class="token punctuation">(</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">right</span><span class="token punctuation">(</span>right<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">parent</span><span class="token punctuation">(</span>parent<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment">// 线索化类型</span>
+<span class="token keyword">enum</span> <span class="token class-name">threaded_mode</span> <span class="token punctuation">{</span>
+  in_order<span class="token punctuation">,</span>   <span class="token comment">// 中序线索化</span>
+  pre_order<span class="token punctuation">,</span>  <span class="token comment">// 先序线索化</span>
+  post_order<span class="token punctuation">,</span> <span class="token comment">// 后序线索化</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">template</span> <span class="token operator">&lt;</span><span class="token keyword">typename</span> <span class="token class-name">T</span><span class="token operator">></span> <span class="token keyword">class</span> <span class="token class-name">ThreadedBinaryTree</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+  TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>root<span class="token punctuation">;</span>
+  <span class="token comment">/**
+   * @brief 从存储层序遍历二叉树的数组中构建对应的线索化二叉树
+   * @param nodes 层序遍历结点数组
+   * @param mode 线索化模式
+   */</span>
+  <span class="token keyword">void</span> <span class="token function">from_vec</span><span class="token punctuation">(</span>std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span> nodes<span class="token punctuation">,</span> threaded_mode mode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>nodes<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>cur <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token generic-function"><span class="token function">TreeNode</span><span class="token generic class-name"><span class="token operator">&lt;</span>T<span class="token operator">></span></span></span><span class="token punctuation">(</span>nodes<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    std<span class="token double-colon punctuation">::</span>queue<span class="token operator">&lt;</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span><span class="token operator">></span> q<span class="token punctuation">;</span>
+    q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>cur<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>q<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node <span class="token operator">=</span> q<span class="token punctuation">.</span><span class="token function">front</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      q<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>nodes<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> null_t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        node<span class="token operator">-></span>left <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token generic-function"><span class="token function">TreeNode</span><span class="token generic class-name"><span class="token operator">&lt;</span>T<span class="token operator">></span></span></span><span class="token punctuation">(</span>nodes<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        node<span class="token operator">-></span>left<span class="token operator">-></span>parent <span class="token operator">=</span> node<span class="token punctuation">;</span>
+        q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>node<span class="token operator">-></span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>nodes<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> null_t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        node<span class="token operator">-></span>right <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token generic-function"><span class="token function">TreeNode</span><span class="token generic class-name"><span class="token operator">&lt;</span>T<span class="token operator">></span></span></span><span class="token punctuation">(</span>nodes<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        node<span class="token operator">-></span>right<span class="token operator">-></span>parent <span class="token operator">=</span> node<span class="token punctuation">;</span>
+        q<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>node<span class="token operator">-></span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">this</span><span class="token operator">-></span>root <span class="token operator">=</span> cur<span class="token punctuation">;</span>
+    <span class="token comment">// 线索化</span>
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>mode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> threaded_mode<span class="token double-colon punctuation">::</span>in_order<span class="token operator">:</span>
+      <span class="token function">threaded_in_order_tree</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-></span>root<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> threaded_mode<span class="token double-colon punctuation">::</span>pre_order<span class="token operator">:</span>
+      <span class="token function">threaded_pre_order_tree</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-></span>root<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> threaded_mode<span class="token double-colon punctuation">::</span>post_order<span class="token operator">:</span>
+      <span class="token function">threaded_post_order_tree</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-></span>root<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">default</span><span class="token operator">:</span>
+      std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"请制定要线索化类型"</span> <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="highlight-lines"><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><div class="highlight-line">&nbsp;</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
 </details>
 <blockquote>
 <p>有了父结点就可以更加方便的寻找结点的前驱</p>
 </blockquote>
 <p><img src="@source/Algorithm/data_struct/image/image-20230114222136272.png" alt="找前序前驱"></p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230114213603190.png" alt=""></p>
-<CodeTabs id="749" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
+<p><img src="@source/Algorithm/data_struct/image/image-20230423202626426.png" alt="image-20230423202626426"></p>
+<CodeTabs id="844" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -807,14 +1223,70 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token comment">/**
+ * @brief 对先序线索化的二叉树进行遍历
+ * @return std::vector&lt;T> 遍历结果
+ */</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token function">pre_order_tbt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span> ans<span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token function">last_node_preorder</span><span class="token punctuation">(</span>root<span class="token operator">-></span>left<span class="token punctuation">)</span><span class="token punctuation">;</span> p <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span>
+       p <span class="token operator">=</span> <span class="token function">next_node_preorder</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    ans<span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span>p<span class="token operator">-></span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * @brief 寻找子树中最后一个被前序遍历的结点,即子树中 [最右最左] 结点
+ * @param node 子树根结点
+ * @return TreeNode&lt;T>* 该子树中最后一个被前序遍历的结点
+ */</span>
+TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span><span class="token function">take_preorder_end</span><span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>right_tag <span class="token operator">==</span> node_tag<span class="token double-colon punctuation">::</span>child_node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      node <span class="token operator">=</span> node<span class="token operator">-></span>right<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>left_tag <span class="token operator">==</span> node_tag<span class="token double-colon punctuation">::</span>child_node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      node <span class="token operator">=</span> node<span class="token operator">-></span>left<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>left_tag <span class="token operator">==</span> node_tag<span class="token double-colon punctuation">::</span>order_node <span class="token operator">&amp;&amp;</span>
+        node<span class="token operator">-></span>right_tag <span class="token operator">==</span> node_tag<span class="token double-colon punctuation">::</span>order_node<span class="token punctuation">)</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> node<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * @brief 在先序线索二叉树中寻找结点的后继结点
+ * @param node 结点
+ * @return TreeNode&lt;T>* 结点的先序后继结点
+ */</span>
+TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span><span class="token function">next_node_preorder</span><span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>left <span class="token operator">!=</span> <span class="token keyword">nullptr</span> <span class="token operator">&amp;&amp;</span> node<span class="token operator">-></span>left_tag <span class="token operator">==</span> node_tag<span class="token double-colon punctuation">::</span>child_node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> node<span class="token operator">-></span>left<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> node<span class="token operator">-></span>right<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * @brief 在先序线索二叉树中寻找结点的前驱结点 (借助结点的父结点完成)
+ * @param node 结点
+ * @return TreeNode&lt;T>* 结点的先序前驱结点
+ */</span>
+TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span><span class="token function">last_node_preorder</span><span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span>
+  TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>parent <span class="token operator">=</span> node<span class="token operator">-></span>parent<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>parent <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>parent<span class="token operator">-></span>right <span class="token operator">==</span> node <span class="token operator">&amp;&amp;</span> parent<span class="token operator">-></span>left <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+      <span class="token keyword">return</span> <span class="token function">take_preorder_end</span><span class="token punctuation">(</span>parent<span class="token operator">-></span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> parent<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <h3 id="后序线索二叉树" tabindex="-1"><a class="header-anchor" href="#后序线索二叉树" aria-hidden="true">#</a> 后序线索二叉树</h3>
 <blockquote>
 <p>构造后序线索二叉树</p>
 </blockquote>
-<CodeTabs id="768" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
+<CodeTabs id="863" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -849,15 +1321,43 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token comment">/**
+ * @brief 构建后序线索二叉树
+ * @param node 二叉树根节点
+ */</span>
+<span class="token keyword">void</span> <span class="token function">threaded_post_order_tree</span><span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">post_order_helper</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> 
+<span class="token comment">/**
+ * @brief 后序线索化 (边遍历边线索化)
+ * @param node 二叉树根节点
+ */</span>
+<span class="token keyword">void</span> <span class="token function">post_order_helper</span><span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token function">post_order_helper</span><span class="token punctuation">(</span>node<span class="token operator">-></span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">post_order_helper</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>left <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    node<span class="token operator">-></span>left <span class="token operator">=</span> pre<span class="token punctuation">;</span>
+    node<span class="token operator">-></span>left_tag <span class="token operator">=</span> node_tag<span class="token double-colon punctuation">::</span>order_node<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>right <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+    node<span class="token operator">-></span>right_tag <span class="token operator">=</span> node_tag<span class="token double-colon punctuation">::</span>order_node<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>pre <span class="token operator">!=</span> <span class="token keyword">nullptr</span> <span class="token operator">&amp;&amp;</span> pre<span class="token operator">-></span>right <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    pre<span class="token operator">-></span>right <span class="token operator">=</span> node<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  pre <span class="token operator">=</span> node<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
 <blockquote>
 <p>使用构造好的后序线索二叉树对二叉树进行后序遍历、找前驱、找后继</p>
 </blockquote>
 <p><img src="@source/Algorithm/data_struct/image/image-20230114222024356.png" alt="找后序后继"></p>
 <p><img src="@source/Algorithm/data_struct/image/image-20230114222538798.png" alt="image-20230114222538798"></p>
-<CodeTabs id="790" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
+<CodeTabs id="885" :data='[{"title":"rust","id":"rust"},{"title":"java","id":"java"},{"title":"c++","id":"c++"}]' tab-id="language">
 <template #tab0="{ title, value, isActive }">
 <div class="language-rust line-numbers-mode" data-ext="rs"><pre v-pre class="language-rust"><code>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
@@ -933,9 +1433,69 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 <template #tab2="{ title, value, isActive }">
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></template>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><pre v-pre class="language-cpp"><code><span class="token comment">/**
+ * @brief 对后序线索化的二叉树进行遍历
+ * @return std::vector&lt;T> 遍历结果
+ */</span>
+std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token function">post_order_tbt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  std<span class="token double-colon punctuation">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">></span> ans<span class="token punctuation">;</span>
+  ans<span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-></span>root<span class="token operator">-></span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token function">last_node_postorder</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-></span>root<span class="token punctuation">)</span><span class="token punctuation">;</span> p <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span>
+       p <span class="token operator">=</span> <span class="token function">last_node_postorder</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    ans<span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span>p<span class="token operator">-></span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  std<span class="token double-colon punctuation">::</span><span class="token function">reverse</span><span class="token punctuation">(</span>ans<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> ans<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> ans<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * @brief 在后序线索二叉树中寻找结点的前驱结点
+ * @param node 节点
+ * @return TreeNode&lt;T>* 节点的后序前驱结点
+ */</span>
+TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span><span class="token function">last_node_postorder</span><span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>right_tag <span class="token operator">==</span> child_node <span class="token operator">&amp;&amp;</span> node<span class="token operator">-></span>right <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> node<span class="token operator">-></span>right<span class="token punctuation">;</span>
+  <span class="token keyword">else</span>
+    <span class="token keyword">return</span> node<span class="token operator">-></span>left<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * @brief 寻找子树中第一个被后序遍历的结点, 即子树中 循环[最左最右]
+ * @param node 结点
+ * @return TreeNode&lt;T>* 该结点子树中第一个被后序遍历的结点
+ */</span>
+TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span><span class="token function">take_postorder_first</span><span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>left_tag <span class="token operator">==</span> node_tag<span class="token double-colon punctuation">::</span>child_node <span class="token operator">&amp;&amp;</span> node<span class="token operator">-></span>left <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      node <span class="token operator">=</span> node<span class="token operator">-></span>left<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>right_tag <span class="token operator">==</span> node_tag<span class="token double-colon punctuation">::</span>child_node <span class="token operator">&amp;&amp;</span>
+           node<span class="token operator">-></span>right <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      node <span class="token operator">=</span> node<span class="token operator">-></span>right<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token operator">-></span>left_tag <span class="token operator">==</span> node_tag<span class="token double-colon punctuation">::</span>order_node <span class="token operator">&amp;&amp;</span>
+        node<span class="token operator">-></span>right_tag <span class="token operator">==</span> node_tag<span class="token double-colon punctuation">::</span>order_node<span class="token punctuation">)</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> node<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/**
+ * @brief 在后序线索二叉树中寻找结点的后继结点 (结束父结点实现)
+ * @param node 结点
+ * @return TreeNode&lt;T>* 结点的后序后继结点
+ */</span>
+TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span><span class="token function">next_node_postorder</span><span class="token punctuation">(</span>TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>node<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span>
+  TreeNode<span class="token operator">&lt;</span>T<span class="token operator">></span> <span class="token operator">*</span>parent <span class="token operator">=</span> node<span class="token operator">-></span>parent<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>parent <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>parent<span class="token operator">-></span>left <span class="token operator">==</span> node <span class="token operator">&amp;&amp;</span> parent<span class="token operator">-></span>right <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span>
+      <span class="token keyword">return</span> <span class="token function">take_postorder_first</span><span class="token punctuation">(</span>parent<span class="token operator">-></span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> node<span class="token operator">-></span>parent<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
+<p><RouterLink to="/Algorithm/data_struct/code/binary_tree.html">二叉树的完全代码实现</RouterLink></p>
 </div></template>
 
 

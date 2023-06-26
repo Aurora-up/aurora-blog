@@ -4,14 +4,13 @@ import { zhSidebar } from "./sidebar/index.js";
 
 
 export default hopeTheme({
-
-  hostname: 'https://aurora-up.github.io',
+  // 网站部署域名
+  hostname: 'https://aurora-up.github.io/aurora-blog/',
 
   author: {
     name: "Mr.Hdd",
     url: "https://aurora-up.github.io/aurora-blog/",
     email: "2723787996@qq.com",
-    
   },
   
 
@@ -34,7 +33,6 @@ export default hopeTheme({
       Gitee: "https://gitee.com/Aurora-up",
       GitHub: "https://github.com/Aurora-up",
     },
-    
   },
 
   // 图标地址

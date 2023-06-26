@@ -82,7 +82,7 @@ K_{idx} = (V_{idx} \ \ \&amp; \ \ 0x7fffffff)\ \% \ p
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></template>
 </CodeTabs>
-<h3 id="开放寻找法" tabindex="-1"><a class="header-anchor" href="#开放寻找法" aria-hidden="true">#</a> 开放寻找法</h3>
+<h3 id="开放寻址法" tabindex="-1"><a class="header-anchor" href="#开放寻址法" aria-hidden="true">#</a> 开放寻址法</h3>
 <p>开放寻址法的解决冲突的策略如下图：也即遇到冲突时继续向后寻找，若向后寻找过程一直有冲突，则寻找到末尾时，从头开始继续寻找；然后向后寻址的方式也有多种，例如线性探测，二次探测等等，下图为线性探测：</p>
 <p><img src="@source/Algorithm/data_struct/image/image-20230220111044525.png" alt="image-20230220111044525"></p>
 <details class="hint-container details"><summary>二次探测法</summary>
