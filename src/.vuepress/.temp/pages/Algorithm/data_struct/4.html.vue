@@ -12,7 +12,7 @@
 </ol>
 <p>「性质」</p>
 <ul>
-<li>从根结点到叶子结点的最长的可能的路径不能多于最短的可能路径的两倍长</li>
+<li><strong>从根结点到叶子结点的最长的可能的路径不能多于最短的可能路径的两倍长</strong></li>
 </ul>
 <p><img src="@source/Algorithm/data_struct/image/image-20230102212014604.png" alt="image-20230102212014604"></p>
 <div class="hint-container info">
@@ -24,6 +24,7 @@
 <p>红黑树同样是一颗二叉搜索树，所以其操作都在是二叉搜索树的操作基础之上，在下面插入和删除操作中的各种情况图均是红黑树的某个子树，而非整个红黑树.</p>
 </div>
 <h2 id="插入操作" tabindex="-1"><a class="header-anchor" href="#插入操作" aria-hidden="true">#</a> 插入操作</h2>
+<p><img src="@source/Algorithm/data_struct/image/image-20231217135628259.png" alt="image-20231217135628259"></p>
 <h3 id="_1-树为空" tabindex="-1"><a class="header-anchor" href="#_1-树为空" aria-hidden="true">#</a> 1. 树为空</h3>
 <p>直接将结点插入作为根结点并染成黑色即可</p>
 <h3 id="_2-待插入结点的父结点为黑色" tabindex="-1"><a class="header-anchor" href="#_2-待插入结点的父结点为黑色" aria-hidden="true">#</a> 2. 待插入结点的父结点为黑色</h3>
@@ -59,11 +60,13 @@
 <li>以 “祖父结点” 为原点进行<strong>右旋 (最左侧的情况时)</strong> 或 <strong>左旋 (最右侧的情况时)</strong></li>
 </ol>
 <p><img src="@source/Algorithm/data_struct/image/image-20230102230622831.png" alt="image-20230102230622831"></p>
+<blockquote>
 <p>实例：一次完整的插入操作：</p>
+</blockquote>
 <p><img src="@source/Algorithm/data_struct/image/image-20230102213729006.png" alt="image-20230102213729006"></p>
-<p>将变色好的子树还原到原树中，发现整颗树现在并不是红黑树，在其中存在需要【变色 + 旋转】的子树结构，根据对应操作对红黑树进行变形，如下图所示：</p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230102214213394.png" alt="image-20230102214213394"></p>
-<p><img src="@source/Algorithm/data_struct/image/image-20230102214738521.png" alt="image-20230102214738521"></p>
+<p>将变色好的子树还原到原树中，发现整颗树现在并不是红黑树，在其中存在需要【旋转 + 变色】的子树结构，根据对应操作对红黑树进行变形，如下图所示：</p>
+<p><img src="@source/Algorithm/data_struct/image/image-20231217143925287.png" alt="image-20231217143925287"></p>
+<p><img src="@source/Algorithm/data_struct/image/image-20231217144058931.png" alt="image-20231217144058931"></p>
 <h2 id="删除操作" tabindex="-1"><a class="header-anchor" href="#删除操作" aria-hidden="true">#</a> 删除操作</h2>
 <p>相较于插入操作，删除操作更多种类，具体分为以下几类：</p>
 <ol>

@@ -93,42 +93,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "语法相关",
-    "headers": [
-      {
-        "level": 3,
-        "title": "rust 相关",
-        "slug": "rust-相关",
-        "link": "#rust-相关",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "c / c++ 相关",
-        "slug": "c-c-相关",
-        "link": "#c-c-相关",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "java 相关",
-        "slug": "java-相关",
-        "link": "#java-相关",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "前端相关",
-        "slug": "前端相关",
-        "link": "#前端相关",
-        "children": []
-      }
-    ],
-    "path": "/code/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "数据库相关",
     "headers": [
       {
@@ -167,60 +131,38 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "框架相关",
+    "title": "语法相关",
     "headers": [
       {
-        "level": 2,
-        "title": "java - Spring 系列框架",
-        "slug": "java-spring-系列框架",
-        "link": "#java-spring-系列框架",
-        "children": [
-          {
-            "level": 3,
-            "title": "spring",
-            "slug": "spring",
-            "link": "#spring",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "springboot",
-            "slug": "springboot",
-            "link": "#springboot",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "springMVC",
-            "slug": "springmvc",
-            "link": "#springmvc",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "springWebFlux",
-            "slug": "springwebflux",
-            "link": "#springwebflux",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "springcloud",
-            "slug": "springcloud",
-            "link": "#springcloud",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "mybatis",
-            "slug": "mybatis",
-            "link": "#mybatis",
-            "children": []
-          }
-        ]
+        "level": 3,
+        "title": "rust 相关",
+        "slug": "rust-相关",
+        "link": "#rust-相关",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "c / c++ 相关",
+        "slug": "c-c-相关",
+        "link": "#c-c-相关",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "java 相关",
+        "slug": "java-相关",
+        "link": "#java-相关",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "前端相关",
+        "slug": "前端相关",
+        "link": "#前端相关",
+        "children": []
       }
     ],
-    "path": "/framework/",
+    "path": "/code/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -301,6 +243,64 @@ export const searchIndex = [
       }
     ],
     "path": "/demo/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "框架相关",
+    "headers": [
+      {
+        "level": 2,
+        "title": "java - Spring 系列框架",
+        "slug": "java-spring-系列框架",
+        "link": "#java-spring-系列框架",
+        "children": [
+          {
+            "level": 3,
+            "title": "spring",
+            "slug": "spring",
+            "link": "#spring",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "springboot",
+            "slug": "springboot",
+            "link": "#springboot",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "springMVC",
+            "slug": "springmvc",
+            "link": "#springmvc",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "springWebFlux",
+            "slug": "springwebflux",
+            "link": "#springwebflux",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "springcloud",
+            "slug": "springcloud",
+            "link": "#springcloud",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "mybatis",
+            "slug": "mybatis",
+            "link": "#mybatis",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/framework/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1509,42 +1509,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "决策树",
-    "headers": [],
-    "path": "/Algorithm/machine_learning/1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "相关概念",
-    "headers": [
-      {
-        "level": 3,
-        "title": "有监督学习和无监督学习",
-        "slug": "有监督学习和无监督学习",
-        "link": "#有监督学习和无监督学习",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "参数估计和非参数估计",
-        "slug": "参数估计和非参数估计",
-        "link": "#参数估计和非参数估计",
-        "children": []
-      }
-    ],
-    "path": "/Algorithm/machine_learning/10.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "机器学习算法",
-    "headers": [],
-    "path": "/Algorithm/machine_learning/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "线性代数 —— 行列式",
     "headers": [
       {
@@ -1607,6 +1571,42 @@ export const searchIndex = [
       }
     ],
     "path": "/Algorithm/math/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "决策树",
+    "headers": [],
+    "path": "/Algorithm/machine_learning/1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "相关概念",
+    "headers": [
+      {
+        "level": 3,
+        "title": "有监督学习和无监督学习",
+        "slug": "有监督学习和无监督学习",
+        "link": "#有监督学习和无监督学习",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "参数估计和非参数估计",
+        "slug": "参数估计和非参数估计",
+        "link": "#参数估计和非参数估计",
+        "children": []
+      }
+    ],
+    "path": "/Algorithm/machine_learning/10.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "机器学习算法",
+    "headers": [],
+    "path": "/Algorithm/machine_learning/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1715,9 +1715,60 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "前端语法相关",
+    "title": "字符串匹配",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Kmp 算法",
+        "slug": "kmp-算法",
+        "link": "#kmp-算法",
+        "children": [
+          {
+            "level": 3,
+            "title": "1.索引从 0 开始的 next 数组，",
+            "slug": "_1-索引从-0-开始的-next-数组",
+            "link": "#_1-索引从-0-开始的-next-数组",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.索引从 1 开始的 next 数组，",
+            "slug": "_2-索引从-1-开始的-next-数组",
+            "link": "#_2-索引从-1-开始的-next-数组",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.索引从 1 开始的 next 数组，",
+            "slug": "_3-索引从-1-开始的-next-数组",
+            "link": "#_3-索引从-1-开始的-next-数组",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/Algorithm/string/1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "字符串",
     "headers": [],
-    "path": "/code/frontend/",
+    "path": "/Algorithm/string/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "redis",
+    "headers": [],
+    "path": "/database/redis/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "mysql",
+    "headers": [],
+    "path": "/database/mysql/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1873,53 +1924,16 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "前端语法相关",
+    "headers": [],
+    "path": "/code/frontend/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "java语法相关",
     "headers": [],
     "path": "/code/java/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "字符串匹配",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Kmp 算法",
-        "slug": "kmp-算法",
-        "link": "#kmp-算法",
-        "children": [
-          {
-            "level": 3,
-            "title": "1.索引从 0 开始的 next 数组，",
-            "slug": "_1-索引从-0-开始的-next-数组",
-            "link": "#_1-索引从-0-开始的-next-数组",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.索引从 1 开始的 next 数组，",
-            "slug": "_2-索引从-1-开始的-next-数组",
-            "link": "#_2-索引从-1-开始的-next-数组",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.索引从 1 开始的 next 数组，",
-            "slug": "_3-索引从-1-开始的-next-数组",
-            "link": "#_3-索引从-1-开始的-next-数组",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/Algorithm/string/1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "字符串",
-    "headers": [],
-    "path": "/Algorithm/string/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1934,266 +1948,6 @@ export const searchIndex = [
     "title": "rust语法相关",
     "headers": [],
     "path": "/code/rust/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "mysql",
-    "headers": [],
-    "path": "/database/mysql/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "redis",
-    "headers": [],
-    "path": "/database/redis/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring 概述",
-    "headers": [
-      {
-        "level": 3,
-        "title": "学习文档：",
-        "slug": "学习文档",
-        "link": "#学习文档",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "API 使用参考文档：",
-        "slug": "api-使用参考文档",
-        "link": "#api-使用参考文档",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Spring 中常用注解 API 文档",
-        "slug": "spring-中常用注解-api-文档",
-        "link": "#spring-中常用注解-api-文档",
-        "children": []
-      }
-    ],
-    "path": "/framework/spring/1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring IOC",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Spring IOC",
-        "slug": "spring-ioc",
-        "link": "#spring-ioc",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "向 IOC 容器中配置 bean",
-        "slug": "向-ioc-容器中配置-bean",
-        "link": "#向-ioc-容器中配置-bean",
-        "children": [
-          {
-            "level": 3,
-            "title": "XML 配置",
-            "slug": "xml-配置",
-            "link": "#xml-配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "java 配置",
-            "slug": "java-配置",
-            "link": "#java-配置",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "注解配置",
-            "slug": "注解配置",
-            "link": "#注解配置",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "为 IOC 容器中的 bean 作依赖注入",
-        "slug": "为-ioc-容器中的-bean-作依赖注入",
-        "link": "#为-ioc-容器中的-bean-作依赖注入",
-        "children": [
-          {
-            "level": 3,
-            "title": "Setter 注入",
-            "slug": "setter-注入",
-            "link": "#setter-注入",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Constructor 注入",
-            "slug": "constructor-注入",
-            "link": "#constructor-注入",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "基于注解的注入",
-            "slug": "基于注解的注入",
-            "link": "#基于注解的注入",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/framework/spring/2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring AOP",
-    "headers": [],
-    "path": "/framework/spring/3.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring IOC (官文)",
-    "headers": [],
-    "path": "/framework/spring/4.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring",
-    "headers": [],
-    "path": "/framework/spring/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "SpringMVC概述",
-    "headers": [],
-    "path": "/framework/springMVC/1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "请求, 响应",
-    "headers": [
-      {
-        "level": 2,
-        "title": "控制器",
-        "slug": "控制器",
-        "link": "#控制器",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "请求映射",
-        "slug": "请求映射",
-        "link": "#请求映射",
-        "children": []
-      }
-    ],
-    "path": "/framework/springMVC/2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "拦截器, 过滤器",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Filter",
-        "slug": "filter",
-        "link": "#filter",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "在 Spring boot 中使用 Filter",
-        "slug": "在-spring-boot-中使用-filter",
-        "link": "#在-spring-boot-中使用-filter",
-        "children": [
-          {
-            "level": 3,
-            "title": "1. 第一种方式",
-            "slug": "_1-第一种方式",
-            "link": "#_1-第一种方式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.第二种方式",
-            "slug": "_2-第二种方式",
-            "link": "#_2-第二种方式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "多个过滤器顺序配置问题",
-            "slug": "多个过滤器顺序配置问题",
-            "link": "#多个过滤器顺序配置问题",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "1.第一种方式",
-            "slug": "_1-第一种方式-1",
-            "link": "#_1-第一种方式-1",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.第二种方式",
-            "slug": "_2-第二种方式-1",
-            "link": "#_2-第二种方式-1",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Interceptor",
-        "slug": "interceptor",
-        "link": "#interceptor",
-        "children": [
-          {
-            "level": 3,
-            "title": "多个 Interperctor 执行顺序问题。",
-            "slug": "多个-interperctor-执行顺序问题。",
-            "link": "#多个-interperctor-执行顺序问题。",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/framework/springMVC/3.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "CORS 跨域配置",
-    "headers": [],
-    "path": "/framework/springMVC/4.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "WebSocket",
-    "headers": [],
-    "path": "/framework/springMVC/5.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "springMVC",
-    "headers": [],
-    "path": "/framework/springMVC/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2437,6 +2191,273 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "SpringMVC概述",
+    "headers": [],
+    "path": "/framework/springMVC/1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "请求, 响应",
+    "headers": [
+      {
+        "level": 2,
+        "title": "控制器",
+        "slug": "控制器",
+        "link": "#控制器",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "请求映射",
+        "slug": "请求映射",
+        "link": "#请求映射",
+        "children": []
+      }
+    ],
+    "path": "/framework/springMVC/2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "拦截器, 过滤器",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Filter",
+        "slug": "filter",
+        "link": "#filter",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "在 Spring boot 中使用 Filter",
+        "slug": "在-spring-boot-中使用-filter",
+        "link": "#在-spring-boot-中使用-filter",
+        "children": [
+          {
+            "level": 3,
+            "title": "1. 第一种方式",
+            "slug": "_1-第一种方式",
+            "link": "#_1-第一种方式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.第二种方式",
+            "slug": "_2-第二种方式",
+            "link": "#_2-第二种方式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "多个过滤器顺序配置问题",
+            "slug": "多个过滤器顺序配置问题",
+            "link": "#多个过滤器顺序配置问题",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.第一种方式",
+            "slug": "_1-第一种方式-1",
+            "link": "#_1-第一种方式-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.第二种方式",
+            "slug": "_2-第二种方式-1",
+            "link": "#_2-第二种方式-1",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Interceptor",
+        "slug": "interceptor",
+        "link": "#interceptor",
+        "children": [
+          {
+            "level": 3,
+            "title": "多个 Interperctor 执行顺序问题。",
+            "slug": "多个-interperctor-执行顺序问题。",
+            "link": "#多个-interperctor-执行顺序问题。",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/framework/springMVC/3.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "CORS 跨域配置",
+    "headers": [],
+    "path": "/framework/springMVC/4.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "WebSocket",
+    "headers": [],
+    "path": "/framework/springMVC/5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "springMVC",
+    "headers": [],
+    "path": "/framework/springMVC/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Spring WebFlux",
+    "headers": [],
+    "path": "/framework/springWebFlux/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Spring 概述",
+    "headers": [
+      {
+        "level": 3,
+        "title": "学习文档：",
+        "slug": "学习文档",
+        "link": "#学习文档",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "API 使用参考文档：",
+        "slug": "api-使用参考文档",
+        "link": "#api-使用参考文档",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Spring 中常用注解 API 文档",
+        "slug": "spring-中常用注解-api-文档",
+        "link": "#spring-中常用注解-api-文档",
+        "children": []
+      }
+    ],
+    "path": "/framework/spring/1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Spring IOC",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Spring IOC",
+        "slug": "spring-ioc",
+        "link": "#spring-ioc",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "向 IOC 容器中配置 bean",
+        "slug": "向-ioc-容器中配置-bean",
+        "link": "#向-ioc-容器中配置-bean",
+        "children": [
+          {
+            "level": 3,
+            "title": "XML 配置",
+            "slug": "xml-配置",
+            "link": "#xml-配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "java 配置",
+            "slug": "java-配置",
+            "link": "#java-配置",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "注解配置",
+            "slug": "注解配置",
+            "link": "#注解配置",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "为 IOC 容器中的 bean 作依赖注入",
+        "slug": "为-ioc-容器中的-bean-作依赖注入",
+        "link": "#为-ioc-容器中的-bean-作依赖注入",
+        "children": [
+          {
+            "level": 3,
+            "title": "Setter 注入",
+            "slug": "setter-注入",
+            "link": "#setter-注入",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Constructor 注入",
+            "slug": "constructor-注入",
+            "link": "#constructor-注入",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "基于注解的注入",
+            "slug": "基于注解的注入",
+            "link": "#基于注解的注入",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/framework/spring/2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Spring AOP",
+    "headers": [],
+    "path": "/framework/spring/3.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Spring IOC (官文)",
+    "headers": [],
+    "path": "/framework/spring/4.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Spring",
+    "headers": [],
+    "path": "/framework/spring/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Docker",
+    "headers": [],
+    "path": "/otherTechniques/docker/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "springcloud",
+    "headers": [],
+    "path": "/framework/springcloud/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "SpringBoot小案例 - 文件上传",
     "headers": [],
     "path": "/framework/springboot/1.html",
@@ -2475,27 +2496,6 @@ export const searchIndex = [
     "title": "springboot",
     "headers": [],
     "path": "/framework/springboot/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "springcloud",
-    "headers": [],
-    "path": "/framework/springcloud/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Docker",
-    "headers": [],
-    "path": "/otherTechniques/docker/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring WebFlux",
-    "headers": [],
-    "path": "/framework/springWebFlux/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2622,9 +2622,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "语法相关 分类",
+    "title": "数据库 分类",
     "headers": [],
-    "path": "/category/%E8%AF%AD%E6%B3%95%E7%9B%B8%E5%85%B3/",
+    "path": "/category/%E6%95%B0%E6%8D%AE%E5%BA%93/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2636,9 +2636,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "数据库 分类",
+    "title": "语法相关 分类",
     "headers": [],
-    "path": "/category/%E6%95%B0%E6%8D%AE%E5%BA%93/",
+    "path": "/category/%E8%AF%AD%E6%B3%95%E7%9B%B8%E5%85%B3/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2650,9 +2650,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "framework 分类",
+    "title": "springboot 分类",
     "headers": [],
-    "path": "/category/framework/",
+    "path": "/category/springboot/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2664,9 +2664,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "springboot 分类",
+    "title": "网络协议 分类",
     "headers": [],
-    "path": "/category/springboot/",
+    "path": "/category/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2678,9 +2678,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "网络协议 分类",
+    "title": "随笔 分类",
     "headers": [],
-    "path": "/category/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/",
+    "path": "/category/%E9%9A%8F%E7%AC%94/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2692,9 +2692,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "随笔 分类",
+    "title": "framework 分类",
     "headers": [],
-    "path": "/category/%E9%9A%8F%E7%AC%94/",
+    "path": "/category/framework/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2790,9 +2790,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "决策树 分类",
+    "title": "数学 分类",
     "headers": [],
-    "path": "/category/%E5%86%B3%E7%AD%96%E6%A0%91/",
+    "path": "/category/%E6%95%B0%E5%AD%A6/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2804,9 +2804,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "机器学习 分类",
+    "title": "线性代数 分类",
     "headers": [],
-    "path": "/category/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/",
+    "path": "/category/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2818,9 +2818,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "数学 分类",
+    "title": "决策树 分类",
     "headers": [],
-    "path": "/category/%E6%95%B0%E5%AD%A6/",
+    "path": "/category/%E5%86%B3%E7%AD%96%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2832,9 +2832,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "线性代数 分类",
+    "title": "机器学习 分类",
     "headers": [],
-    "path": "/category/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/",
+    "path": "/category/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2874,9 +2874,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "前端 分类",
+    "title": "NoSql 分类",
     "headers": [],
-    "path": "/category/%E5%89%8D%E7%AB%AF/",
+    "path": "/category/nosql/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2888,9 +2888,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "C、C++ 分类",
+    "title": "redis 分类",
     "headers": [],
-    "path": "/category/c%E3%80%81c__/",
+    "path": "/category/redis/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2902,9 +2902,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "cpp 分类",
+    "title": "mysql 分类",
     "headers": [],
-    "path": "/category/cpp/",
+    "path": "/category/mysql/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2916,9 +2916,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "java 分类",
+    "title": "C、C++ 分类",
     "headers": [],
-    "path": "/category/java/",
+    "path": "/category/c%E3%80%81c__/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2930,9 +2930,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "python 分类",
+    "title": "cpp 分类",
     "headers": [],
-    "path": "/category/python/",
+    "path": "/category/cpp/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2944,9 +2944,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "rust 分类",
+    "title": "前端 分类",
     "headers": [],
-    "path": "/category/rust/",
+    "path": "/category/%E5%89%8D%E7%AB%AF/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2958,9 +2958,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "mysql 分类",
+    "title": "java 分类",
     "headers": [],
-    "path": "/category/mysql/",
+    "path": "/category/java/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -2972,23 +2972,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "NoSql 分类",
+    "title": "python 分类",
     "headers": [],
-    "path": "/category/nosql/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "决策树 标签",
-    "headers": [],
-    "path": "/tag/%E5%86%B3%E7%AD%96%E6%A0%91/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "redis 分类",
-    "headers": [],
-    "path": "/category/redis/",
+    "path": "/category/python/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3000,9 +2986,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "spring 分类",
+    "title": "rust 分类",
     "headers": [],
-    "path": "/category/spring/",
+    "path": "/category/rust/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3010,6 +2996,20 @@ export const searchIndex = [
     "title": "矩阵 标签",
     "headers": [],
     "path": "/tag/%E7%9F%A9%E9%98%B5/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "mybatis 分类",
+    "headers": [],
+    "path": "/category/mybatis/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "决策树 标签",
+    "headers": [],
+    "path": "/tag/%E5%86%B3%E7%AD%96%E6%A0%91/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3028,9 +3028,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "mybatis 分类",
+    "title": "Spring-WebFlux 分类",
     "headers": [],
-    "path": "/category/mybatis/",
+    "path": "/category/spring-webflux/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3042,51 +3042,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "springcloud 分类",
+    "title": "spring 分类",
     "headers": [],
-    "path": "/category/springcloud/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "C、C++ 指针 标签",
-    "headers": [],
-    "path": "/tag/c%E3%80%81c__-%E6%8C%87%E9%92%88/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "docker 分类",
-    "headers": [],
-    "path": "/category/docker/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "C、C++ 引用 标签",
-    "headers": [],
-    "path": "/tag/c%E3%80%81c__-%E5%BC%95%E7%94%A8/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Spring-WebFlux 分类",
-    "headers": [],
-    "path": "/category/spring-webflux/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "C、C++ 智能指针 标签",
-    "headers": [],
-    "path": "/tag/c%E3%80%81c__-%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Kubernetes 分类",
-    "headers": [],
-    "path": "/category/kubernetes/",
+    "path": "/category/spring/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3098,9 +3056,51 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "spring 标签",
+    "title": "docker 分类",
     "headers": [],
-    "path": "/tag/spring/",
+    "path": "/category/docker/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "C、C++ 指针 标签",
+    "headers": [],
+    "path": "/tag/c%E3%80%81c__-%E6%8C%87%E9%92%88/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "springcloud 分类",
+    "headers": [],
+    "path": "/category/springcloud/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "C、C++ 引用 标签",
+    "headers": [],
+    "path": "/tag/c%E3%80%81c__-%E5%BC%95%E7%94%A8/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Kubernetes 分类",
+    "headers": [],
+    "path": "/category/kubernetes/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "C、C++ 智能指针 标签",
+    "headers": [],
+    "path": "/tag/c%E3%80%81c__-%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "mybatis 标签",
+    "headers": [],
+    "path": "/tag/mybatis/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -3112,9 +3112,9 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "mybatis 标签",
+    "title": "spring 标签",
     "headers": [],
-    "path": "/tag/mybatis/",
+    "path": "/tag/spring/",
     "pathLocale": "/",
     "extraFields": []
   },
